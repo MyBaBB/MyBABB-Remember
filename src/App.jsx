@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { NewTodoForm } from "./components/NewTodoForm"
 import "./Todo.css"
 import { TodoList } from "./components/TodoList"
+import Copyright from "./components/Copyright"
 
 export default function App() {
   const [todos, setTodos] = useState(() => {
@@ -47,8 +48,9 @@ export default function App() {
     <>
     <div className="controlContainer  ">
       <NewTodoForm onSubmit={addTodo} />
-      <h1 className="header">Brain Files</h1>
+      <h1 className="header">Note Files</h1>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+      <Copyright />
       </div>
     </>
   )
