@@ -4,7 +4,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
     <div className="outerDivContainer"> 
       <li  className="ListItem9">
         
-    <label  className="label1 flex border-2 border-varMEDBLUEFEATHER rounded-md max-w-[275px] h-auto ">
+    <label  className="label1 relative flex -left-3 border-2 p-2 border-varMEDBLUEFEATHER rounded-md max-w-[355px] h-auto ">
           <input
             type="checkbox"
             checked={completed}
@@ -20,7 +20,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
 
         <button onClick={() => deleteTodo(id)}
         
-          className="btn btn-danger flex ">
+          className="btn btn-danger relative flex -left-4 ">
           Delete
         </button>
       </li>
