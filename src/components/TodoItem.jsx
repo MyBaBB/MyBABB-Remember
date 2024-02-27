@@ -2,7 +2,7 @@
 export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
     return (
     <div className="outerDivContainer"> 
-      <li  className="ListItem9">
+      <li  className="ListItem9  ">
         
     <label  className="label1 relative flex -left-3 border-2 p-2 border-varMEDBLUEFEATHER rounded-md max-w-[355px] h-auto ">
           <input
@@ -12,7 +12,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
             
           />
           <div className="checkbox1 overflow-x-auto" >
-          <span className="title1   ">{title}</span>
+          <span className="title1">{title}</span>
           </div>
 
      </label>
