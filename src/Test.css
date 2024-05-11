@@ -1,6 +1,4 @@
-.testout 
-
-{
+.testout {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -13,5 +11,3 @@
   font-size: calc(10px + 2vmin);
   color: orange;
 }
-
- 
