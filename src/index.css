@@ -3,10 +3,9 @@
 @import "tailwindcss/utilities";
 
 * {
-    scroll-behavior: smooth;
-  }
-   
-  
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "Archivo_Black";
   src: url(../GoogleFonts/ArchivoBlack-Regular.ttf);
@@ -23,7 +22,6 @@
   font-family: "Blackbeard-ld7V";
   src: url(../GoogleFonts/Blackbeard-ld7V.ttf);
 }
-
 
 @font-face {
   font-family: "BlackOpsOne-Regular";
@@ -49,7 +47,6 @@
   font-family: "ChunkFive-Regular";
   src: url(../GoogleFonts/ChunkFive-Regular.otf);
 }
-
 
 @font-face {
   font-family: "Creepster-Regular";
@@ -186,7 +183,3 @@
   font-family: "Yellowtail-Regular";
   src: url(../GoogleFonts/Yellowtail-Regular.ttf);
 }
-
- 
-
- 
