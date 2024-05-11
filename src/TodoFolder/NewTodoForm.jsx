@@ -20,14 +20,14 @@ export function NewTodoForm({ onSubmit }) {
 <>
 <div className="relative">
     <a href="https://resume-hub.mybabb.com/">
-    <div className=" rewindButton relative   z-50  hidden md:block text-white  ">
+    <div className=" rewindButton relative   z-50    text-white  ">
       <span className="inline-block text-blue-300"> <SlControlRewind size={30}/></span>&nbsp;&nbsp;
       <span className="inline-block"> <SiTestinglibrary   size={30}/></span>
     </div>
     </a>
    
     <a href="https://mybabb.github.io/MyBaBB_Password_Machine/">
-    <div className=" rewindButton relative z-50  hidden md:block  mb-[-5rem]  ">
+    <div className=" rewindButton relative z-50   mb-[-5rem]  ">
       <span className="inline-block mt-2 text-blue-300"><SlControlRewind size={30}/></span>&nbsp;&nbsp; 
       <span className="inline-block text-gray-800"><FaUserSecret size={27}/></span>
     </div>
