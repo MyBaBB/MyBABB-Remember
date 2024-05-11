@@ -3,7 +3,8 @@ import { useState } from "react";
 import { SlControlRewind } from "react-icons/sl";
 import { FaUserSecret } from "react-icons/fa";
 import { SiTestinglibrary } from "react-icons/si";
-
+import { GrFastForward } from "react-icons/gr";
+import { GrRewind } from "react-icons/gr";
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
 
@@ -18,21 +19,31 @@ export function NewTodoForm({ onSubmit }) {
 
   return (
 <>
-<div className="relative">
+ 
+<div className="relative flex justify-between    ">
+<div className="inline-block "> 
     <a href="https://resume-hub.mybabb.com/">
-    <div className=" rewindButton relative   z-50    text-white  ">
-      <span className="inline-block text-blue-300"> <SlControlRewind size={30}/></span>&nbsp;&nbsp;
+    <div className=" rewindButton relative   w-fit inline-block   z-50    text-white  ">
+      <span className="inline-block mt-2 text-blue-300"> <GrRewind size={30}/></span>&nbsp;&nbsp;
       <span className="inline-block"> <SiTestinglibrary   size={30}/></span>
     </div>
     </a>
-   
+    </div> 
+
+     <div className="inline-block  "> 
     <a href="https://mybabb.github.io/MyBaBB_Password_Machine/">
-    <div className=" rewindButton relative z-50   mb-[-5rem]  ">
-      <span className="inline-block mt-2 text-blue-300"><SlControlRewind size={30}/></span>&nbsp;&nbsp; 
-      <span className="inline-block text-gray-800"><FaUserSecret size={27}/></span>
-    </div>
-    </a>
-    </div>
+    <div className=" rewindButton relative z-50    inline-block mb-[-5rem]  ">
+
+    <span className="inline-block text-gray-800"><FaUserSecret size={27}/></span>&nbsp;&nbsp;
+      <span className="inline-block mt-2 text-blue-300"><GrFastForward size={30}/></span> 
+      
+   </div>
+     </a>
+     </div>
+ 
+</div>
+
+
     <form
       onSubmit={handleSubmit}
       className="new-item-form relative m-auto flex w-[250px] xs:w-[400px] md:w-[500px] "
@@ -54,7 +65,7 @@ export function NewTodoForm({ onSubmit }) {
           onChange={(e) => setNewItem(e.target.value)}
           type="text"
           id="item"
-          placeholder="Type here to take a note"
+          placeholder="Type here"
         />
       </div>
       <button className="btn m-auto w-fit font-LibreBaskerville-Regular text-blue-100  ">
