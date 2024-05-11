@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { SlControlRewind } from "react-icons/sl";
+import { FaUserSecret } from "react-icons/fa";
+import { SiTestinglibrary } from "react-icons/si";
+
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
 
@@ -15,11 +18,21 @@ export function NewTodoForm({ onSubmit }) {
 
   return (
 <>
-
+<div className="relative">
     <a href="https://resume-hub.mybabb.com/">
-    <div className=" rewindButton relative z-50  hidden md:block text-amber-200 mb-[-2rem] "><SlControlRewind size={30}/>
+    <div className=" rewindButton relative   z-50  hidden md:block text-white  ">
+      <span className="inline-block text-blue-300"> <SlControlRewind size={30}/></span>&nbsp;&nbsp;
+      <span className="inline-block"> <SiTestinglibrary   size={30}/></span>
     </div>
     </a>
+   
+    <a href="https://mybabb.github.io/MyBaBB_Password_Machine/">
+    <div className=" rewindButton relative z-50  hidden md:block  mb-[-5rem]  ">
+      <span className="inline-block mt-2 text-blue-300"><SlControlRewind size={30}/></span>&nbsp;&nbsp; 
+      <span className="inline-block text-gray-800"><FaUserSecret size={27}/></span>
+    </div>
+    </a>
+    </div>
     <form
       onSubmit={handleSubmit}
       className="new-item-form relative m-auto flex w-[250px] xs:w-[400px] md:w-[500px] "
