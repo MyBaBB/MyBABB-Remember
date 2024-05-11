@@ -36,6 +36,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
           }} className="btn  copyButton  hover:bg-white  relative flex   font-Aclonica-Regular hover:text-black">
             Copy
           </button>
+          
           </div>
        
       </div>

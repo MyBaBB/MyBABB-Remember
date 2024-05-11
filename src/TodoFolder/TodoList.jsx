@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-import { TodoItem } from "./TodoItem"
+import { TodoItem } from "./TodoItem";
 
 export function TodoList({ todos, toggleTodo, deleteTodo }) {
   return (
     <ul className="list">
       {todos.length === 0 && "No notes Yet"}
-      {todos.map(todo => {
+      {todos.map((todo) => {
         return (
           <TodoItem
             {...todo}
@@ -13,8 +13,8 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}
           />
-        )
+        );
       })}
     </ul>
-  )
+  );
 }
