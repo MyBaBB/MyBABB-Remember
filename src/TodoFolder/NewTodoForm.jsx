@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import { SlControlRewind } from "react-icons/sl";
+import { FiFastForward } from "react-icons/fi";
 import { FaUserSecret } from "react-icons/fa";
 import { SiTestinglibrary } from "react-icons/si";
-import { GrFastForward } from "react-icons/gr";
-import { GrRewind } from "react-icons/gr";
+import { LiaFastForwardSolid } from "react-icons/lia";
+import { FiRewind } from "react-icons/fi";
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
 
@@ -24,7 +24,7 @@ export function NewTodoForm({ onSubmit }) {
 <div className="inline-block "> 
     <a href="https://resume-hub.mybabb.com/">
     <div className=" rewindButton relative   w-fit inline-block   z-50    text-white  ">
-      <span className="inline-block mt-2 text-blue-300"> <GrRewind size={30}/></span>&nbsp;&nbsp;
+      <span className="inline-block mt-2 text-blue-300"> < FiRewind  size={30}/></span>&nbsp;&nbsp;
       <span className="inline-block"> <SiTestinglibrary   size={30}/></span>
     </div>
     </a>
@@ -32,10 +32,10 @@ export function NewTodoForm({ onSubmit }) {
 
      <div className="inline-block  "> 
     <a href="https://mybabb.github.io/MyBaBB_Password_Machine/">
-    <div className=" rewindButton relative z-50    inline-block mb-[-5rem]  ">
+    <div className=" rewindButton relative z-50    inline-block    ">
 
     <span className="inline-block text-gray-800"><FaUserSecret size={27}/></span>&nbsp;&nbsp;
-      <span className="inline-block mt-2 text-blue-300"><GrFastForward size={30}/></span> 
+      <span className="inline-block mt-2 text-blue-300"><FiFastForward size={30}/></span> 
       
    </div>
      </a>
