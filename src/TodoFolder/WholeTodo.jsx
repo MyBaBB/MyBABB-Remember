@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { NewTodoForm } from "./components/NewTodoForm"
+import { NewTodoForm } from "./NewTodoForm"
 import "./Todo.css"
-import { TodoList } from "./components/TodoList"
-import Copyright from "./components/Copyright"
+import { TodoList } from "./TodoList"
+ 
 
 export default function App() {
   const [todos, setTodos] = useState(() => {
@@ -46,11 +46,12 @@ export default function App() {
 
     return (
     <>
-    <div className="controlContainer  ">
+    <div className="controlContainer w-fit bg-gray-500 m-auto border-2 rounded-3xl p-4 border-black  ">
       <NewTodoForm onSubmit={addTodo} />
-      <h1 className="header">Note Files</h1>
+      <span className="text-left"><h1 className="header text-blue-100
+       decoration- pb-4">
+        <u><span className=" font-LibreBaskerville-Italic">Your Items</span></u> :</h1></span>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
-      <Copyright />
       </div>
     </>
   )
