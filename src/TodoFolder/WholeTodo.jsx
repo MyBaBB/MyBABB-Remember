@@ -46,9 +46,11 @@ export default function App() {
 
     return (
     <>
-    <div className="controlContainer w-fit m-auto   ">
+    <div className="controlContainer w-fit bg-gray-500 m-auto border-2 rounded-3xl p-4 border-black  ">
       <NewTodoForm onSubmit={addTodo} />
-      <span className="text-left"><h1 className="header pb-4">The List</h1></span>
+      <span className="text-left"><h1 className="header text-blue-100
+       decoration- pb-4">
+        <u><span className=" font-LibreBaskerville-Italic">Your Items</span></u> :</h1></span>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
       </div>
     </>

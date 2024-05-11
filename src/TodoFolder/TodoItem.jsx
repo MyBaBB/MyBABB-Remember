@@ -7,10 +7,11 @@ function copyTodoItem(title) {
 
 export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
     return (
-      <div className="outerDivContainer w-fit m-auto" > 
+      <div className="outerDivContainer  w-fit m-auto" > 
         <li  className="ListItem9  ">
           
-          <label  className="label1 relative flex m-auto border-2 w-[250px] xs:w-[400px] md:w-[500px] border-varMEDBLUEFEATHER rounded-md   ">
+          <label  className="label1 relative bg-slate-700 flex m-auto border-2 w-[250px] xs:w-[400px] md:w-[500px] 
+                    border-varMEDBLUEFEATHER rounded-md   ">
             <input
               type="checkbox"
               checked={completed}
@@ -18,20 +19,21 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
               
             />
             <div className="checkbox1 overflow-x-auto" >
-              <span className="title1">{title}</span>
+              <span className="title1 font-NotoSans-VariableFont_wdth,wght text-lg">{title}</span>
             </div>
 
           </label>
           </li>
-       <div className=" relative flex justify-between pt-1 pb-4 m-auto">
-          <button onClick={() => deleteTodo(id)} className="btn btn-danger relative  ">
+       <div className=" relative flex font-Aclonica-Regular justify-between pt-1 pb-4 m-auto">
+          <button onClick={() => deleteTodo(id)} className="btn hover:bg-red-700  text-gray-200
+                    bg-red-900 relative  ">
             Delete
           </button> 
 
           <button onClick={() => {
             copyTodoItem(title);
             alert("📋Copied to ClipBoard");
-          }} className="btn copyButton relative flex">
+          }} className="btn  copyButton font-Aclonica-Regular relative flex hover:bg-white hover:text-black">
             Copy
           </button>
           </div>
