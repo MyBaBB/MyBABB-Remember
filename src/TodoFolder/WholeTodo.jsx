@@ -52,7 +52,7 @@ export default function App() {
        pb-4 text-blue-100"
           >
             <u>
-              <span className=" font-LibreBaskerville-Italic">Your Items</span>
+              <span className=" font-LibreBaskerville-Italic text-base">Your Items</span>
             </u>{" "}
             :
           </h1>
