@@ -18,8 +18,8 @@ export default function App() {
   function addTodo(title) {
     setTodos((currentTodos) => {
       return [
-        ...currentTodos,
         { id: crypto.randomUUID(), title, completed: false },
+        ...currentTodos,
       ];
     });
   }
@@ -44,15 +44,17 @@ export default function App() {
 
   return (
     <>
-      <div className="controlContainer m-auto w-fit rounded-3xl border-2 border-black bg-gray-500 p-4  ">
+      <div className="controlContainer m-auto   w-fit rounded-3xl border-2 border-black bg-gray-500 p-4  ">
         <NewTodoForm onSubmit={addTodo} />
         <span className="text-left">
           <h1
             className="header decoration-
-       pb-4 text-blue-100"
+       pb-2 text-blue-100"
           >
             <u>
-              <span className=" font-LibreBaskerville-Italic text-base">Your Items</span>
+              <span className=" font-LibreBaskerville-Italic text-base">
+                Your Items
+              </span>
             </u>{" "}
             :
           </h1>

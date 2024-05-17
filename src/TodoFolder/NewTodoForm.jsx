@@ -3,8 +3,9 @@ import { useState } from "react";
 import { FiFastForward } from "react-icons/fi";
 import { FaUserSecret } from "react-icons/fa";
 import { SiTestinglibrary } from "react-icons/si";
-import { LiaFastForwardSolid } from "react-icons/lia";
+import { GiNotebook } from "react-icons/gi";
 import { FiRewind } from "react-icons/fi";
+import { IoFileTrayStackedSharp } from "react-icons/io5";
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
 
@@ -58,13 +59,13 @@ export function NewTodoForm({ onSubmit }) {
       >
         <div className="form-row  ">
           <label htmlFor="item">
-            <span
-              className="oldFart m-auto my-4 w-fit
-                       rounded-2xl bg-slate-500 p-2 font-ChunkFive-Regular text-3xl text-blue-200
-                       sm:text-2xl"
-            >
-              Take a Note
-            </span>
+            <div className="btn relative m-auto mb-4 flex w-fit items-center justify-center align-middle  text-blue-100  ">
+              <span className="font-ArchivoBlack-Regular">Write&nbsp;</span>
+              <span className="inline-block text-blue-200">
+                <GiNotebook size={35} />
+              </span>
+              <span className="font-ArchivoBlack-Regular"> </span>
+            </div>
           </label>
 
           <textarea
@@ -77,8 +78,14 @@ export function NewTodoForm({ onSubmit }) {
             placeholder="Type here"
           />
         </div>
-        <button className="btn m-auto w-fit font-LibreBaskerville-Regular text-blue-100  ">
-          Push Here To Remember{" "}
+        <button className="btn relative m-auto -mb-4 flex w-fit items-center justify-center align-middle  text-blue-100  ">
+          <span className="font-ArchivoBlack-Regular">
+            Add&nbsp;&nbsp;&nbsp;
+          </span>
+          <span className="inline-block text-blue-200">
+            <IoFileTrayStackedSharp size={35} />
+          </span>
+          <span className="font-ArchivoBlack-Regular"> </span>
         </button>
       </form>
     </>
