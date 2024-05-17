@@ -17,7 +17,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
             onChange={(e) => toggleTodo(id, e.target.checked)}
           />
           <div className="checkbox1 overflow-x-auto">
-            <span className="title1 font-NotoSans-VariableFont_wdth,wght text-lg">
+            <span className="title1 font-DMSerifDisplay-Regular text-xl">
               {title}
             </span>
           </div>

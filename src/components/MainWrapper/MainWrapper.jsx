@@ -6,7 +6,7 @@ import Copyright from "../Copyright";
 const MainWrapper = () => {
   return (
     <div>
-      <div className=" relative m-auto flex  h-fit w-[100vw] min-h-screen p-2">
+      <div className=" relative m-auto flex  h-fit min-h-screen w-[100vw] p-2">
         <div className=" m-auto w-full p-4 ">
           <WholeTodo />
 
