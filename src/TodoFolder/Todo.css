@@ -52,10 +52,7 @@ body {
   margin-top: .2rem;
 }
 
-.btn:hover,
-.btn:focus-visible {
-  background: hsl(200, 100%, 50%, 0.2);
-}
+
 .btn2 {
   font-size: 15px;
   background: hsl(200, 100%, 50%, 0.1);
@@ -70,10 +67,7 @@ body {
   margin-right: .1rem;
 }
 
-.btn2:hover,
-.btn2:focus-visible {
-  background: hsl(200, 100%, 50%, 0.2);
-}
+
 
 .btn.btn-danger {
   background: hsl(0, 100%, 40%, 0.1);
@@ -81,11 +75,7 @@ body {
   color: hsl(0, 100%, 30%);
 }
 
-.btn.btn-danger:hover,
-.btn.btn-danger:focus-visible {
-  background: hsl(0, 100%, 40%, 0.5);
-  color: #000;
-}
+
 .copyButton {
   text-shadow: 1px 1px 2px #000000;
 }

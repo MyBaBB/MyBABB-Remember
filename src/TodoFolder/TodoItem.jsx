@@ -35,9 +35,9 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
         <button
           onClick={() => {
             copyTodoItem(title);
-            alert("📋Copied to ClipBoard");
+            alert("👉🏻 Copied to ClipBoard ✍🏻");
           }}
-          className="btn  copyButton  relative  flex font-Aclonica-Regular   hover:bg-white hover:text-black"
+          className="btn  copyButton  relative  flex font-PTSerif-Bold   hover:bg-blue-700"
         >
           Copy item
         </button>
