@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { NewTodoForm } from "./NewTodoForm";
 import "./Todo.css";
 import { TodoList } from "./TodoList";
+ 
 
 export default function App() {
   const [todos, setTodos] = useState(() => {
@@ -43,17 +44,20 @@ export default function App() {
   }
   function copyAllTodos() {
     let todosText = "";
-    todos.forEach((todo) => {
-      todosText += todo.title + "\n";
+    todos.forEach((todo, index) => {
+      todosText += (index + 1) + ". " + todo.title + "\n";
     });
     navigator.clipboard.writeText(todosText);
+   
+    
   }
+  
   return (
     <>
       <div className="controlContainer m-auto   w-fit rounded-3xl border-2 border-black bg-gray-500 p-4  ">
         <NewTodoForm onSubmit={addTodo} />
         <div className="mt-4 mb-2 relative flex justify-between">
-
+     
             <u>
               <span className="relative flex w-fit   pb-2 text-blue-100 font-LibreBaskerville-Italic text-base">
                 Your Items :
@@ -63,9 +67,9 @@ export default function App() {
             <button
               onClick={() => {
                 copyAllTodos();
-                alert("📋Copied to ClipBoard");
+                alert("👉🏻 Copied All Items to your ClipBoard ✍🏻");
               }}
-              className="btn2 copyButton  font-Aclonica-Regular   hover:bg-white hover:text-black"
+              className="btn2 copyButton  font-PTSerif-Bold   hover:bg-blue-700 "
             >
               Copy All Lines
             </button>
@@ -78,6 +82,7 @@ export default function App() {
           toggleTodo={toggleTodo}
           deleteTodo={deleteTodo}
         />
+         
       </div>
     </>
   );
