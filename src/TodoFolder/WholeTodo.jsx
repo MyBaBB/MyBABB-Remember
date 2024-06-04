@@ -54,24 +54,23 @@ export default function App() {
   
   return (
     <>
-      <div className="controlContainer relative m-auto  w-fit rounded-3xl border-2 border-black bg-gray-500 p-4  ">
+      <div className="controlContainer relative m-auto  w-fit rounded-3xl border-2 border-black
+        p-4  " style={{ background: 'radial-gradient(circle, #707070, #606060)' }}>
         <div className="relative flex-row ">
-        <NewTodoForm onSubmit={addTodo} />
-        
-     
-           
-           
-            <button
-              onClick={() => {
-                copyAllTodos();
-                alert("👉🏻 Copied All Items to your ClipBoard ✍🏻");
-              }}
-              className="btn2 copyButton absolute bottom-[.65rem] right-[.45rem] text-blue-100 font-PTSerif-Bold   hover:bg-blue-700 "
-            >
-              Copy Everything
-            </button>
-                 
-              
+          <NewTodoForm onSubmit={addTodo} />
+       
+          <button
+            onClick={() => {
+              copyAllTodos();
+              alert("👉🏻 Copied All Items to your ClipBoard ✍🏻");
+            }}
+            className="btn2 copyButton absolute bottom-[.65rem] right-[.45rem] text-blue-50
+                 font-PTSerif-Bold   hover:bg-gradient-to-b from-green-600 to-green-950"
+          >
+            Copy Everything
+          </button>
+               
+            
         </div> 
 
         <TodoList

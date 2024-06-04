@@ -21,16 +21,16 @@ export function NewTodoForm({ onSubmit }) {
   return (
     <>
       <div className="relative flex justify-between">
-        <div className="inline-block">
-          <a href="https://resume-hub.mybabb.com/"></a>
-          <a href="https://resume-hub.mybabb.com/">
-            <div className=" rewindButton relative   z-50 inline-block   w-fit    text-white  ">
-              <span className="mt-2 inline-block text-blue-300">
+        <div className="inline-block ">
+          
+          <a href="https://resume-hub.mybabb.com/" className="">
+            <div className=" rewindButton relative   z-50 inline-block   w-fit   ">
+              <span className="mt-2 inline-block text-black hover:text-blue-50">
                 {" "}
                 <FiRewind size={30} />
               </span>
               &nbsp;&nbsp;
-              <span className="inline-block">
+              <span className="inline-block text-blue-50 ">
                 {" "}
                 <SiTestinglibrary size={30} />
               </span>
@@ -41,11 +41,11 @@ export function NewTodoForm({ onSubmit }) {
         <div className="inline-block  ">
           <a href="https://mybabb.github.io/MyBaBB_Password_Machine/">
             <div className=" rewindButton relative z-50    inline-block    ">
-              <span className="inline-block text-gray-800">
+              <span className="inline-block text-blue-50">
                 <FaUserSecret size={27} />
               </span>
               &nbsp;&nbsp;
-              <span className="mt-2 inline-block text-blue-300">
+              <span className="mt-2 inline-block text-black hover:text-blue-50">
                 <FiFastForward size={30} />
               </span>
             </div>
@@ -61,8 +61,8 @@ export function NewTodoForm({ onSubmit }) {
           
 
           <textarea
-            className="placeHolder1 min-h-[28px] w-full rounded-lg  
-                          border-2 border-varDARKBLUEFEATHER text-center font-LibreBaskerville-Bold hover:opacity-80"
+            className="placeHolder1 min-h-[18px] PT-1 w-full rounded-lg  
+                          border-2 border-black text-center font-LibreBaskerville-Bold hover:opacity-80"
             value={newItem}
             onChange={(e) => setNewItem(e.target.value)}
             type="text"
@@ -70,7 +70,8 @@ export function NewTodoForm({ onSubmit }) {
             placeholder="Type here"
           />
         
-        <button className="btn relative flex m-auto ml-[.2rem] text-blue-100  ">
+        <button className="btn3 relative flex m-auto ml-[.2rem] text-blue-50 
+         hover:bg-gradient-to-b from-blue-700 to-blue-950 ">
           <span className="font-PTSerif-Bold">
              Click Add Item
           </span>
