@@ -41,24 +41,38 @@ export default function App() {
       return currentTodos.filter((todo) => todo.id !== id);
     });
   }
-
+  function copyAllTodos() {
+    let todosText = "";
+    todos.forEach((todo) => {
+      todosText += todo.title + "\n";
+    });
+    navigator.clipboard.writeText(todosText);
+  }
   return (
     <>
       <div className="controlContainer m-auto   w-fit rounded-3xl border-2 border-black bg-gray-500 p-4  ">
         <NewTodoForm onSubmit={addTodo} />
-        <span className="text-left">
-          <h1
-            className="header decoration-
-       pb-2 text-blue-100"
-          >
+        <div className="mt-4 mb-2 relative flex justify-between">
+
             <u>
-              <span className=" font-LibreBaskerville-Italic text-base">
-                Your Items
+              <span className="relative flex w-fit   pb-2 text-blue-100 font-LibreBaskerville-Italic text-base">
+                Your Items :
               </span>
-            </u>{" "}
-            :
-          </h1>
-        </span>
+            </u> 
+           
+            <button
+              onClick={() => {
+                copyAllTodos();
+                alert("📋Copied to ClipBoard");
+              }}
+              className="btn2 copyButton  font-Aclonica-Regular   hover:bg-white hover:text-black"
+            >
+              Copy All Lines
+            </button>
+                 
+        </div>          
+          
+
         <TodoList
           todos={todos}
           toggleTodo={toggleTodo}

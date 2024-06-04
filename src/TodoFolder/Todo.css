@@ -40,7 +40,7 @@ body {
 .btn {
   background: hsl(200, 100%, 50%, 0.1);
   border: 1px solid hsl(200, 100%, 50%);
-
+  font-size: 15px;
   box-shadow: 1px 1px 7px #0c0e08;
   text-shadow: 2px 2px 4px #0c0e08;
   padding: 0.25em 0.5em;
@@ -49,10 +49,29 @@ body {
   outline: none;
   margin-left: 1rem;
   margin-right: 1rem;
+  margin-top: .2rem;
 }
 
 .btn:hover,
 .btn:focus-visible {
+  background: hsl(200, 100%, 50%, 0.2);
+}
+.btn2 {
+  font-size: 15px;
+  background: hsl(200, 100%, 50%, 0.1);
+  border: 1px solid hsl(200, 100%, 50%);
+  box-shadow: 1px 1px 7px #0c0e08;
+  text-shadow: 2px 2px 4px #0c0e08;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  outline: none;
+  margin-left: 1rem;
+  margin-right: .1rem;
+}
+
+.btn2:hover,
+.btn2:focus-visible {
   background: hsl(200, 100%, 50%, 0.2);
 }
 
