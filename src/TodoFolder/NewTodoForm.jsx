@@ -3,9 +3,9 @@ import { useState } from "react";
 import { FiFastForward } from "react-icons/fi";
 import { FaUserSecret } from "react-icons/fa";
 import { SiTestinglibrary } from "react-icons/si";
-import { GiNotebook } from "react-icons/gi";
+ 
 import { FiRewind } from "react-icons/fi";
-import { IoFileTrayStackedSharp } from "react-icons/io5";
+
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
 
@@ -55,21 +55,13 @@ export function NewTodoForm({ onSubmit }) {
 
       <form
         onSubmit={handleSubmit}
-        className="new-item-form relative m-auto -mt-4 flex w-[250px] xs:w-[400px] md:w-[500px] "
+        className="new-item-form relative m-auto mb-4  flex w-[250px] xs:w-[400px] md:w-[500px] "
       >
-        <div className="form-row  ">
-          <label htmlFor="item">
-            <div className="btn relative m-auto mb-4 flex w-fit items-center justify-center align-middle  text-blue-100  ">
-              <span className="font-ArchivoBlack-Regular">Write&nbsp;</span>
-              <span className="inline-block text-blue-200">
-                <GiNotebook size={35} />
-              </span>
-              <span className="font-ArchivoBlack-Regular"> </span>
-            </div>
-          </label>
+      
+          
 
           <textarea
-            className="placeHolder1 h-12 w-full rounded-lg  
+            className="placeHolder1 min-h-[28px] w-full rounded-lg  
                           border-2 border-varDARKBLUEFEATHER text-center font-LibreBaskerville-Bold hover:opacity-80"
             value={newItem}
             onChange={(e) => setNewItem(e.target.value)}
@@ -77,16 +69,18 @@ export function NewTodoForm({ onSubmit }) {
             id="item"
             placeholder="Type here"
           />
-        </div>
-        <button className="btn relative m-auto -mb-4 flex w-fit items-center justify-center align-middle  text-blue-100  ">
-          <span className="font-ArchivoBlack-Regular">
-            Add&nbsp;&nbsp;&nbsp;
+        
+        <button className="btn relative flex m-auto ml-[.2rem] text-blue-100  ">
+          <span className="font-PTSerif-Bold">
+             Click Add Item
           </span>
-          <span className="inline-block text-blue-200">
-            <IoFileTrayStackedSharp size={35} />
-          </span>
+         
           <span className="font-ArchivoBlack-Regular"> </span>
         </button>
+ 
+        
+
+        
       </form>
     </>
   );

@@ -23,7 +23,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
           </div>
         </label>
       </li>
-      <div className=" relative m-auto flex justify-between pb-4 pt-1 font-Aclonica-Regular">
+      <div className=" relative m-auto flex justify-between pb-4 pt-1 ml-[.42rem] font-Aclonica-Regular">
         <button
           onClick={() => deleteTodo(id)}
           className="btn relative  bg-red-900
@@ -39,7 +39,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
           }}
           className="btn  copyButton  relative  flex font-PTSerif-Bold   hover:bg-blue-700"
         >
-          Copy item
+          Copy
         </button>
       </div>
     </div>

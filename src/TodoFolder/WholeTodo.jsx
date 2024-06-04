@@ -54,28 +54,25 @@ export default function App() {
   
   return (
     <>
-      <div className="controlContainer m-auto   w-fit rounded-3xl border-2 border-black bg-gray-500 p-4  ">
+      <div className="controlContainer relative m-auto  w-fit rounded-3xl border-2 border-black bg-gray-500 p-4  ">
+        <div className="relative flex-row ">
         <NewTodoForm onSubmit={addTodo} />
-        <div className="mt-4 mb-2 relative flex justify-between">
+        
      
-            <u>
-              <span className="relative flex w-fit   pb-2 text-blue-100 font-LibreBaskerville-Italic text-base">
-                Your Items :
-              </span>
-            </u> 
+           
            
             <button
               onClick={() => {
                 copyAllTodos();
                 alert("👉🏻 Copied All Items to your ClipBoard ✍🏻");
               }}
-              className="btn2 copyButton  font-PTSerif-Bold   hover:bg-blue-700 "
+              className="btn2 copyButton absolute bottom-[.65rem] right-[.45rem] text-blue-100 font-PTSerif-Bold   hover:bg-blue-700 "
             >
-              Copy All Lines
+              Copy Everything
             </button>
                  
-        </div>          
-          
+              
+        </div> 
 
         <TodoList
           todos={todos}

@@ -47,9 +47,9 @@ body {
   border-radius: 0.25em;
   cursor: pointer;
   outline: none;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: .2rem;
+  margin-left: .1rem;
+  margin-right: .42rem;
+ 
 }
 
 
@@ -63,7 +63,7 @@ body {
   border-radius: 0.25em;
   cursor: pointer;
   outline: none;
-  margin-left: 1rem;
+  margin-left: .1rem;
   margin-right: .1rem;
 }
 
@@ -73,6 +73,7 @@ body {
   background: hsl(0, 100%, 40%, 0.1);
   border: none;
   color: hsl(0, 100%, 30%);
+ 
 }
 
 
