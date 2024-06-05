@@ -61,7 +61,7 @@ export function NewTodoForm({ onSubmit }) {
           
 
           <textarea
-            className="placeHolder1 min-h-[18px] PT-1 w-full rounded-lg  
+            className="placeHolder1 min-h-[18px]  pt-1 w-full rounded-lg  
                           border-2 border-black text-center font-LibreBaskerville-Bold hover:opacity-80"
             value={newItem}
             onChange={(e) => setNewItem(e.target.value)}
@@ -70,10 +70,10 @@ export function NewTodoForm({ onSubmit }) {
             placeholder="Type here"
           />
         
-        <button className="btn3 relative flex m-auto ml-[.2rem] text-blue-50 
+        <button className="btn3 relative flex m-auto justify-center  text-blue-50 
          hover:bg-gradient-to-b from-blue-700 to-blue-950 ">
           <span className="font-PTSerif-Bold">
-             Click Add Item
+             Click to Add Item
           </span>
          
           <span className="font-ArchivoBlack-Regular"> </span>

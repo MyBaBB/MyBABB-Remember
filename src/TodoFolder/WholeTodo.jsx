@@ -59,17 +59,6 @@ export default function App() {
         <div className="relative flex-row ">
           <NewTodoForm onSubmit={addTodo} />
        
-          <button
-            onClick={() => {
-              copyAllTodos();
-              alert("👉🏻 Copied All Items to your ClipBoard ✍🏻");
-            }}
-            className="btn2 copyButton absolute bottom-[.65rem] right-[.45rem] text-blue-50
-                 font-PTSerif-Bold   hover:bg-gradient-to-b from-green-600 to-green-950"
-          >
-            Copy Everything
-          </button>
-               
             
         </div> 
 
@@ -79,6 +68,17 @@ export default function App() {
           deleteTodo={deleteTodo}
         />
          
+         <button
+            onClick={() => {
+              copyAllTodos();
+              alert("👉🏻 Copied All Items to your ClipBoard ✍🏻");
+            }}
+            className="btn2 copyButton relative flex justify-center m-auto    text-blue-50
+                 font-PTSerif-Bold   hover:bg-gradient-to-b from-green-600 to-green-950"
+          >
+            Copy Everything
+          </button>
+               
       </div>
     </>
   );
