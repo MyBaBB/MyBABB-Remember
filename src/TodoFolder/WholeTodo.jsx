@@ -36,7 +36,11 @@ export default function App() {
       });
     });
   }
-
+  function getRandomEmoji() {
+    const emojis = ["🐠", "🦀", "🦈", "🐟", "🎣","🪼","🐬","🐳","🦞","🦭","🐚","🪸","🦑"];
+    const randomIndex = Math.floor(Math.random() * emojis.length);
+    return emojis[randomIndex];
+  }
   function deleteTodo(id) {
     setTodos((currentTodos) => {
       return currentTodos.filter((todo) => todo.id !== id);
@@ -45,7 +49,7 @@ export default function App() {
   function copyAllTodos() {
     let todosText = "";
     todos.forEach((todo, index) => {
-      todosText += (index + 1) + ". " + todo.title + "\n";
+      todosText +=  (index + 1) + ". " + getRandomEmoji()  + " " + todo.title + " " + "\n";
     });
     navigator.clipboard.writeText(todosText);
    
