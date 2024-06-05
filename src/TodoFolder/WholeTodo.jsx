@@ -37,7 +37,8 @@ export default function App() {
     });
   }
   function getRandomEmoji() {
-    const emojis = ["🐠", "🦀", "🦈", "🐟", "🎣","🪼","🐬","🐳","🦞","🦭","🐚","🪸","🦑"];
+    
+    const emojis = ["🐠", "🦀", "🦈", "🐟", "🎣","🪼","🐬","🐳","🦞","🦭","🐚","🪸","🦑","🐡","🐋","🐙","🦐","🐊","🐍","🐢"];
     const randomIndex = Math.floor(Math.random() * emojis.length);
     return emojis[randomIndex];
   }
