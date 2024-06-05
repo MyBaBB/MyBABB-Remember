@@ -36,11 +36,16 @@ export default function App() {
       });
     });
   }
+  const [isRandomEmojiEnabled, setIsRandomEmojiEnabled] = useState(true);
+
+  function toggleRandomEmoji() {
+    setIsRandomEmojiEnabled((prevValue) => !prevValue);
+  }
+
   function getRandomEmoji() {
-    
     const emojis = ["🐠", "🦀", "🦈", "🐟", "🎣","🪼","🐬","🐳","🦞","🦭","🐚","🪸","🦑","🐡","🐋","🐙","🦐","🐊","🐍","🐢"];
     const randomIndex = Math.floor(Math.random() * emojis.length);
-    return emojis[randomIndex];
+    return isRandomEmojiEnabled ? emojis[randomIndex] : "";
   }
   function deleteTodo(id) {
     setTodos((currentTodos) => {
@@ -83,7 +88,13 @@ export default function App() {
           >
             Copy Everything
           </button>
-               
+            <button
+              onClick={toggleRandomEmoji}
+              className={`btn2 mt-2 toggleButton relative flex justify-center m-auto    text-blue-50
+                font-PTSerif-Bold   hover:bg-gradient-to-b ${isRandomEmojiEnabled ? 'from-green-600 to-green-950' : 'from-red-600 to-red-950'}`}
+            >
+              {isRandomEmojiEnabled ? "Fish" : "No Fish"} 
+            </button>
       </div>
     </>
   );
