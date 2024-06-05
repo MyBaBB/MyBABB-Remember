@@ -88,13 +88,18 @@ export default function App() {
           >
             Copy Everything
           </button>
+          <div
+            className="dataToolTip82  font-Caprasimo w-fit m-auto   "
+            data-tool-tip="Memory Helper">
             <button
               onClick={toggleRandomEmoji}
-              className={`btn2 mt-2 toggleButton relative flex justify-center m-auto    text-blue-50
+              className={`btn2 mt-2 mb-8 toggleButton relative flex justify-center m-auto    text-blue-50
                 font-PTSerif-Bold   hover:bg-gradient-to-b ${isRandomEmojiEnabled ? 'from-green-600 to-green-950' : 'from-red-600 to-red-950'}`}
             >
               {isRandomEmojiEnabled ? "Fish" : "No Fish"} 
             </button>
+
+      </div>
       </div>
     </>
   );

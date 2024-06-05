@@ -225,3 +225,50 @@ body {
   background: rgba(0, 0, 0, 0.5);
   letter-spacing: 0.03cm;
 }
+.dataToolTip82:hover::before,
+.dataToolTip82:hover::after {
+  --scale: 1;
+}
+.dataToolTip82::before {
+  content: attr(data-tool-tip);
+  background: radial-gradient(rgb(226, 222, 222), #492407);
+  width: max-content;
+  position: absolute;
+  content: attr(data-tool-tip);
+  padding: 0.1em 0.1em 0.2em 0.1em;
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: top;
+  transition: ease-in 0.25s;
+  bottom: .5rem;
+
+  left: 50%;
+  border-radius: 10px;
+  color: black;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  --scale: 0;
+  z-index: 51;
+}
+
+.dataToolTip82::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  padding: 0.1em 0.1em 0.1em 0.1em;
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: bottom;
+
+  transition: 0.35s;
+  bottom: 2.1rem;
+  left: 50%;
+  border: 15px solid transparent;
+  border-bottom: #52341b 10px solid;
+  border-radius: 15px;
+  
+  --scale: 0;
+  z-index: 49;
+}
+
