@@ -93,10 +93,10 @@ export default function App() {
             data-tool-tip="Memory Helper">
             <button
               onClick={toggleRandomEmoji}
-              className={`btn2 mt-2 mb-8 toggleButton relative flex justify-center m-auto    text-blue-50
+              className={`btn2 mt-2 mb-8 toggleButton relative flex  justify-center m-auto    text-blue-50
                 font-PTSerif-Bold   hover:bg-gradient-to-b ${isRandomEmojiEnabled ? 'from-green-600 to-green-950' : 'from-red-600 to-red-950'}`}
             >
-              {isRandomEmojiEnabled ? "Add Fish" : "No Fish"} 
+              {isRandomEmojiEnabled ? "Copy w/ Fish" : "No Fish"} 
             </button>
 
       </div>
