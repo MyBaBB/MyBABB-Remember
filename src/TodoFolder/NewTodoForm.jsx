@@ -55,7 +55,7 @@ export function NewTodoForm({ onSubmit }) {
 
       <form
         onSubmit={handleSubmit}
-        className="new-item-form relative m-auto mb-4  flex w-[250px] xs:w-[400px] md:w-[500px] "
+        className="new-item-form relative m-auto mb-4  flex w-[220px] xs:w-[300px] md:w-[500px] "
       >
       
           
