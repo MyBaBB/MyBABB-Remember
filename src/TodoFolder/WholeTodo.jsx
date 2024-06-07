@@ -89,7 +89,7 @@ export default function App() {
             Copy Everything
           </button>
           <div
-            className="dataToolTip82  font-Caprasimo w-fit m-auto   "
+            className="dataToolTip82  font-Caprasimo-Regular w-fit m-auto   "
             data-tool-tip="Memory Helper">
             <button
               onClick={toggleRandomEmoji}

@@ -47,7 +47,6 @@ export default {
 'BlackOpsOne-Regular': ['BlackOpsOne-Regular', 'cursive'],
 'Borel-Regular': ['Borel-Regular', 'sans-serif'],
 'Caprasimo-Regular': ['Caprasimo-Regular', 'cursive'],
-'Caprasimo': ['Caprasimo', 'cursive'],
 'Changa-Regular': ['Changa-Regular', 'sans-serif'],
 'Changa-VariableFont_wght': ['Changa-VariableFont_wght', 'sans-serif'],
 'ChunkFive-Regular': ['ChunkFive-Regular', 'sans-serif'],
