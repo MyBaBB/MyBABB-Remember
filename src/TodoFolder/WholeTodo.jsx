@@ -96,7 +96,7 @@ export default function App() {
               className={`btn2 mt-2 mb-8 toggleButton relative flex justify-center m-auto    text-blue-50
                 font-PTSerif-Bold   hover:bg-gradient-to-b ${isRandomEmojiEnabled ? 'from-green-600 to-green-950' : 'from-red-600 to-red-950'}`}
             >
-              {isRandomEmojiEnabled ? "Fish" : "No Fish"} 
+              {isRandomEmojiEnabled ? "Add Fish" : "No Fish"} 
             </button>
 
       </div>
