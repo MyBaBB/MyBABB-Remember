@@ -17,7 +17,7 @@ export default defineConfig({
         name: "Handy Dandy Note Pad App",  
         short_name: 'Fish-Brains',  
         description: 'Description', 
-        theme_color: '#ffffff',
+        theme_color: '#289edb',
         
         icons: [
           {
