@@ -26,6 +26,14 @@ export default defineConfig({
             type: 'image/png',
             purpose: "any maskable",
       },
+      
+          {
+            src: './src/components/MainWrapper/nightOcean.jpg',
+            sizes: '400x200',
+            type: 'image/png',
+            purpose: "any maskable",
+      },
+
          
        
             ]  
