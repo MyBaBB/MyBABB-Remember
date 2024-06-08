@@ -18,14 +18,15 @@ export default defineConfig({
         short_name: 'React Vite PWA', // <--- 👀
         description: 'Description', // <--- 👀
         theme_color: '#ffffff',
+        
         icons: [
           {
-            src: './src/assets/favicon.png',
+            src: './pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: './src/assets/favicon.png',
+            src: './pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png'
           }
