@@ -4,6 +4,6 @@ export default defineConfig({
   preset,
   images: [
     './favicon.png',
-    './maskable-icon-512x512.png',
+
   ]
 })
