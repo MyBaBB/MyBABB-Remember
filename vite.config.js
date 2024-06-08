@@ -22,8 +22,8 @@ export default defineConfig({
         icons: [
           
         {
-            src: './pwa-512x512.png ',
-             sizes: '512x512',
+            src: './favicon.png',
+             sizes: '84x84',
             type: 'image/png',
             purpose: "any maskable",
          }
