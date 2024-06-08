@@ -14,9 +14,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'Example React Vite PWA', // <--- 👀
-        short_name: 'React Vite PWA', // <--- 👀
-        description: 'Description', // <--- 👀
+        name: 'Example React Vite PWA',  
+        short_name: 'React Vite PWA',  
+        description: 'Description', 
         theme_color: '#ffffff',
         
         icons: [
@@ -26,7 +26,13 @@ export default defineConfig({
             type: 'image/png',
             purpose: "any maskable",
       },
-        
+          {
+            src: './maskable-icon-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: "any maskable",
+      },
+       
             ]  
       }
     })
