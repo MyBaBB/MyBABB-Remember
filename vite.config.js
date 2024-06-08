@@ -12,10 +12,10 @@ export default defineConfig({
   plugins: [react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
+      includeAssets: ['favicon.png', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
         name: "Handy Dandy Note Pad App",  
-        short_name: 'React Vite PWA',  
+        short_name: 'Fish-Brains',  
         description: 'Description', 
         theme_color: '#ffffff',
         
