@@ -14,7 +14,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
       manifest: {
-        name: 'Example React Vite PWA',  
+        name: "Handy Dandy Note Pad App",  
         short_name: 'React Vite PWA',  
         description: 'Description', 
         theme_color: '#ffffff',
