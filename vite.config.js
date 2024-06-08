@@ -28,7 +28,7 @@ export default defineConfig({
       },
       
           {
-            src: './src/components/MainWrapper/nightOcean.jpg',
+            src: './apple-touch-icon-180x180.png ',
             sizes: '400x200',
             type: 'image/png',
             purpose: "any maskable",
