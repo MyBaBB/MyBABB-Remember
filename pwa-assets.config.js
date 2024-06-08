@@ -4,5 +4,7 @@ export default defineConfig({
   preset,
   images: [
     './favicon.png',
+    './pwa-192x192.png',
+    './pwa-512x512.png',
   ]
 })
