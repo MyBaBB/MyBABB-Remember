@@ -8,7 +8,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
  
 export default defineConfig({
-  base: './', // <--- 👀 
+  base: './mybabb.github.io/MyBABB-Remember/', // <--- 👀 
   plugins: [react(),
     VitePWA({
       registerType: 'autoUpdate',
