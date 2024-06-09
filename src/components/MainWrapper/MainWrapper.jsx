@@ -70,7 +70,7 @@ const MainWrapper = () => {
       </div>
       <div className="relative m-auto flex h-fit w-fit font-Aclonica-Regular ">
         <button onClick={showInstallButton} className="showInstallButton">
-          
+          Install
         </button>
       </div>
     </div>

@@ -1,4 +1,4 @@
-/* .showInstallButton {
+.showInstallButton {
   border: 2px solid black;
   padding: 2px;
   border-radius: 10px;
@@ -7,14 +7,13 @@
   font-weight: bold;
   margin-top: 10px;
    
-} */
+}
 .installAppButton {
   background: linear-gradient(to top, #00b09b, #96c93d);
-  white-space: nowrap;
+ 
   color: black;
   font-weight: bold;
   border: 2px solid black;
   border-radius: 12px;
   padding: 10px;
-  margin-top: 23px;
 }
