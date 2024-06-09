@@ -23,11 +23,11 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
           </div>
         </label>
       </li>
-      <div className=" relative m-auto flex justify-between pb-4 pt-1 ml-[.49rem] font-Aclonica-Regular">
+      <div className=" relative m-auto ml-[.49rem] flex justify-between pb-4 pt-1 font-Aclonica-Regular">
         <button
           onClick={() => deleteTodo(id)}
           className="btn relative  bg-red-900
-                    text-blue-50 hover:bg-gradient-to-b from-red-500 to-red-950"
+                    from-red-500 to-red-950 text-blue-50 hover:bg-gradient-to-b"
         >
           Delete
         </button>
@@ -37,8 +37,8 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
             copyTodoItem(title);
             alert("👉🏻 Copied to ClipBoard ✍🏻");
           }}
-          className="btn  copyButton text-blue-50 relative  flex font-PTSerif-Bold 
-            hover:bg-gradient-to-b from-green-600 to-green-950"
+          className="btn  copyButton relative flex  from-green-600 to-green-950 
+            font-PTSerif-Bold text-blue-50 hover:bg-gradient-to-b"
         >
           Copy
         </button>
