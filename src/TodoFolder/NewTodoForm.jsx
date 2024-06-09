@@ -22,7 +22,6 @@ export function NewTodoForm({ onSubmit }) {
     <>
       <div className="relative flex justify-between">
         <div className="inline-block ">
-          
           <a href="https://resume-hub.mybabb.com/" className="">
             <div className=" rewindButton relative   z-50 inline-block   w-fit   ">
               <span className="mt-2 inline-block text-black hover:text-blue-50">
@@ -57,31 +56,24 @@ export function NewTodoForm({ onSubmit }) {
         onSubmit={handleSubmit}
         className="new-item-form relative m-auto mb-4  flex w-[220px] xs:w-[300px] md:w-[500px] "
       >
-      
-          
+        <textarea
+          className="placeHolder1 min-h-[18px]  w-full rounded-lg border-2  
+                          border-black pt-1 text-center font-LibreBaskerville-Bold hover:opacity-80"
+          value={newItem}
+          onChange={(e) => setNewItem(e.target.value)}
+          type="text"
+          id="item"
+          placeholder="Type here"
+        />
 
-          <textarea
-            className="placeHolder1 min-h-[18px]  pt-1 w-full rounded-lg  
-                          border-2 border-black text-center font-LibreBaskerville-Bold hover:opacity-80"
-            value={newItem}
-            onChange={(e) => setNewItem(e.target.value)}
-            type="text"
-            id="item"
-            placeholder="Type here"
-          />
-        
-        <button className="btn3 relative flex m-auto justify-center  text-blue-50 
-         hover:bg-gradient-to-b from-blue-700 to-blue-950 ">
-          <span className="font-PTSerif-Bold">
-             Click to Add Item
-          </span>
-         
+        <button
+          className="btn3 relative m-auto flex justify-center  from-blue-700 
+         to-blue-950 text-blue-50 hover:bg-gradient-to-b "
+        >
+          <span className="font-PTSerif-Bold">Click to Add Item</span>
+
           <span className="font-ArchivoBlack-Regular"> </span>
         </button>
- 
-        
-
-        
       </form>
     </>
   );

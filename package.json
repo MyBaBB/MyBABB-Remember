@@ -1,5 +1,5 @@
 {
-  "name": "fishynotes",
+  "name": "Fishy-Notes",
   "private": true,
   "version": "0.0.0",
   "homepage": "https://mybabb.github.io/MyBABB-Remember",
@@ -41,3 +41,4 @@
     "vite-plugin-pwa": "^0.20.0"
   }
 }
+
