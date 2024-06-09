@@ -32,7 +32,7 @@ function showInstallButton() {
 
     // put button in the same div
     const parentDiv = document.querySelector(
-      ".relative.flex.m-auto.w-fit.h-fit",
+      ".relative.flex.m-auto.w-fit.h-fit.font-Aclonica-Regular",
     );
     parentDiv.appendChild(installButton);
 
@@ -70,7 +70,7 @@ const MainWrapper = () => {
       </div>
       <div className="relative m-auto flex h-fit w-fit font-Aclonica-Regular ">
         <button onClick={showInstallButton} className="showInstallButton">
-          Install
+          
         </button>
       </div>
     </div>
