@@ -8,7 +8,7 @@ const MainWrapper = () => {
   return (
    
      
-      <div className="relative m-auto flex h-fit min-h-screen w-[100vw] p-2">
+      <div className="relative  m-auto flex h-fit min-h-screen w-screen p-2">
         <div className=" relative flex m-auto justify-center">
         <div className="m-auto w-full p-4">
           <WholeTodo />
