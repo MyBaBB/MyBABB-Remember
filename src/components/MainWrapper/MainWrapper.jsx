@@ -61,17 +61,22 @@ function showInstallButton() {
 
 const MainWrapper = () => {
   return (
-    <div className="relative   m-auto h-fit min-h-screen w-screen flex-row p-2">
-      <div className="relative m-auto flex justify-center">
+    <div className="relative    m-auto h-fit min-h-screen w-screen flex p-2">
+      <div className="relative   m-auto flex-row justify-center">
         <div className="m-auto w-full p-4">
           <WholeTodo />
           <Copyright />
         </div>
-      </div>
-      <div className="relative m-auto flex h-fit w-fit font-Aclonica-Regular ">
-        <button onClick={showInstallButton} className="showInstallButton">
-          Install
+      
+      <div className="relative flex m-auto items-center w-fit justify-center   ">
+        <button
+          type="button"
+          className="showInstallButton  bg-gray-700 text-white px-4 py-2 font-Aclonica-Regular hover:opacity-80"
+          onClick={showInstallButton}
+        >
+          Install App
         </button>
+        </div>
       </div>
     </div>
   );
