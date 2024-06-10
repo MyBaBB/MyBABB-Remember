@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FiFastForward } from "react-icons/fi";
 import { FaUserSecret } from "react-icons/fa";
 import { SiTestinglibrary } from "react-icons/si";
-
+import "./Todo.css";
 import { FiRewind } from "react-icons/fi";
 
 export function NewTodoForm({ onSubmit }) {
@@ -24,7 +24,7 @@ export function NewTodoForm({ onSubmit }) {
         <div className="inline-block ">
           <a href="https://resume-hub.mybabb.com/" className="">
             <div className=" rewindButton relative   z-50 inline-block   w-fit   ">
-              <span className="mt-2 inline-block text-black hover:text-blue-50">
+              <span className="mt-2 inline-block text-black ">
                 {" "}
                 <FiRewind size={30} />
               </span>
@@ -39,12 +39,12 @@ export function NewTodoForm({ onSubmit }) {
 
         <div className="inline-block  ">
           <a href="https://mybabb.github.io/MyBaBB_Password_Machine/">
-            <div className=" rewindButton relative z-50    inline-block    ">
+            <div className="fastForwardButton relative z-50    inline-block    ">
               <span className="inline-block text-blue-50">
                 <FaUserSecret size={27} />
               </span>
               &nbsp;&nbsp;
-              <span className="mt-2 inline-block text-black hover:text-blue-50">
+              <span className="mt-2 inline-block text-black ">
                 <FiFastForward size={30} />
               </span>
             </div>
