@@ -110,7 +110,7 @@ export default function App() {
         </button>
         <div
           className="dataToolTip82  m-auto w-fit font-Caprasimo-Regular   "
-          data-tool-tip="Memory Helper"
+          data-tool-tip="add Fish to your list"
         >
           <button
             onClick={toggleRandomEmoji}

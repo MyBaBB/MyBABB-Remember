@@ -22,8 +22,8 @@ const InstallApp = () => {
     return (
       <div>
         {!isAppMode && (
-          <button id="installApp" onClick={handleClick}>
-           install
+          <button id="installApp" onClick={handleClick} className='installButton  font-Changa-Regular'>
+           Install the App
           </button>
         )}
       </div>

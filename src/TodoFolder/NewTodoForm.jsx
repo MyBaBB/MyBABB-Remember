@@ -23,10 +23,10 @@ export function NewTodoForm({ onSubmit }) {
       <div className="relative flex justify-between">
         <div className="inline-block ">
           <a href="https://resume-hub.mybabb.com/" className="">
-            <div className=" rewindButton relative   z-50 inline-block   w-fit   ">
-              <span className="mt-2 inline-block text-black ">
+            <div className="  relative   z-50 inline-block   w-fit   ">
+              <span className="rewindButton mt-2 inline-block text-black ">
                 {" "}
-                <FiRewind size={30} />
+                <FiRewind size={30} className="" />
               </span>
               &nbsp;&nbsp;
               <span className="inline-block text-blue-50 ">
@@ -36,15 +36,16 @@ export function NewTodoForm({ onSubmit }) {
             </div>
           </a>
         </div>
-
+ <span className="fishyNotepad font-Aclonica-Regular mt-2 whitespace-nowrap text-[9px] xs:text-[14px]
+ sm:text-[19px]  hidden xxs:block ">Fishy-Notepad</span>
         <div className="inline-block  ">
           <a href="https://mybabb.github.io/MyBaBB_Password_Machine/">
-            <div className="fastForwardButton relative z-50    inline-block    ">
-              <span className="inline-block text-blue-50">
+            <div className=" relative z-50    inline-block    ">
+              <span className=" inline-block text-blue-50">
                 <FaUserSecret size={27} />
               </span>
               &nbsp;&nbsp;
-              <span className="mt-2 inline-block text-black ">
+              <span className="fastForwardButton mt-2 inline-block text-black ">
                 <FiFastForward size={30} />
               </span>
             </div>

@@ -3,8 +3,8 @@ import { TodoItem } from "./TodoItem";
 
 export function TodoList({ todos, toggleTodo, deleteTodo }) {
   return (
-    <ul className="list">
-      {todos.length === 0 && "No notes Yet"}
+    <ul className="list text-center -mt-4 mb-2 font-Itim-Regular">
+      {todos.length === 0 && "Your Notes Appear Here"}
       {todos.map((todo) => {
         return (
           <TodoItem
