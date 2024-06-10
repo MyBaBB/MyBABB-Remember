@@ -17,11 +17,17 @@ const InstallApp = () => {
             }
         }
     };
-
+    const isAppMode = window.matchMedia('(display-mode: standalone)').matches;
+  
     return (
-        <div>
-            <button id="installApp" onClick={handleClick}>Install</button>
-        </div>
+      <div>
+        {!isAppMode && (
+          <button id="installApp" onClick={handleClick}>
+           install
+          </button>
+        )}
+      </div>
+
     );
 };
 

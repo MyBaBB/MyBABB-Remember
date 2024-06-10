@@ -37,6 +37,13 @@ body {
   text-shadow: 0.5px 0.5px 1px #000000;
   letter-spacing: 0.011cm;
 }
+ .fastForwardButton :hover{
+  color: aliceblue
+ }
+
+ .rewindButton :hover{
+  color: aliceblue
+ }
 .btn {
   background: hsl(200, 100%, 50%, 0.1);
   border: 1px solid black;
