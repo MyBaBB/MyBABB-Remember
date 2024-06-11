@@ -14,8 +14,8 @@ export default defineConfig({
     react(),
     VitePWA({
       manifest: {
-        "name":"Fishy-Notes",
-        "short_name":"Fishy-Notes",
+        "name":"Web Developer Friend",
+        "short_name":"Notes",
         "start_url":"./",
         "display":"standalone",
         "background_color":"#2a61a1",

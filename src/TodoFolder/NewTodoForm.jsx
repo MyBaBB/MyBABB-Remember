@@ -40,7 +40,7 @@ export function NewTodoForm({ onSubmit }) {
           className="fishyNotepad mt-2 hidden whitespace-nowrap font-Aclonica-Regular text-[9px]
  xxs:block  xs:text-[14px] sm:text-[19px] "
         >
-          Fishy-Notepad
+          🐟&nbsp;Notepad
         </span>
         <div className="inline-block  ">
           <a href="https://mybabb.github.io/MyBaBB_Password_Machine/">
