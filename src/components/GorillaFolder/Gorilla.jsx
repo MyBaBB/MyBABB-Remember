@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
- 
 
 import "./Gorilla.css";
 import Gorilla2Banana from "./Gorilla2WithBanana100px.png";
@@ -22,7 +21,7 @@ const Gorilla = () => {
             <div className="absolute  bottom-[-1rem]  left-[0]">
               <img src={Gorilla2Banana} alt="Gorilla With Banana" />
             </div>
-            <div className="absolute z-[-1]  right-[-2.2rem] top-[-3rem] ">
+            <div className="absolute right-[-2.2rem]  top-[-3rem] z-[-1] ">
               <img src={BananaTree} alt="Banana Tree" />
             </div>
           </div>
