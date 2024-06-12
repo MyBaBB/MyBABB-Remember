@@ -39,7 +39,7 @@ export default {
       varMEDSPACE:           "#1b3854", 
       varLIGHTSPACE:         "#264d73", 
     },
-  },
+  
   fontFamily: {
 'Aclonica-Regular': ['Aclonica-Regular', 'sans-serif'],
 'ArchivoBlack-Regular': ['ArchivoBlack-Regular', 'sans-serif'],
@@ -96,7 +96,10 @@ export default {
     'lg': '1024px',
     'xl': '1280px',
   },
+ 
+  },
   
   plugins: [],
+
 }
-}
+};

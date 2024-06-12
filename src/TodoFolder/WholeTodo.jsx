@@ -84,10 +84,13 @@ export default function App() {
 
   function copyAllTodos() {
     let todosText = "";
-    todos.slice().reverse().forEach((todo, index) => {
-      todosText +=
-        index + 1 + ". " + getRandomEmoji() + " " + todo.title + " " + "\n";
-    });
+    todos
+      .slice()
+      .reverse()
+      .forEach((todo, index) => {
+        todosText +=
+          index + 1 + ". " + getRandomEmoji() + " " + todo.title + " " + "\n";
+      });
     navigator.clipboard.writeText(todosText);
   }
   function copyAllTodosNormal() {
@@ -98,7 +101,6 @@ export default function App() {
     });
     navigator.clipboard.writeText(todosText);
   }
-
 
   return (
     <>
@@ -117,91 +119,89 @@ export default function App() {
           deleteTodo={deleteTodo}
         />
 
+        {/* Copy All Options Folder */}
 
-
-
-
-
-        
-<div className=" w-fit m-auto">Options</div>
-        <button
-          onClick={() => {
-            copyAllTodos();
-            alert("👉🏻 Copied All Items to your ClipBoard ✍🏻");
-          }}
-          className="btn2 copyButton relative m-auto flex justify-center    from-green-600
-                 to-green-950   font-PTSerif-Bold text-blue-50 hover:bg-gradient-to-b"
-        >
-          Copy All ⬆️
-        </button>
-        <button
-          onClick={() => {
-            copyAllTodosNormal();
-            alert("👉🏻 Copied All Items to your ClipBoard ✍🏻");
-          }}
-          className="btn2 mt-2  copyButton relative m-auto flex justify-center    from-green-600
-                 to-green-950   font-PTSerif-Bold text-blue-50 hover:bg-gradient-to-b"
-        >
-          Copy all ⬇️
-        </button>
-        <div
-          className="dataToolTip82  m-auto w-fit font-Caprasimo-Regular   "
-          data-tool-tip="add Fish to your list"
-        >
+        <div className="copyAllOptions fit relative m-auto mt-[-3rem] flex w-[150px] flex-col items-center rounded-lg">
           <button
-            onClick={toggleRandomEmoji}
-            className={`btn2 toggleButton relative m-auto mb-8 mt-2  flex justify-center    font-PTSerif-Bold
-                text-blue-50   hover:bg-gradient-to-b ${isRandomEmojiEnabled ? "from-green-600 to-green-950" : "from-red-600 to-red-950"}`}
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="btn3 relative m-auto flex w-full   items-center justify-between  rounded-lg 
+         from-blue-700  to-blue-950 px-2 font-PTSerif-Bold text-blue-50 
+             hover:bg-gradient-to-b  "
           >
-            {isRandomEmojiEnabled ? "Add Fish" : "No Fish"}
+            &nbsp;&nbsp;Options
+            {isOpen ? (
+              <AiOutlineCaretUp className="h-8" />
+            ) : (
+              <AiOutlineCaretDown className="h-8" />
+            )}
           </button>
-        </div>
-        <div className="tools relative flex h-[40px] w-[150px] flex-col items-center rounded-lg">
-        <button
-          onClick={() => setIsOpen((prev) => !prev)}
-          className="flex w-full items-center justify-between rounded-lg border-4 
-          border-transparent bg-[#243055] p-0 py-2 text-center font-Orbitron 
-          text-lg font-bold tracking-wider text-blue-200 duration-300
-          hover:bg-blue-200 hover:bg-opacity-20 active:border-white active:text-white"
-        >
-          &nbsp;&nbsp;Tool Box
-          {isOpen ? (
-            <AiOutlineCaretUp className="h-8" />
-          ) : (
-            <AiOutlineCaretDown className="h-8" />
-          )}
-        </button>
 
-        {isOpen && (
-          <div
-            className="absolute top-[2.85rem] flex w-full flex-col items-start 
-          rounded-lg bg-[#243055] p-1 text-blue-200"
-          >
-             
+          {isOpen && (
+            <div
+              className="animate-open-menu relative  flex w-full origin-top flex-col 
+          rounded-lg bg-grey-800 p-2  text-blue-200"
+            >
               <div>
-                <a href="https://mybabb.github.io/MyBaBB_Password_Machine/">
-                  <div
-                    className="relative flex w-full flex-row justify-between
-                   py-1 hover:rounded-lg hover:bg-blue-300"
+                <button
+                  onClick={() => {
+                    copyAllTodos();
+                    alert("👉🏻 Copied All Items to your ClipBoard ✍🏻");
+                  }}
+                  className="btn2   copyButton   relative m-auto my-1 flex
+           w-full justify-center   from-green-600
+                 to-green-950    text-blue-50 hover:bg-gradient-to-b"
+                >
+                  {/* first button */}
+
+                  <span
+                    className="relative  flex w-full justify-between font-PTSerif-Bold 
+           "
                   >
-                    <h3 className="font-bold "></h3>
-                    <h3></h3>
-                  </div>
-                </a>
+                    Copy All
+                  </span>
+                  <span>⬆️</span>
+                </button>
 
-                <a href="https://mybabb.github.io/MyBABB-Remember/">
-                  <div className="flex w-full flex-row justify-between hover:rounded-lg  hover:bg-blue-300   ">
-                    <h3 className="font-bold"></h3>
-                    <h3 className=""></h3>
-                  </div>
-                </a>
+                {/* second button */}
+
+                <button
+                  onClick={() => {
+                    copyAllTodosNormal();
+                    alert("👉🏻 Copied All Items to your ClipBoard ✍🏻");
+                  }}
+                  className="btn2 copyButton   relative m-auto my-1 flex
+           w-full justify-center   from-green-600
+                 to-green-950    text-blue-50 hover:bg-gradient-to-b"
+                >
+                  <span
+                    className="relative  flex w-full justify-between font-PTSerif-Bold "
+                  >
+                    {" "}
+                    Copy all{" "}
+                  </span>
+                  <span>⬇️</span>
+                </button>
+
+                {/* third button */}
+
+                <div className="relative flex w-full  justify-center">
+                  <button
+                    onClick={toggleRandomEmoji}
+                    className={`btn2 toggleButton  
+                    w-full font-PTSerif-Bold m-auto  text-blue-100    
+                  hover:bg-gradient-to-b ${
+                    isRandomEmojiEnabled
+                      ? "from-green-600 to-green-950"
+                      : "from-red-600 to-red-950"
+                  }`}
+                  >
+                    {isRandomEmojiEnabled ? "Add Fish Labels" : "Remove Fish"}
+                  </button>
+                </div>
               </div>
-            
-          </div>
-        )}
-      </div>
-
-        
+            </div>
+          )}
+        </div>
       </div>
     </>
   );

@@ -39,7 +39,8 @@ export function NewTodoForm({ onSubmit }) {
         <span
           className="fishyNotepad mt-2 hidden whitespace-nowrap font-Aclonica-Regular text-[9px]
  xxs:block  xs:text-[14px] sm:text-[19px] "
-        >Notepad
+        >
+          Notepad
         </span>
         <div className="inline-block  ">
           <a href="https://mybabb.github.io/MyBaBB_Password_Machine/">
@@ -71,12 +72,10 @@ export function NewTodoForm({ onSubmit }) {
         />
 
         <button
-          className="btn3 relative m-auto flex justify-center  from-blue-700 
-         to-blue-950 text-blue-50 hover:bg-gradient-to-b "
+          className="btn3 relative m-auto flex justify-center  from-blue-700 to-blue-950  text-blue-50 
+         hover:bg-gradient-to-b "
         >
           <span className="font-PTSerif-Bold">Click to Add Item</span>
-
-          <span className="font-ArchivoBlack-Regular"> </span>
         </button>
       </form>
     </>
