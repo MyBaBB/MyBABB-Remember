@@ -68,8 +68,7 @@ body {
   border-radius: 0.25em;
   cursor: pointer;
   outline: none;
-  margin-left: 0.1rem;
-  margin-right: 0.1rem;
+ 
 }
 .btn3 {
   font-size: 15px;
@@ -93,6 +92,7 @@ body {
 
 .copyButton {
   text-shadow: 1px 1px 2px #000000;
+  margin-top: ;
 }
 .new-item-form input {
   outline: none;
@@ -107,6 +107,13 @@ body {
 .fishyNotepad {
   text-shadow: 1px 1px 2px #000000;
   color: deepskyblue;
+}
+.flipperButton {
+  text-shadow: 1px 1px 2px #000000;
+  color: deepskyblue;
+}
+.flipperButton:hover {
+  color: lightskyblue;
 }
 .new-item-form input:focus {
   border: 1px solid hsl(200, 100%, 70%);
@@ -277,4 +284,18 @@ body {
 
   --scale: 0;
   z-index: 49;
+}
+@keyframes open-menu {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(01.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.animate-open-menu {
+  animation: open-menu 0.5s ease-in-out forwards;
 }
