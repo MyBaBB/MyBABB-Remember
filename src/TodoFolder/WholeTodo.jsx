@@ -72,23 +72,23 @@ export default function App() {
       return currentTodos.filter((todo) => todo.id !== id);
     });
   }
-  function copyAllTodos() {
-    let todosText = "";
-    todos.forEach((todo, index) => {
-      todosText +=
-        index + 1 + ". " + getRandomEmoji() + " " + todo.title + " " + "\n";
-    });
-    navigator.clipboard.writeText(todosText);
-  }
-
   // function copyAllTodos() {
   //   let todosText = "";
-  //   todos.slice().reverse().forEach((todo, index) => {
+  //   todos.forEach((todo, index) => {
   //     todosText +=
   //       index + 1 + ". " + getRandomEmoji() + " " + todo.title + " " + "\n";
   //   });
   //   navigator.clipboard.writeText(todosText);
   // }
+
+  function copyAllTodos() {
+    let todosText = "";
+    todos.slice().reverse().forEach((todo, index) => {
+      todosText +=
+        index + 1 + ". " + getRandomEmoji() + " " + todo.title + " " + "\n";
+    });
+    navigator.clipboard.writeText(todosText);
+  }
 
 
   return (
