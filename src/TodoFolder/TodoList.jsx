@@ -1,39 +1,35 @@
-/* eslint-disable react/prop-types */
 import { TodoItem } from "./TodoItem";
+import { useState } from "react";
+import PropTypes from "prop-types";
 
 export function TodoList({ todos, toggleTodo, deleteTodo }) {
+TodoList.propTypes = {
+  todos: PropTypes.array.isRequired,
+  toggleTodo: PropTypes.func.isRequired,
+  deleteTodo: PropTypes.func.isRequired,
+};
+  const [isReversed, setIsReversed] = useState(false);
+
+  const reversedTodos = isReversed ? todos.slice().reverse() : todos;
+
   return (
-    <ul className="list -mt-4 mb-2 text-center font-Itim-Regular">
-      {todos.length === 0 && "Your Notes Appear Here"}
-      {todos.map((todo) => {
-        return (
+    <div>
+      <div className=" relative flex mb-4 -mt-4  ">
+      <button onClick={() => setIsReversed(!isReversed)} 
+        className="flipperButton font-Itim-Regular">
+        {isReversed ? "🐬 Flipper" : "🐬 Flipper"}
+      </button>
+      </div>
+      <ul className="list -mt-4 mb-2 text-center font-Itim-Regular">
+        {reversedTodos.map((todo) => (
           <TodoItem
             {...todo}
             key={todo.id}
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}
           />
-        );
-      })}
-    </ul>
+        ))}
+      </ul>
+    </div>
   );
 }
-
-
-
-//   <ul className="list -mt-4 mb-2 text-center font-Itim-Regular">
-// {todos.length === 0 && "Your Notes Appear Here"}
-// {todos.slice().reverse().map((todo) => {
-//   return (
-//     <TodoItem
-//       {...todo}
-//       key={todo.id}
-//       toggleTodo={toggleTodo}
-//       deleteTodo={deleteTodo}
-//     />
-//   );
-// })}
-// </ul> 
-//   );
-// }
-     

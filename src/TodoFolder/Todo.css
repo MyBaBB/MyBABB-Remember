@@ -108,6 +108,14 @@ body {
   text-shadow: 1px 1px 2px #000000;
   color: deepskyblue;
 }
+.flipperButton{
+  text-shadow: 1px 1px 2px #000000;
+  color: deepskyblue;
+}
+.flipperButton:hover {
+  color: lightskyblue;
+  ;
+}
 .new-item-form input:focus {
   border: 1px solid hsl(200, 100%, 70%);
 }
