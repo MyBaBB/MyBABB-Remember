@@ -119,9 +119,9 @@ export default function App() {
           deleteTodo={deleteTodo}
         />
 
-        {/* Copy All Options Folder */}
+        {/* Copy All Options Folder  Temporary xxxxxxx hidden xxxxxxxxx */}
 
-        <div className="copyAllOptions fit relative m-auto mt-[-3rem] flex w-[150px] flex-col items-center rounded-lg">
+        <div className="copyAllOptions hidden fit relative m-auto xs:mt-[-3rem]   w-[150px] flex-col items-center rounded-lg">
           <button
             onClick={() => setIsOpen((prev) => !prev)}
             className="btn3 relative m-auto flex w-full   items-center justify-between  rounded-lg 

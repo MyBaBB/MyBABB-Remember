@@ -14,12 +14,13 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
 
   return (
     <div>
-      <div className=" relative -mt-4 mb-4 flex  ">
+      <div className=" relative -mt-4 mb-4 flex border-2 border-red-500 w-full justify-start
+        ">
         <button
           onClick={() => setIsReversed(!isReversed)}
-          className="flipperButton font-Itim-Regular"
+          className="flipperButton font-Itim-Regular text-[20px]"
         >
-          {isReversed ? "🐬 Flipper" : "🐬 Flipper"}
+          {isReversed ? "⬆️ Chronology" : "⬇️ Chronology"}
         </button>
       </div>
       <ul className="list -mt-4 mb-2 text-center font-Itim-Regular">
