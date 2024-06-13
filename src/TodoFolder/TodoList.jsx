@@ -8,20 +8,13 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
     toggleTodo: PropTypes.func.isRequired,
     deleteTodo: PropTypes.func.isRequired,
   };
-  const [isReversed, setIsReversed] = useState(false);
+  const [isReversed] = useState(false);
 
   const reversedTodos = isReversed ? todos.slice().reverse() : todos;
 
   return (
     <div>
-      <div className=" relative -mt-4 mb-4 flex  ">
-        <button
-          onClick={() => setIsReversed(!isReversed)}
-          className="flipperButton font-Itim-Regular"
-        >
-          {isReversed ? "🐬 Flipper" : "🐬 Flipper"}
-        </button>
-      </div>
+      
       <ul className="list -mt-4 mb-2 text-center font-Itim-Regular">
         {reversedTodos.map((todo) => (
           <TodoItem

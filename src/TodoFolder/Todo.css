@@ -13,8 +13,14 @@ body {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
 .controlContainer {
   box-shadow: 0px 0px 7px #0c0e08;
+}
+
+.alertBox {
+  text-shadow: 1px 1px 2px #000000;
+  text-decoration: underline;
 }
 .new-item-form {
   display: flex;
@@ -68,7 +74,6 @@ body {
   border-radius: 0.25em;
   cursor: pointer;
   outline: none;
- 
 }
 .btn3 {
   font-size: 15px;
@@ -92,7 +97,7 @@ body {
 
 .copyButton {
   text-shadow: 1px 1px 2px #000000;
-  margin-top: ;
+  margin-top:;
 }
 .new-item-form input {
   outline: none;
@@ -298,4 +303,19 @@ body {
 }
 .animate-open-menu {
   animation: open-menu 0.5s ease-in-out forwards;
+}
+@keyframes close-menu {
+  0% {
+    transform: scaleY(1);
+  }
+  80% {
+    transform: scaleY(0.8);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+.animate-close-menu {
+  animation: close-menu 0.3s ease-in-out forwards;
+  
 }
