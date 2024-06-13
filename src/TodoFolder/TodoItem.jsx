@@ -6,6 +6,7 @@ function copyTodoItem(title) {
 export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
   return (
     <div className="outerDivContainer   m-auto w-fit">
+     
       <li className="ListItem9  ">
         <label
           className="label1 relative m-auto flex w-[250px] rounded-md border-[1px] border-black bg-slate-700 
