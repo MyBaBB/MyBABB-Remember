@@ -2,7 +2,7 @@
 import React from "react";
 import WholeTodo from "../../TodoFolder/WholeTodo.jsx";
 import Copyright from "../Copyright";
-import WebApp from "./PWAFolder/WebApp.jsx";
+
 import "./MainWrapper.css";
 //  import Gorilla from "../GorillaFolder/Gorilla.jsx"
 
@@ -13,7 +13,7 @@ const MainWrapper = () => {
         <div className="m-auto w-full p-4">
           {/* <Gorilla /> */}
           <WholeTodo />
-          <WebApp />
+          
           <Copyright />
         </div>
       </div>

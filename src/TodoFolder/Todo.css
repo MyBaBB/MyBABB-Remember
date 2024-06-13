@@ -67,7 +67,7 @@ body {
 .btn2 {
   font-size: 15px;
   background: hsl(200, 100%, 50%, 0.1);
-  border: 1px solid black;
+  border: 1px solid deepskyblue;
   box-shadow: 1px 1px 4px #0c0e08;
   text-shadow: 1px 1px 4px #0c0e08;
   padding: 0.25em 0.5em;

@@ -3,11 +3,11 @@ import { NewTodoForm } from "./NewTodoForm";
 import "./Todo.css";
 import { TodoList } from "./TodoList";
 import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai";
- 
+import  WebApp  from "../components/MainWrapper/PWAFolder/WebApp"
 import { GiClick } from "react-icons/gi";
 import { IoFishOutline } from "react-icons/io5";
 import { CgCopy } from "react-icons/cg";
-
+import    NightOcean  from "../assets/nightOcean.jpg";
 
 
 export default function App() {
@@ -131,10 +131,10 @@ export default function App() {
         >
           <button
             onClick={() => setIsOpen((prev) => !prev)}
-            className="btn3 relative mt-12 m-auto flex w-full   
+            className="btn3 relative -mt-4  xxs:mt-4 xs:mt-10 -mb-2 m-auto flex w-full   
             items-center justify-between  rounded-[5px] 
-           from-blue-700  to-blue-950 px-2 font-PTSerif-Bold text-blue-50 
-             hover:bg-gradient-to-b   "
+           from-blue-700 bg-gray-500 to-blue-950 px-2 font-PTSerif-Bold text-blue-50 
+             hover:bg-gradient-to-b z-50  "
           >
             &nbsp;&nbsp;Options
             {isOpen ? (
@@ -146,7 +146,7 @@ export default function App() {
 
             
             <div
-            className={`bg-grey-800 relative flex w-full origin-top flex-col rounded-lg p-2 text-blue-200 ${
+            className={`bg-grey-800 z-50 relative flex w-full origin-top flex-col rounded-lg p-2 text-blue-200 ${
               isOpen ? "animate-open-menu" : "animate-close-menu"
             }`}  
           >
@@ -218,6 +218,13 @@ export default function App() {
             </div>
           
         </div>
+        <div className="relative flex  justify-center mt-[-9.5rem] xxs:mt-[-9.5rem] xs:mt-[-9.5rem]  z-[0]">
+        <img src={NightOcean} alt="Ocean at Night" className="rounded-lg"></img>
+        </div>
+        <div className=" mt-[1rem] mb-[-1rem]">
+        
+       < WebApp />
+      </div>
       </div>
     </>
   );
