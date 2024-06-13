@@ -35,8 +35,17 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
         <button
           onClick={() => {
             copyTodoItem(title);
-            alert("👉🏻 Copied to ClipBoard ✍🏻");
-          }}
+            const alertBox = document.createElement('div');
+                    alertBox.textContent = "👉🏻 Copied Single Item to your ClipBoard ✍🏻   ";
+                    alertBox.classList.add('fixed', 'top-1/2', 'left-1/2', 
+                      'transform', '-translate-x-1/2', '-translate-y-1/2', 'bg-red-950', 
+                      'py-2', 'px-4', 'rounded-lg', 'shadow-lg', 'z-50', "font-PTSerif-Bold",
+                       'border-2', 'border-yellow-800', "text-blue-50");
+                    document.body.appendChild(alertBox);
+                    setTimeout(() => {
+                        alertBox.remove();
+                    }, 2000);
+                  }}
           className="btn  copyButton relative flex  from-green-600 to-green-950 
             font-PTSerif-Bold text-blue-50 hover:bg-gradient-to-b"
         >

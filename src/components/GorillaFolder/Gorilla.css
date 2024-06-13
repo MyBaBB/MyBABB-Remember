@@ -4,10 +4,23 @@
   background-color: greenyellow;
   width: 80%;
   margin: 0 auto;
-  margin-bottom: -20px;
 
   border-radius: 12px;
 }
 .gorilla {
   text-shadow: 2px 2px 4px #000000;
+}
+.gearIcon {
+  font-size: 1.5rem;
+  color: greenyellow;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

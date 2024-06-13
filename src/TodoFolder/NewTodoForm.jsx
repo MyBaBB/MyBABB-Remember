@@ -37,7 +37,7 @@ export function NewTodoForm({ onSubmit }) {
           </a>
         </div>
         <span
-          className="fishyNotepad mt-2 hidden whitespace-nowrap font-Aclonica-Regular text-[9px]
+          className="fishyNotepad mt-2  whitespace-nowrap font-Aclonica-Regular text-[14px]
  xxs:block  xs:text-[14px] sm:text-[19px] "
         >
           Notepad

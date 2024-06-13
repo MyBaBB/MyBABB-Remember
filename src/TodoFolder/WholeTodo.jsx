@@ -3,6 +3,11 @@ import { NewTodoForm } from "./NewTodoForm";
 import "./Todo.css";
 import { TodoList } from "./TodoList";
 import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai";
+import Gorilla from "../components/GorillaFolder/Gorilla";
+import { GiClick } from "react-icons/gi";
+import { IoFishOutline } from "react-icons/io5";
+import { CgCopy } from "react-icons/cg";
+
 export default function App() {
   const [todos, setTodos] = useState(() => {
     const localValue = localStorage.getItem("ITEMS");
@@ -37,6 +42,7 @@ export default function App() {
   }
   const [isRandomEmojiEnabled, setIsRandomEmojiEnabled] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const [isTodoOrderReversed, setIsTodoOrderReversed] = useState(false);
 
   function toggleRandomEmoji() {
     setIsRandomEmojiEnabled((prevValue) => !prevValue);
@@ -82,17 +88,7 @@ export default function App() {
   //   navigator.clipboard.writeText(todosText);
   // }
 
-  function copyAllTodos() {
-    let todosText = "";
-    todos
-      .slice()
-      .reverse()
-      .forEach((todo, index) => {
-        todosText +=
-          index + 1 + ". " + getRandomEmoji() + " " + todo.title + " " + "\n";
-      });
-    navigator.clipboard.writeText(todosText);
-  }
+  
   function copyAllTodosNormal() {
     let todosText = "";
     todos.forEach((todo, index) => {
@@ -101,9 +97,15 @@ export default function App() {
     });
     navigator.clipboard.writeText(todosText);
   }
-
+  function toggleTodoOrder() {
+    setIsTodoOrderReversed((prevValue) => !prevValue);
+    const reversedTodos = isTodoOrderReversed ? todos.slice().reverse() : todos;
+    setTodos(reversedTodos);
+    localStorage.setItem("todos", JSON.stringify(reversedTodos));
+  }
   return (
     <>
+      <Gorilla />
       <div
         className="controlContainer relative m-auto  w-fit rounded-3xl border-2 border-black
         p-4  "
@@ -121,7 +123,10 @@ export default function App() {
 
         {/* Copy All Options Folder  Temporary xxxxxxx hidden xxxxxxxxx */}
 
-        <div className="copyAllOptions hidden fit relative m-auto xs:mt-[-3rem]   w-[150px] flex-col items-center rounded-lg">
+        <div
+          className="copyAllOptions    fit relative m-auto w-[150px]   flex-col items-center rounded-lg
+         xs:mt-[-3rem]"
+        >
           <button
             onClick={() => setIsOpen((prev) => !prev)}
             className="btn3 relative m-auto flex w-full   items-center justify-between  rounded-lg 
@@ -138,64 +143,69 @@ export default function App() {
 
           {isOpen && (
             <div
-              className="animate-open-menu relative  flex w-full origin-top flex-col 
-          rounded-lg bg-grey-800 p-2  text-blue-200"
+              className="animate-open-menu bg-grey-800  relative flex w-full origin-top 
+          flex-col rounded-lg p-2  text-blue-200"
             >
               <div>
-                <button
-                  onClick={() => {
-                    copyAllTodos();
-                    alert("👉🏻 Copied All Items to your ClipBoard ✍🏻");
-                  }}
-                  className="btn2   copyButton   relative m-auto my-1 flex
-           w-full justify-center   from-green-600
-                 to-green-950    text-blue-50 hover:bg-gradient-to-b"
-                >
-                  {/* first button */}
+                {/* 1st */}
 
-                  <span
-                    className="relative  flex w-full justify-between font-PTSerif-Bold 
-           "
-                  >
-                    Copy All
+                <div
+            onClick={toggleTodoOrder}
+            
+            className="btn2 copyButton   relative m-auto my-1 flex
+            w-full justify-center   from-green-600
+                  to-green-950    text-blue-50 hover:bg-gradient-to-b"
+                 >
+           <span className="relative  flex w-full justify-between font-PTSerif-Bold ">
+                    {" "}
+                    Reverse{" "}
                   </span>
-                  <span>⬆️</span>
-                </button>
-
-                {/* second button */}
+                  <span className="inline-block whitespace-nowrap"></span><GiClick size={25} />&nbsp;2x
+          </div>
+                
+                {/* 2nd button */}
 
                 <button
                   onClick={() => {
                     copyAllTodosNormal();
-                    alert("👉🏻 Copied All Items to your ClipBoard ✍🏻");
+                    const alertBox = document.createElement('div');
+                    alertBox.textContent = "👉🏻 Copied Your List to your ClipBoard ✍🏻   ";
+                    alertBox.classList.add('fixed', 'top-1/2', 'left-1/2', 
+                      'transform', '-translate-x-1/2', '-translate-y-1/2', 'bg-red-950', 
+                      'py-2', 'px-4', 'border-2', 'border-yellow-800',  'rounded-lg', 'shadow-lg', 'z-50',);
+                    document.body.appendChild(alertBox);
+                    setTimeout(() => {
+                        alertBox.remove();
+                    }, 2000);
                   }}
                   className="btn2 copyButton   relative m-auto my-1 flex
            w-full justify-center   from-green-600
                  to-green-950    text-blue-50 hover:bg-gradient-to-b"
                 >
-                  <span
-                    className="relative  flex w-full justify-between font-PTSerif-Bold "
-                  >
+                  <span className="relative  flex w-full justify-between font-PTSerif-Bold ">
                     {" "}
-                    Copy all{" "}
+                    Copy List{" "}
                   </span>
-                  <span>⬇️</span>
+                  <span className="inline-block"><CgCopy /></span>
                 </button>
 
-                {/* third button */}
+                {/*3rd button */}
 
-                <div className="relative flex w-full  justify-center">
+                <div className="   w-full   ">
                   <button
                     onClick={toggleRandomEmoji}
-                    className={`btn2 toggleButton  
-                    w-full font-PTSerif-Bold m-auto  text-blue-100    
-                  hover:bg-gradient-to-b ${
+                    className={`btn2 toggleButton relative flex  justify-between  
+                    w-full font-PTSerif-Bold  text-blue-100    
+                  hover:bg-gradient-to-b  ${
                     isRandomEmojiEnabled
                       ? "from-green-600 to-green-950"
                       : "from-red-600 to-red-950"
                   }`}
                   >
-                    {isRandomEmojiEnabled ? "Add Fish Labels" : "Remove Fish"}
+                    {isRandomEmojiEnabled ? " Fish On" : "Fish Off "}
+                    <span className="inline-block  ">
+                      <IoFishOutline size={20}  />
+                    </span>
                   </button>
                 </div>
               </div>

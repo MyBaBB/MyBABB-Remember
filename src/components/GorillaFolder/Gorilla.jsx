@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-
+import { PiGearFineLight } from "react-icons/pi";
 import "./Gorilla.css";
 import Gorilla2Banana from "./Gorilla2WithBanana100px.png";
 import BananaTree from "./BananaTree2.png";
@@ -27,8 +27,18 @@ const Gorilla = () => {
           </div>
           <p className="mt-8 whitespace-nowrap font-BlackOpsOne-Regular text-3xl text-lime-400">
             Under Construction
-            <hr className="hr4 mb-1  mt-1  " />
+            <hr className="hr4  " />
           </p>
+
+          <p>
+            <span className="gearIcon absolute bottom-[4rem] left-[1rem]">
+              <PiGearFineLight size={20} />
+            </span>
+            &nbsp;&nbsp; Working on Advanced Features
+          </p>
+          <p>Refresh your Browser After. </p>
+
+          <p>Items are only removed if you Clear Cache</p>
         </div>
       </div>
     </div>
