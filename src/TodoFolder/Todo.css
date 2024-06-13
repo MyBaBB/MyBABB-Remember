@@ -293,12 +293,15 @@ body {
 @keyframes open-menu {
   0% {
     transform: scaleY(0);
+     opacity: 0;
   }
   80% {
     transform: scaleY(01.2);
+    opacity: 0.5;
   }
   100% {
     transform: scaleY(1);
+    opacity: 1;
   }
 }
 .animate-open-menu {
@@ -307,15 +310,20 @@ body {
 @keyframes close-menu {
   0% {
     transform: scaleY(1);
+    opacity: 1;
   }
-  80% {
+  40% {
     transform: scaleY(0.8);
+    opacity: .5;
   }
-  100% {
+100% {
     transform: scaleY(0);
+    opacity: .0;
+    
   }
 }
 .animate-close-menu {
-  animation: close-menu 0.3s ease-in-out forwards;
+  animation: close-menu 0.6s ease-in-out forwards;
   
 }
+
