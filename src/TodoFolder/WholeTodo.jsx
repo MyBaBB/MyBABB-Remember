@@ -3,10 +3,12 @@ import { NewTodoForm } from "./NewTodoForm";
 import "./Todo.css";
 import { TodoList } from "./TodoList";
 import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai";
-import Gorilla from "../components/GorillaFolder/Gorilla";
+ 
 import { GiClick } from "react-icons/gi";
 import { IoFishOutline } from "react-icons/io5";
 import { CgCopy } from "react-icons/cg";
+
+
 
 export default function App() {
   const [todos, setTodos] = useState(() => {
@@ -105,7 +107,7 @@ export default function App() {
   }
   return (
     <>
-      <Gorilla />
+    
       <div
         className="controlContainer relative m-auto  w-fit rounded-3xl border-2 border-black
         p-4  "
@@ -124,46 +126,36 @@ export default function App() {
         {/* Copy All Options Folder  Temporary xxxxxxx hidden xxxxxxxxx */}
 
         <div
-          className="copyAllOptions    fit relative m-auto w-[150px]   flex-col items-center rounded-lg
+          className="copyAllOptions    fit relative m-auto w-[143px]   flex-col items-center rounded-lg
          xs:mt-[-3rem]"
         >
           <button
             onClick={() => setIsOpen((prev) => !prev)}
-            className="btn3 relative m-auto flex w-full   items-center justify-between  rounded-lg 
-         from-blue-700  to-blue-950 px-2 font-PTSerif-Bold text-blue-50 
-             hover:bg-gradient-to-b  "
+            className="btn3 relative mt-12 m-auto flex w-full   
+            items-center justify-between  rounded-[5px] 
+           from-blue-700  to-blue-950 px-2 font-PTSerif-Bold text-blue-50 
+             hover:bg-gradient-to-b   "
           >
             &nbsp;&nbsp;Options
             {isOpen ? (
-              <AiOutlineCaretUp className="h-8" />
+              <AiOutlineCaretUp size={20} color="#00bfff" />
             ) : (
-              <AiOutlineCaretDown className="h-8" />
+              <AiOutlineCaretDown size={20} color="#00bfff" />
             )}
           </button>
 
-          {isOpen && (
+            
             <div
-              className="animate-open-menu bg-grey-800  relative flex w-full origin-top 
-          flex-col rounded-lg p-2  text-blue-200"
-            >
+            className={`bg-grey-800 relative flex w-full origin-top flex-col rounded-lg p-2 text-blue-200 ${
+              isOpen ? "animate-open-menu" : "animate-close-menu"
+            }`}
+          >
               <div>
                 {/* 1st */}
 
-                <div
-            onClick={toggleTodoOrder}
-            
-            className="btn2 copyButton   relative m-auto my-1 flex
-            w-full justify-center   from-green-600
-                  to-green-950    text-blue-50 hover:bg-gradient-to-b"
-                 >
-           <span className="relative  flex w-full justify-between font-PTSerif-Bold ">
-                    {" "}
-                    Reverse{" "}
-                  </span>
-                  <span className="inline-block whitespace-nowrap"></span><GiClick size={25} />&nbsp;2x
-          </div>
+             
                 
-                {/* 2nd button */}
+           
 
                 <button
                   onClick={() => {
@@ -208,9 +200,23 @@ export default function App() {
                     </span>
                   </button>
                 </div>
+
+                <div
+            onClick={toggleTodoOrder} 
+            
+            className="btn2 copyButton   relative m-auto my-1 flex
+            w-full justify-center   from-green-600
+                  to-green-950    text-blue-50 hover:bg-gradient-to-b"
+                 >
+           <span className="relative  flex w-full justify-between font-PTSerif-Bold ">
+                    {" "}
+                    Reverse{" "}
+                  </span>
+                  <span className="inline-block whitespace-nowrap"></span><GiClick size={25} />&nbsp;2x
+          </div>
               </div>
             </div>
-          )}
+          
         </div>
       </div>
     </>
