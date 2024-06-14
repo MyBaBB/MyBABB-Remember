@@ -25,19 +25,25 @@ const InstallApp = () => {
         <button
           id="installApp"
           onClick={handleClick}
-          className="installButton text-[12px] mb-1 font-Changa-Regular"
+          className="installButton mb-1 font-Changa-Regular text-[12px]"
         >
           Install the App
         </button>
       )}
-       <a href="https://www.youtube.com/watch?v=AwfKUpq5seE " className="relative ">
+      <a
+        href="https://www.youtube.com/watch?v=AwfKUpq5seE "
+        className="relative "
+      >
         <div className="relative  mb-1">
-        <button className="installButton relative  
-         flex w-fit justify-center">
-          <span className="  w-full text-[12px] justify-between font-Changa-Regular">
-            IPhone Instructions </span>
-        </button>
-      </div>
+          <button
+            className="installButton relative  
+         flex w-fit justify-center"
+          >
+            <span className="  w-full justify-between font-Changa-Regular text-[12px]">
+              IPhone Instructions{" "}
+            </span>
+          </button>
+        </div>
       </a>
     </div>
   );

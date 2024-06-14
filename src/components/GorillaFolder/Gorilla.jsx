@@ -36,8 +36,10 @@ const Gorilla = () => {
             </span>
             &nbsp;&nbsp; Working on Advanced Features
           </p>
-          <p>Refresh your Browser to remove notice later  </p>
-          <p className="text-[9px] text-blue-100"><u>Ctrl+f5 or Cmd+f5</u> (for Mac) </p>
+          <p>Refresh your Browser to remove notice later </p>
+          <p className="text-[9px] text-blue-100">
+            <u>Ctrl+f5 or Cmd+f5</u> (for Mac){" "}
+          </p>
           <p>Items are only removed if you Clear Cache</p>
         </div>
       </div>

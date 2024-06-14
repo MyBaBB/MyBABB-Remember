@@ -13,7 +13,7 @@ const MainWrapper = () => {
         <div className="m-auto w-full p-4">
           {/* <Gorilla /> */}
           <WholeTodo />
-          
+
           <Copyright />
         </div>
       </div>
