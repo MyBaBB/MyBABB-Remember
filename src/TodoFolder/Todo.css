@@ -65,30 +65,38 @@ body {
 }
 
 .btn2 {
+  color:#dceef4 ;
+  background: rgba(14, 14, 14, 0.61);
   font-size: 15px;
-  background: hsl(200, 100%, 50%, 0.1);
-  border: 1px solid deepskyblue;
   box-shadow: 1px 1px 4px #0c0e08;
   text-shadow: 1px 1px 4px #0c0e08;
   padding: 0.25em 0.5em;
+  border: 1.5px solid #00bfff;
   border-radius: 0.25em;
   cursor: pointer;
-  outline: none;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+  
+}
+.btn2:hover {
+  border: 1.5px solid black;
 }
 .btn3 {
   font-size: 15px;
-  background: hsl(200, 100%, 50%, 0.1);
-  border: 1px solid black;
+  color:#dceef4 ;
+  background: rgba(14, 14, 14, 0.61);
   box-shadow: 1px 1px 4px #0c0e08;
   text-shadow: 1px 1px 4px #0c0e08;
   padding: 0.25em 0.5em;
+  border: 1.5px solid #00bfff;
   border-radius: 0.25em;
   cursor: pointer;
-  outline: none;
-  margin-left: 0.1rem;
+   margin-left: 0.1rem;
   margin-right: 0.1rem;
 }
-
+.btn3:hover {
+  border: 1.5px solid black;
+}
 .btn.btn-danger {
   background: hsl(0, 100%, 40%, 0.1);
   border: none;

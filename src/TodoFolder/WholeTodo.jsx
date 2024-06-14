@@ -7,7 +7,7 @@ import WebApp from "../components/MainWrapper/PWAFolder/WebApp";
 import { GiClick } from "react-icons/gi";
 import { IoFishOutline } from "react-icons/io5";
 import { CgCopy } from "react-icons/cg";
-// import    NightOcean  from "../assets/nightOcean.jpg";
+import    NightOcean  from "../assets/nightOcean.jpg";
 
 export default function App() {
   const [todos, setTodos] = useState(() => {
@@ -52,15 +52,11 @@ export default function App() {
     const reversedTodos = !isTodoOrderReversed ? [...todos].reverse() : todos;
     setTodos(reversedTodos);
     setIsTodoOrderReversed(!isTodoOrderReversed); // Update the state based on the new value
-
-    // Since we're now setting the state synchronously within the same function,
-    // we don't need to rely on the previous state value here anymore.
-    localStorage.setItem("todos", JSON.stringify(reversedTodos));
   }
-  // Here I need to write the function that toggles the top and bottom
+
+  // switches input from top to bottom
   const [addToTop, setAddToTop] = useState(true);
   const [isAddToTopEnabled, setIsAddToTopEnabled] = useState(false);
-  // const [isAddToBottomEnabled, setAddToBottomEnabled] = useState(true);
 
   function toggleAddToTop() {
     setAddToTop((prevValue) => !prevValue);
@@ -69,9 +65,7 @@ export default function App() {
     setIsAddToTopEnabled((prevValue) => !prevValue);
   }
 
-  // function toggleAddToBottom() {
-  //   setAddToBottomEnabled( );
-  // }
+  
 
   const [isRandomEmojiEnabled, setIsRandomEmojiEnabled] = useState(true);
   function toggleRandomEmoji() {
@@ -109,14 +103,7 @@ export default function App() {
       return currentTodos.filter((todo) => todo.id !== id);
     });
   }
-  // function copyAllTodos() {
-  //   let todosText = "";
-  //   todos.forEach((todo, index) => {
-  //     todosText +=
-  //       index + 1 + ". " + getRandomEmoji() + " " + todo.title + " " + "\n";
-  //   });
-  //   navigator.clipboard.writeText(todosText);
-  // }
+ 
 
   function copyAllTodosNormal() {
     let todosText = "";
@@ -147,30 +134,31 @@ export default function App() {
         {/* Copy All Options Folder  Temporary xxxxxxx hidden xxxxxxxxx */}
 
         <div
-          className="copyAllOptions    fit relative m-auto w-[143px]   flex-col items-center rounded-lg
-         xs:mt-[-3rem]"
+          className="copyAllOptions
+          relative m-auto mt-[-1.3rem]    flex-col items-center 
+           rounded-lg  px-[2rem] z-[51]"
         >
           <button
             onClick={() => setIsOpen((prev) => !prev)}
-            className="btn3 relative z-50  m-auto -mb-2 -mt-4 flex w-full items-center   
-            justify-between rounded-[5px]  bg-gray-500 
-           from-blue-700 to-blue-950 px-2 font-PTSerif-Bold text-blue-50 hover:bg-gradient-to-b 
-             xxs:mt-4 xs:mt-10  "
-          >
+            className="btn3 z-50  m-auto mt-4 relative  flex w-[80%] items-center   
+            justify-between rounded-[5px]   
+           from-[#00bfff] to-blue-950 px-2 font-PTSerif-Bold
+          hover:bg-gradient-to-b " >
+
             &nbsp;&nbsp;Options
+            
             {isOpen ? (
-              <AiOutlineCaretUp size={20} color="#00bfff" />
+              <AiOutlineCaretUp size={20} color=" #a3e1f5 ;" />
             ) : (
-              <AiOutlineCaretDown size={20} color="#00bfff" />
+              <AiOutlineCaretDown size={20} color=" #a3e1f5 ;" />
             )}
           </button>
 
           <div
-            className={`bg-grey-800 relative z-50 flex w-full origin-top flex-col rounded-lg p-2 text-blue-200 ${
-              isOpen ? "animate-open-menu" : "animate-close-menu"
-            }`}
+            className={`bg-grey-800 relative z-50 flex w-full  origin-top flex-col rounded-lg p-2
+               text-blue-200 ${isOpen ? "animate-open-menu" : "animate-close-menu"}`}
           >
-            <div>
+            <div className="  m-auto w-80">
               <button
                 onClick={() => {
                   copyAllTodosNormal();
@@ -179,11 +167,11 @@ export default function App() {
                     "👉🏻 Copied Your List to your ClipBoard ✍🏻   ";
                   alertBox.classList.add(
                     "fixed",
-                    "top-1/2",
+                    "bottom-1/2",
                     "left-1/2",
                     "transform",
-                    "-translate-x-1/2",
-                    "-translate-y-1/2",
+                    "-translate-x-[45%]",
+                    "-translate-y-[3.4rem]",
                     "bg-red-950",
                     "py-2",
                     "px-4",
@@ -200,7 +188,7 @@ export default function App() {
                 }}
                 className="btn2 copyButton   relative m-auto my-1 flex
            w-full justify-center   from-green-600
-                 to-green-950    text-blue-50 hover:bg-gradient-to-b"
+                 to-green-950    hover:bg-gradient-to-b"
               >
                 <span className="relative  flex w-full justify-between font-PTSerif-Bold ">
                   {" "}
@@ -213,11 +201,11 @@ export default function App() {
 
               {/*3rd button */}
 
-              <div className="   w-full   ">
+              <div className="mb-1   w-full   ">
                 <button
                   onClick={toggleRandomEmoji}
                   className={`btn2 toggleButton relative flex  w-full  
-                    justify-between font-PTSerif-Bold  text-blue-100    
+                    justify-between font-PTSerif-Bold      
                   hover:bg-gradient-to-b  ${
                     isRandomEmojiEnabled
                       ? "from-green-600 to-green-950"
@@ -237,14 +225,22 @@ export default function App() {
                     toggleAddToTop();
                   }}
                   className={`btn2 toggleButton relative flex  w-full  
-                    justify-between font-PTSerif-Bold  text-blue-100    
-                  hover:bg-gradient-to-b  ${isAddToTopEnabled ? "from-red-600 to-red-950" : "from-green-600 to-green-950"}`}
+                    justify-between font-PTSerif-Bold       
+                  hover:bg-gradient-to-b  ${isAddToTopEnabled ? "from-green-950 to-green-600" : "from-green-600 to-green-950"}`}
                 >
-                  {isAddToTopEnabled ? " Bottom" : "Top "}
+                  {isAddToTopEnabled ? (
+                     <div className="relative flex justify-between w-full ">
+                     <span className="font-PTSerif-Bold">Bottom Feeder</span>
+                     <span ><AiOutlineCaretDown size={20} /></span>
+                     </div>
+                  ) : (
+                    <div className="relative flex justify-between w-full ">
+                     <span className="font-PTSerif-Bold">Top Feeder</span>
+                     <span ><AiOutlineCaretUp size={20} /></span>
+                     </div>
+                  )}
 
-                  <span className="inline-block  ">
-                    <IoFishOutline size={20} />
-                  </span>
+                  
                 </button>
               </div>
 
@@ -252,26 +248,29 @@ export default function App() {
                 onClick={toggleTodoOrder}
                 className="btn2 copyButton   relative m-auto my-1 flex
             w-full justify-center   from-green-600
-                  to-green-950    text-blue-50 hover:bg-gradient-to-b"
+                  to-green-950      hover:bg-gradient-to-b"
               >
                 <span className="relative  flex w-full justify-between font-PTSerif-Bold ">
                   {" "}
-                  Reverse{" "}
+                  Reverse Order {" "}
                 </span>
                 <span className="inline-block whitespace-nowrap"></span>
                 <GiClick size={25} />
                 &nbsp;2x
               </button>
             </div>
+            
+          </div>
+          <div className="absolute z-[0] left-[50%] -translate-x-1/2 bottom-[0rem]   w-full    ">
+          <img src={NightOcean} alt="Ocean at Night" className="rounded-lg relative m-auto"></img>
+          </div>
           </div>
         </div>
-        <div className="relative z-[0]  mt-[-9.5rem] flex justify-center xxs:mt-[-9.5rem]  xs:mt-[-9.5rem]">
-          {/* <img src={NightOcean} alt="Ocean at Night" className="rounded-lg"></img> */}
-        </div>
+        
         <div className=" mb-[-1rem] mt-[1rem]">
           <WebApp />
         </div>
-      </div>
+        
     </>
   );
 }
