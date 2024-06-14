@@ -44,7 +44,13 @@ export default function App() {
   }
   const [isRandomEmojiEnabled, setIsRandomEmojiEnabled] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-  
+  const [isTodoOrderReversed, setIsTodoOrderReversed] = useState(false);
+  function toggleTodoOrder() {
+    setIsTodoOrderReversed((prevValue) => !prevValue);
+    const reversedTodos = isTodoOrderReversed ? todos.slice().reverse() : todos;
+    setTodos(reversedTodos);
+    localStorage.setItem("todos", JSON.stringify(reversedTodos));
+  }
 
   function toggleRandomEmoji() {
     setIsRandomEmojiEnabled((prevValue) => !prevValue);
@@ -196,7 +202,19 @@ export default function App() {
                     </span>
                   </button>
                 </div>
-
+                <button
+            onClick={toggleTodoOrder} 
+            
+            className="btn2 copyButton   relative m-auto my-1 flex
+            w-full justify-center   from-green-600
+                  to-green-950    text-blue-50 hover:bg-gradient-to-b"
+                 >
+           <span className="relative  flex w-full justify-between font-PTSerif-Bold ">
+                    {" "}
+                    Reverse{" "}
+                  </span>
+                  <span className="inline-block whitespace-nowrap"></span><GiClick size={25} />&nbsp;2x
+          </button>
                
               </div>
             </div>
