@@ -199,7 +199,7 @@ export default function App() {
                
                 <span className="relative text-[9px] xxs:text-[12px] xs:text-[15px]  flex w-full justify-between font-PTSerif-Bold ">
                   {" "}
-                  <span>Copy List</span><span className="absolute left-1/2 translate-x-[-50%] hidden sm:block text-[9px]  text-9px text-varLIGHTBLUEFEATHER">
+                  <span>Copy List</span><span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-varLIGHTBLUEFEATHER">
                      (The Entire List)</span>  {" "}
                 </span>
                 <span className="inline-block">
@@ -242,14 +242,14 @@ export default function App() {
                      <div className="relative flex justify-between w-full ">
                      <span className="font-PTSerif-Bold text-[9px] xxs:text-[12px] xs:text-[15px] ">Bottom Feeder</span>
                      <span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-varLIGHTBLUEFEATHER">
-                     (Bottom Input)</span>
+                     (Input at Bottom)</span>
                      <span ><AiOutlineCaretDown size={20} /></span>
                      </div>
                   ) : (
                     <div className="relative flex justify-between w-full ">
                      <span className="text-[9px] xxs:text-[12px] xs:text-[15px]  font-PTSerif-Bold">Top Feeder</span>
-                     <span className="absolute left-1/2 translate-x-[-20%] hidden sm:block text-[9px]  text-9px text-varLIGHTBLUEFEATHER">
-                     (Top Input)</span>
+                     <span className="absolute left-1/2 translate-x-[10%] hidden sm:block text-[9px]  text-9px text-varLIGHTBLUEFEATHER">
+                     (Input at Top)</span>
                      <span ><AiOutlineCaretUp size={20} /></span>
                      </div>
                   )}
@@ -264,8 +264,8 @@ export default function App() {
               >
                 <span className="relative  flex w-full justify-between  font-PTSerif-Bold
                   ">
-                    <span className="absolute left-1/2 translate-x-[-20%] hidden sm:block text-[9px]  text-9px text-varLIGHTBLUEFEATHER">
-                    (Cronological Order)</span>
+                    <span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-varLIGHTBLUEFEATHER">
+                    (Chronological Order)</span>
                   {" "}
                   Flipper {" "}
                 </span>
