@@ -199,7 +199,7 @@ export default function App() {
                
                 <span className="relative text-[9px] xxs:text-[12px] xs:text-[15px]  flex w-full justify-between font-PTSerif-Bold ">
                   {" "}
-                  <span>Copy List</span><span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-varLIGHTBLUEFEATHER">
+                  <span  className="font-PTSerif-Bold  ">Copy List</span><span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-blue-300">
                      (The Entire List)</span>  {" "}
                 </span>
                 <span className="inline-block">
@@ -221,7 +221,7 @@ export default function App() {
                   }`}
                 >
                   {isRandomEmojiEnabled ? " Indicator On" : "Indicator Off "}
-                 <span className="absolute left-1/2 translate-x-[-20%] hidden sm:block text-[9px]  text-9px text-varLIGHTBLUEFEATHER">
+                 <span className="absolute left-1/2 translate-x-[-20%] hidden sm:block text-[9px]  text-9px text-blue-300">
                      (Enables Fish Icons)</span>
                   <span className="inline-block  ">
                     <IoFishOutline size={20} />
@@ -241,14 +241,14 @@ export default function App() {
                   {isAddToTopEnabled ? (
                      <div className="relative flex justify-between w-full ">
                      <span className="font-PTSerif-Bold text-[9px] xxs:text-[12px] xs:text-[15px] ">Bottom Feeder</span>
-                     <span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-varLIGHTBLUEFEATHER">
+                     <span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-blue-300">
                      (Input at Bottom)</span>
                      <span ><AiOutlineCaretDown size={20} /></span>
                      </div>
                   ) : (
                     <div className="relative flex justify-between w-full ">
                      <span className="text-[9px] xxs:text-[12px] xs:text-[15px]  font-PTSerif-Bold">Top Feeder</span>
-                     <span className="absolute left-1/2 translate-x-[10%] hidden sm:block text-[9px]  text-9px text-varLIGHTBLUEFEATHER">
+                     <span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-blue-300">
                      (Input at Top)</span>
                      <span ><AiOutlineCaretUp size={20} /></span>
                      </div>
@@ -264,7 +264,7 @@ export default function App() {
               >
                 <span className="relative  flex w-full justify-between  font-PTSerif-Bold
                   ">
-                    <span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-varLIGHTBLUEFEATHER">
+                    <span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-blue-300">
                     (Chronological Order)</span>
                   {" "}
                   Flipper {" "}

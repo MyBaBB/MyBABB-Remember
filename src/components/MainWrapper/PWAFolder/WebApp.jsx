@@ -20,7 +20,7 @@ const InstallApp = () => {
   const isAppMode = window.matchMedia("(display-mode: standalone)").matches;
 
   return (
-    <div className="relative m-auto   w-[75%]  flex justify-between">
+    <div className="relative m-auto   w-[55%]  flex justify-between">
       {!isAppMode && (
         <button
           id="installApp"

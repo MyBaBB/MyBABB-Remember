@@ -72,7 +72,7 @@ export function NewTodoForm({ onSubmit }) {
         />
 
         <button
-          className="btn3 relative m-auto flex justify-center  from-blue-700 to-blue-950  text-blue-50 
+          className="btn3 relative m-auto mb-8 flex justify-center  from-blue-700 to-blue-950  text-blue-50 
          hover:bg-gradient-to-b "
         >
           <span className="font-PTSerif-Bold">Click to Add Item</span>

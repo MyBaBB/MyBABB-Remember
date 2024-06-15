@@ -28,7 +28,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
         <button
           onClick={() => deleteTodo(id)}
           className="btn relative  bg-red-900
-                    from-red-500 to-red-950 text-blue-50 hover:bg-gradient-to-b"
+                    from-red-500 to-red-950 mb-4 text-blue-50 hover:bg-gradient-to-b"
         >
           Delete
         </button>
@@ -48,7 +48,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
                     }, 2000);
                   }}
           className="btn  copyButton relative flex  from-green-600 to-green-950 
-            font-PTSerif-Bold text-blue-50 hover:bg-gradient-to-b"
+            font-PTSerif-Bold text-blue-50 hover:bg-gradient-to-b mb-4"
         >
           Copy
         </button>
