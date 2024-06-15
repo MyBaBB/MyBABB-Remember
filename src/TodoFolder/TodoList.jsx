@@ -14,7 +14,6 @@ export function TodoList({ todos, toggleTodo, deleteTodo }) {
 
   return (
     <div>
-      
       <ul className="list -mt-4 mb-2 text-center font-Itim-Regular">
         {reversedTodos.map((todo) => (
           <TodoItem
