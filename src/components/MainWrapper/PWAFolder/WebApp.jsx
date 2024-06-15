@@ -20,14 +20,14 @@ const InstallApp = () => {
   const isAppMode = window.matchMedia("(display-mode: standalone)").matches;
 
   return (
-    <div className="relative m-auto   w-[55%]  flex justify-between">
+    <div className="relative m-auto   w-[65%]  flex justify-between">
       {!isAppMode && (
         <button
           id="installApp"
           onClick={handleClick}
           className="installButton mb-1 font-Changa-Regular text-[12px]"
         >
-          Install the App
+          Android/Desk App
         </button>
       )}
       <a
