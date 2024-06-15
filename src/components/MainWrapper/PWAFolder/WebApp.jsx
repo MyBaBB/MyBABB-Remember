@@ -21,6 +21,7 @@ const InstallApp = () => {
 
   return (
     <div className="relative m-auto   w-[65%]  flex justify-between">
+      <div>
       {!isAppMode && (
         <button
           id="installApp"
@@ -30,20 +31,27 @@ const InstallApp = () => {
           Android/Desk App
         </button>
       )}
+      </div>
+
+
+      
+
+
       <a
         href="https://www.youtube.com/watch?v=AwfKUpq5seE "
         className="relative "
       >
-        <div className="relative  mb-1">
-          <button
-            className="installButton relative  
-         flex w-fit justify-center"
-          >
-            <span className="  w-full justify-between font-Changa-Regular text-[12px]">
-              IPhone Instructions{" "}
-            </span>
-          </button>
-        </div>
+        <div>
+      {!isAppMode && (
+        <button
+          id="installApp"
+          onClick={handleClick}
+          className="installButton mb-1 font-Changa-Regular text-[12px]"
+        >
+        IPhone Instructions
+        </button>
+      )}
+      </div>
       </a>
     </div>
   );
