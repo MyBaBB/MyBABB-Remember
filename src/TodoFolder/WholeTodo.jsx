@@ -277,10 +277,11 @@ export default function App() {
             
           </div>
           <div className="absolute hidden sm:block z-[0] left-[50%] -translate-x-1/2 bottom-[0rem]   w-full    ">
-          <img src={NightOcean} alt="Ocean at Night" className="rounded-lg relative flex m-auto"></img>
+
+          <img src={NightOcean} alt="Ocean at Night" className="nightOcean rounded-lg  relative flex m-auto"></img>
           </div>
           <div className="absolute  sm:hidden z-[0] left-[50%] -translate-x-1/2 bottom-[.5rem]  xxs:bottom-[0rem] w-full     ">
-          <img src={NightOcean240px} alt="Ocean at Night" className="rounded-lg relative flex m-auto"   ></img>
+          <img src={NightOcean240px} alt="Ocean at Night" className="nightOcean240px rounded-lg relative flex m-auto"   ></img>
           </div>
           </div>
           < Copyright />
