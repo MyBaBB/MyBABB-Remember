@@ -70,13 +70,12 @@ body {
   font-size: 15px;
   box-shadow: 1px 1px 4px #0c0e08;
   text-shadow: 1px 1px 4px #0c0e08;
-  padding: 0.25em 0.5em;
+  padding: .25rem;
   border: 1.5px solid #00bfff;
   border-radius: 0.25em;
   cursor: pointer;
-  margin-left: 0.1rem;
-  margin-right: 0.1rem;
-  
+  margin: 0.1rem;
+  width: 80%;
 }
 .btn2:hover {
   border: 1.5px solid black;
@@ -87,12 +86,12 @@ body {
   background: rgba(14, 14, 14, 0.61);
   box-shadow: 1px 1px 4px #0c0e08;
   text-shadow: 1px 1px 4px #0c0e08;
-  padding: 0.25em 0.5em;
+  padding: 0.25rem;
   border: 1.5px solid #00bfff;
   border-radius: 0.25em;
   cursor: pointer;
-   margin-left: 0.1rem;
-  margin-right: 0.1rem;
+  margin: 0.1rem;
+  
 }
 .btn3:hover {
   border: 1.5px solid black;
@@ -105,7 +104,7 @@ body {
 
 .copyButton {
   text-shadow: 1px 1px 2px #000000;
-  margin-top:;
+  
 }
 .new-item-form input {
   outline: none;
@@ -258,7 +257,7 @@ body {
 }
 .dataToolTip82::before {
   content: attr(data-tool-tip);
-  background: radial-gradient(rgb(226, 222, 222), #492407);
+  background: radial-gradient(#03a6e4, #162d5c);
   width: max-content;
   position: absolute;
   content: attr(data-tool-tip);
@@ -266,17 +265,19 @@ body {
   transform: translateX(-50%) scale(var(--scale));
   transform-origin: top;
   transition: ease-in 0.25s;
-  bottom: 0.5rem;
-
+  bottom: 4.3rem;
+  
   left: 50%;
+  border:2px solid wheat;
   border-radius: 10px;
-  color: black;
+  color: wheat;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 3px;
   padding-bottom: 3px;
   --scale: 0;
   z-index: 51;
+  text-shadow: 1px 1px 1px #000000;
 }
 
 .dataToolTip82::after {
@@ -289,10 +290,154 @@ body {
   transform-origin: bottom;
 
   transition: 0.35s;
-  bottom: 2.1rem;
+  top: 2.05rem;
   left: 50%;
   border: 15px solid transparent;
-  border-bottom: #52341b 10px solid;
+  border-Bottom: wheat 10px solid;
+  border-radius: 15px;
+
+  --scale: 0;
+  z-index: 49;
+}
+.dataToolTip83:hover::before,
+.dataToolTip83:hover::after {
+  --scale: 1;
+}
+.dataToolTip83::before {
+  content: attr(data-tool-tip);
+  background: radial-gradient(#03a6e4, #162d5c);
+  width: max-content;
+  position: absolute;
+  content: attr(data-tool-tip);
+  padding: 0.1em 0.1em 0.2em 0.1em;
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: top;
+  transition: ease-in 0.25s;
+  bottom: 1.8rem;
+  
+  left: 50%;
+  border:2px solid wheat;
+  border-radius: 10px;
+  color: wheat;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  --scale: 0;
+  z-index: 51;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.dataToolTip83::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  padding: 0.1em 0.1em 0.1em 0.1em;
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: bottom;
+
+  transition: 0.35s;
+  top: 4.55rem;
+  left: 50%;
+  border: 15px solid transparent;
+  border-Bottom: wheat 10px solid;
+  border-radius: 15px;
+
+  --scale: 0;
+  z-index: 49;
+}
+.dataToolTip84:hover::before,
+.dataToolTip84:hover::after {
+  --scale: 1;
+}
+.dataToolTip84::before {
+  content: attr(data-tool-tip);
+  background: radial-gradient(#03a6e4, #162d5c);
+  width: max-content;
+  position: absolute;
+  content: attr(data-tool-tip);
+  padding: 0.1em 0.1em 0.2em 0.1em;
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: top;
+  transition: ease-in 0.25s;
+  bottom: -.4rem;
+  
+  left: 50%;
+  border:2px solid wheat;
+  border-radius: 10px;
+  color: wheat;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  --scale: 0;
+  z-index: 51;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.dataToolTip84::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  padding: 0.1em 0.1em 0.1em 0.1em;
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: bottom;
+
+  transition: 0.35s;
+  bottom: 1.4rem;
+  left: 50%;
+  border: 15px solid transparent;
+  border-Bottom: wheat 10px solid;
+  border-radius: 15px;
+
+  --scale: 0;
+  z-index: 49;
+}
+.dataToolTip85:hover::before,
+.dataToolTip85:hover::after {
+  --scale: 1;
+}
+.dataToolTip85::before {
+  content: attr(data-tool-tip);
+  background: radial-gradient(#03a6e4, #162d5c);
+  width: max-content;
+  position: absolute;
+  content: attr(data-tool-tip);
+  padding: 0.1em 0.1em 0.2em 0.1em;
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: top;
+  transition: ease-in 0.25s;
+  bottom: -1.8rem;
+  
+  left: 50%;
+  border:2px solid wheat;
+  border-radius: 10px;
+  color: wheat;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  --scale: 0;
+  z-index: 51;
+  text-shadow: 1px 1px 1px #000000;
+}
+
+.dataToolTip85::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  padding: 0.1em 0.1em 0.1em 0.1em;
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: bottom;
+
+  transition: 0.35s;
+  bottom: .05rem;
+  left: 50%;
+  border: 15px solid transparent;
+  border-Bottom: wheat 10px solid;
   border-radius: 15px;
 
   --scale: 0;

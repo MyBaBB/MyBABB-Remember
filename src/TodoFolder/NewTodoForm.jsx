@@ -20,7 +20,7 @@ export function NewTodoForm({ onSubmit }) {
 
   return (
     <>
-      <div className="relative flex justify-between">
+      <div className="relative   hidden xxs:flex justify-between">
         <div className="inline-block ">
           <a href="https://resume-hub.mybabb.com/" className="">
             <div className="  relative   z-50 inline-block   w-fit   ">
@@ -59,7 +59,7 @@ export function NewTodoForm({ onSubmit }) {
 
       <form
         onSubmit={handleSubmit}
-        className="new-item-form relative m-auto mb-4  flex w-[220px] xs:w-[300px] md:w-[500px] "
+        className="new-item-form relative m-auto mb-4  flex w-[90%] "
       >
         <textarea
           className="placeHolder1 min-h-[18px]  w-full rounded-lg border-2  
