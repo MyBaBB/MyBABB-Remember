@@ -44,7 +44,8 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
 
         <button
           onClick={() => {
-            copyTodoItem(title);
+            const updatedTitle = completed ? `🏁COMPLETED🏁 ${title} ` : title;
+            copyTodoItem(updatedTitle);
             const alertBox = document.createElement("div");
             alertBox.textContent =
               "👉🏻 Copied Single Item to your ClipBoard ✍🏻   ";
