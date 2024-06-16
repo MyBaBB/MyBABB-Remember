@@ -7,8 +7,8 @@ import WebApp from "../components/MainWrapper/PWAFolder/WebApp";
 import { GiClick } from "react-icons/gi";
 import { IoFishOutline } from "react-icons/io5";
 import { CgCopy } from "react-icons/cg";
-import  NightOcean  from "../assets/nightOcean400x200.jpg";
-import  NightOcean240px  from "../assets/nightOcean240x190.jpg";
+import NightOcean from "../assets/nightOcean400x200.jpg";
+import NightOcean240px from "../assets/nightOcean240x190.jpg";
 import Copyright from "../components/Copyright";
 
 export default function App() {
@@ -67,8 +67,6 @@ export default function App() {
     setIsAddToTopEnabled((prevValue) => !prevValue);
   }
 
-  
-
   const [isRandomEmojiEnabled, setIsRandomEmojiEnabled] = useState(true);
   function toggleRandomEmoji() {
     setIsRandomEmojiEnabled((prevValue) => !prevValue);
@@ -105,7 +103,6 @@ export default function App() {
       return currentTodos.filter((todo) => todo.id !== id);
     });
   }
- 
 
   function copyAllTodosNormal() {
     let todosText = "";
@@ -119,8 +116,8 @@ export default function App() {
   return (
     <>
       <div
-        className="controlContainer relative flex-row m-auto rounded-3xl border-2 border-black
-         w-[95%] max-w-[550px]  p-4"
+        className="controlContainer relative m-auto w-[95%] max-w-[550px] flex-row rounded-3xl
+         border-2 border-black  p-4"
         style={{ background: "radial-gradient(circle, #707070, #606060)" }}
       >
         <div className="relative flex-row ">
@@ -137,31 +134,29 @@ export default function App() {
 
         <div
           className="copyAllOptions 
-          relative m-auto mt-[-1.3rem]    flex-col items-center 
-           rounded-lg  px-[2rem] z-[1]"
+          relative z-[1] m-auto    mt-[-1.3rem] flex-col 
+           items-center  rounded-lg px-[2rem]"
         >
           <button
             onClick={() => setIsOpen((prev) => !prev)}
-            className="btn3 z-50  m-auto mt-4 relative  flex w-[80%] items-center   
+            className="btn3 relative  z-50 m-auto mt-4  flex w-[80%] items-center   
             justify-between rounded-[5px]   
            from-[#00bfff] to-blue-950 px-2 font-PTSerif-Bold
-          hover:bg-gradient-to-b " >
-
+          hover:bg-gradient-to-b "
+          >
             &nbsp;&nbsp;Options
-            
             {isOpen ? (
               <AiOutlineCaretUp size={20} color=" #a3e1f5 ;" />
             ) : (
               <AiOutlineCaretDown size={20} color=" #a3e1f5 ;" />
             )}
           </button>
-      
+
           <div
-            className={`bg-grey-800 relative z-50 flex w-full  p-1 origin-top flex-col rounded-lg  
+            className={`bg-grey-800 relative z-50 flex w-full  origin-top flex-col rounded-lg p-1  
                text-blue-200 ${isOpen ? "animate-open-menu" : "animate-close-menu"}`}
           >
             <div className="subButtonWrapper  m-auto w-full ">
-              
               <button
                 onClick={() => {
                   copyAllTodosNormal();
@@ -169,7 +164,6 @@ export default function App() {
                   alertBox.textContent =
                     "👉🏻 Entire List was Copied to  ClipBoard ✍🏻   ";
                   alertBox.classList.add(
-                   
                     "fixed",
                     "bottom-[25%]",
                     "left-[50%]",
@@ -191,107 +185,122 @@ export default function App() {
                     alertBox.remove();
                   }, 2000);
                 }}
-                
                 className="btn2  copyButton   relative m-auto my-1 flex
             justify-center   from-green-600
                  to-green-950    hover:bg-gradient-to-b "
               >
-               
-                <span className="relative text-[9px] xxs:text-[12px] xs:text-[15px]  flex w-full justify-between font-PTSerif-Bold ">
+                <span className="relative flex w-full justify-between  font-PTSerif-Bold text-[9px] xxs:text-[12px] xs:text-[15px] ">
                   {" "}
-                  <span  className="font-PTSerif-Bold  ">Copy List</span><span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-blue-300">
-                     (The Entire List)</span>  {" "}
+                  <span className="font-PTSerif-Bold  ">Copy List</span>
+                  <span className="text-9px absolute left-1/2 hidden translate-x-[0%] text-[9px]  text-blue-300 sm:block">
+                    (The Entire List)
+                  </span>{" "}
                 </span>
                 <span className="inline-block">
                   <CgCopy />
                 </span>
               </button>
-              
+
               {/*3rd button */}
 
               <div className="mb-1   w-full   ">
                 <button
                   onClick={toggleRandomEmoji}
-                  className={`btn2 toggleButton relative flex m-auto    
+                  className={`btn2 toggleButton relative m-auto flex    
                     justify-between font-PTSerif-Bold      
-                  hover:bg-gradient-to-b text-[9px] xxs:text-[12px] xs:text-[15px]  ${
+                  text-[9px] hover:bg-gradient-to-b xxs:text-[12px] xs:text-[15px]  ${
                     isRandomEmojiEnabled
                       ? "from-green-600 to-green-950"
                       : "from-red-600 to-red-950"
                   }`}
                 >
                   {isRandomEmojiEnabled ? " Indicator On" : "Indicator Off "}
-                 <span className="absolute left-1/2 translate-x-[-20%] hidden sm:block text-[9px]  text-9px text-blue-300">
-                     (Enables Fish Icons)</span>
+                  <span className="text-9px absolute left-1/2 hidden translate-x-[-20%] text-[9px]  text-blue-300 sm:block">
+                    (Enables Fish Icons)
+                  </span>
                   <span className="inline-block  ">
                     <IoFishOutline size={20} />
                   </span>
                 </button>
               </div>
-             
-                <button
-                  onClick={() => {
-                    toggleAddToTopEnabled();
-                    toggleAddToTop();
-                  }}
-                  className={`btn2 toggleButton  relative flex  m-auto   
+
+              <button
+                onClick={() => {
+                  toggleAddToTopEnabled();
+                  toggleAddToTop();
+                }}
+                className={`btn2 toggleButton  relative m-auto  flex   
                     justify-between font-PTSerif-Bold       
                   hover:bg-gradient-to-b  ${isAddToTopEnabled ? "from-green-950 to-green-600" : "from-green-600 to-green-950"}`}
-                >
-                  {isAddToTopEnabled ? (
-                     <div className="relative flex justify-between w-full ">
-                     <span className="font-PTSerif-Bold text-[9px] xxs:text-[12px] xs:text-[15px] ">Bottom Feeder</span>
-                     <span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-blue-300">
-                     (Input at Bottom)</span>
-                     <span ><AiOutlineCaretDown size={20} /></span>
-                     </div>
-                  ) : (
-                    <div className="relative flex justify-between w-full ">
-                     <span className="text-[9px] xxs:text-[12px] xs:text-[15px]  font-PTSerif-Bold">Top Feeder</span>
-                     <span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-blue-300">
-                     (Input at Top)</span>
-                     <span ><AiOutlineCaretUp size={20} /></span>
-                     </div>
-                  )}
-
-                  
-                </button>
+              >
+                {isAddToTopEnabled ? (
+                  <div className="relative flex w-full justify-between ">
+                    <span className="font-PTSerif-Bold text-[9px] xxs:text-[12px] xs:text-[15px] ">
+                      Bottom Feeder
+                    </span>
+                    <span className="text-9px absolute left-1/2 hidden translate-x-[0%] text-[9px]  text-blue-300 sm:block">
+                      (Input at Bottom)
+                    </span>
+                    <span>
+                      <AiOutlineCaretDown size={20} />
+                    </span>
+                  </div>
+                ) : (
+                  <div className="relative flex w-full justify-between ">
+                    <span className="font-PTSerif-Bold text-[9px] xxs:text-[12px]  xs:text-[15px]">
+                      Top Feeder
+                    </span>
+                    <span className="text-9px absolute left-1/2 hidden translate-x-[0%] text-[9px]  text-blue-300 sm:block">
+                      (Input at Top)
+                    </span>
+                    <span>
+                      <AiOutlineCaretUp size={20} />
+                    </span>
+                  </div>
+                )}
+              </button>
               <button
                 onClick={toggleTodoOrder}
                 className="btn2 copyButton relative     m-auto my-1  flex
-                text-[9px] xxs:text-[12px] xs:text-[15px]  
-                 from-green-600 to-green-950 hover:bg-gradient-to-b"
+                from-green-600 to-green-950 text-[9px]  
+                 hover:bg-gradient-to-b xxs:text-[12px] xs:text-[15px]"
               >
-                <span className="relative  flex w-full justify-between  font-PTSerif-Bold
-                  ">
-                    <span className="absolute left-1/2 translate-x-[0%] hidden sm:block text-[9px]  text-9px text-blue-300">
-                    (Chronological Order)</span>
-                  {" "}
-                  Flipper {" "}
+                <span
+                  className="relative  flex w-full justify-between  font-PTSerif-Bold
+                  "
+                >
+                  <span className="text-9px absolute left-1/2 hidden translate-x-[0%] text-[9px]  text-blue-300 sm:block">
+                    (Chronological Order)
+                  </span>{" "}
+                  Flipper{" "}
                 </span>
                 <span className="inline-block "></span>
                 <GiClick size={20} />
                 &nbsp;2x
               </button>
             </div>
-            
           </div>
-          <div className="absolute hidden sm:block z-[0] left-[50%] -translate-x-1/2 bottom-[0rem]   w-full    ">
+          <div className="absolute bottom-[0rem] left-[50%] z-[0] hidden w-full -translate-x-1/2   sm:block    ">
+            <img
+              src={NightOcean}
+              alt="Ocean at Night"
+              className="nightOcean relative  m-auto flex rounded-lg"
+            ></img>
+          </div>
+          <div className="absolute  bottom-[.5rem] left-[50%] z-[0] w-full -translate-x-1/2  xxs:bottom-[0rem] sm:hidden     ">
+            <img
+              src={NightOcean240px}
+              alt="Ocean at Night"
+              className="nightOcean240px relative m-auto flex rounded-lg"
+            ></img>
+          </div>
+        </div>
+        <Copyright />
+      </div>
 
-          <img src={NightOcean} alt="Ocean at Night" className="nightOcean rounded-lg  relative flex m-auto"></img>
-          </div>
-          <div className="absolute  sm:hidden z-[0] left-[50%] -translate-x-1/2 bottom-[.5rem]  xxs:bottom-[0rem] w-full     ">
-          <img src={NightOcean240px} alt="Ocean at Night" className="nightOcean240px rounded-lg relative flex m-auto"   ></img>
-          </div>
-          </div>
-          < Copyright />
-        </div>
-         
-        
-        <div className=" mb-[-1rem] mt-[1rem]">
-          <WebApp />
-        </div>
-        
+      <div className=" mb-[-1rem] mt-[1rem]">
+        <WebApp />
+      </div>
     </>
   );
 }

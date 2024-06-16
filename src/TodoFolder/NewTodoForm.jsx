@@ -20,7 +20,7 @@ export function NewTodoForm({ onSubmit }) {
 
   return (
     <>
-      <div className="relative   hidden xxs:flex justify-between">
+      <div className="relative   hidden justify-between xxs:flex">
         <div className="inline-block ">
           <a href="https://resume-hub.mybabb.com/" className="">
             <div className="  relative   z-50 inline-block   w-fit   ">

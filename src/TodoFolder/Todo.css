@@ -65,12 +65,12 @@ body {
 }
 
 .btn2 {
-  color:#dceef4 ;
+  color: #dceef4;
   background: rgba(14, 14, 14, 0.61);
   font-size: 15px;
   box-shadow: 1px 1px 4px #0c0e08;
   text-shadow: 1px 1px 4px #0c0e08;
-  padding: .25rem;
+  padding: 0.25rem;
   border: 1.5px solid #00bfff;
   border-radius: 0.25em;
   cursor: pointer;
@@ -82,7 +82,7 @@ body {
 }
 .btn3 {
   font-size: 15px;
-  color:#dceef4 ;
+  color: #dceef4;
   background: rgba(14, 14, 14, 0.61);
   box-shadow: 1px 1px 4px #0c0e08;
   text-shadow: 1px 1px 4px #0c0e08;
@@ -91,7 +91,6 @@ body {
   border-radius: 0.25em;
   cursor: pointer;
   margin: 0.1rem;
-  
 }
 .btn3:hover {
   border: 1.5px solid black;
@@ -104,7 +103,6 @@ body {
 
 .copyButton {
   text-shadow: 1px 1px 2px #000000;
-  
 }
 .new-item-form input {
   outline: none;
@@ -258,7 +256,6 @@ body {
   box-shadow: 2px 2px 4px #000000;
 }
 
-
 .dataToolTip82:hover::before,
 .dataToolTip82:hover::after {
   --scale: 1;
@@ -274,9 +271,9 @@ body {
   transform-origin: top;
   transition: ease-in 0.25s;
   bottom: 4.3rem;
-  
+
   left: 50%;
-  border:2px solid wheat;
+  border: 2px solid wheat;
   border-radius: 10px;
   color: wheat;
   padding-left: 2rem;
@@ -301,7 +298,7 @@ body {
   top: 2.05rem;
   left: 50%;
   border: 15px solid transparent;
-  border-Bottom: wheat 10px solid;
+  border-bottom: wheat 10px solid;
   border-radius: 15px;
 
   --scale: 0;

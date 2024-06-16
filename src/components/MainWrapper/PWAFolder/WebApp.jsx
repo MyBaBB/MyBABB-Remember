@@ -20,38 +20,34 @@ const InstallApp = () => {
   const isAppMode = window.matchMedia("(display-mode: standalone)").matches;
 
   return (
-    <div className="relative m-auto   w-[65%]  flex justify-between">
+    <div className="relative m-auto   flex  w-[65%] justify-between">
       <div>
-      {!isAppMode && (
-        <button
-          id="installApp"
-          onClick={handleClick}
-          className="installButton mb-1 font-Changa-Regular text-[12px]"
-        >
-          Android/Desk App
-        </button>
-      )}
+        {!isAppMode && (
+          <button
+            id="installApp"
+            onClick={handleClick}
+            className="installButton mb-1 font-Changa-Regular text-[12px]"
+          >
+            Android/Desk App
+          </button>
+        )}
       </div>
-
-
-      
-
 
       <a
         href="https://www.youtube.com/watch?v=AwfKUpq5seE "
         className="relative "
       >
         <div>
-      {!isAppMode && (
-        <button
-          id="installApp"
-          onClick={handleClick}
-          className="installButton mb-1 font-Changa-Regular text-[12px]"
-        >
-        IPhone Instructions
-        </button>
-      )}
-      </div>
+          {!isAppMode && (
+            <button
+              id="installApp"
+              onClick={handleClick}
+              className="installButton mb-1 font-Changa-Regular text-[12px]"
+            >
+              IPhone Instructions
+            </button>
+          )}
+        </div>
       </a>
     </div>
   );
