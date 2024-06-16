@@ -33,6 +33,10 @@ export default function App() {
       }
     });
   }
+
+
+
+
   function toggleTodo(id, completed) {
     setTodos((currentTodos) => {
       return currentTodos.map((todo) => {
@@ -44,6 +48,12 @@ export default function App() {
       });
     });
   }
+
+
+
+
+
+
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -107,8 +117,10 @@ export default function App() {
   function copyAllTodosNormal() {
     let todosText = "";
     todos.forEach((todo, index) => {
-      todosText +=
-        index + 1 + ". " + getRandomEmoji() + " " + todo.title + " " + "\n";
+      if (!todo.completed) {
+        todosText +=
+          index + 1 + ". " + getRandomEmoji() + " " + todo.title + " " + "\n";
+      }
     });
     navigator.clipboard.writeText(todosText);
   }

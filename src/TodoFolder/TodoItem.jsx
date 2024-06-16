@@ -5,7 +5,11 @@ function copyTodoItem(title) {
 
 export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
   return (
-    <div className="outerDivContainerm-auto w-full">
+    <div className="outerDivContainer m-auto  w-full">
+
+
+
+      
       <li className="ListItem9  ">
         <label
           className="label1 relative m-auto flex w-full  rounded-md border-[1px] border-black bg-slate-700 
@@ -23,6 +27,12 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
           </div>
         </label>
       </li>
+
+
+
+
+
+
       <div className=" relative m-auto ml-[.49rem] flex justify-between pb-4 pt-1 font-Aclonica-Regular">
         <button
           onClick={() => deleteTodo(id)}
