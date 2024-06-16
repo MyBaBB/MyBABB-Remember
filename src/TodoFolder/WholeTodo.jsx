@@ -54,7 +54,7 @@ export default function App() {
 
 
 
-
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const [isTodoOrderReversed, setIsTodoOrderReversed] = useState(false);
@@ -117,10 +117,12 @@ export default function App() {
   function copyAllTodosNormal() {
     let todosText = "";
     todos.forEach((todo, index) => {
-      if (!todo.completed) {
-        todosText +=
-          index + 1 + ". " + getRandomEmoji() + " " + todo.title + " " + "\n";
-      }
+      todosText +=
+        index + 1 + ". " + (todo.completed ? "🏁COMPLETED🏁 " : getRandomEmoji()) +
+        " " +
+        todo.title +
+        " " +
+        "\n";
     });
     navigator.clipboard.writeText(todosText);
   }
