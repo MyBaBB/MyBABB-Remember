@@ -117,12 +117,9 @@ export default function App() {
   function copyAllTodosNormal() {
     let todosText = "";
     todos.forEach((todo, index) => {
+      const emoji = todo.completed ? "✅Done✅" : getRandomEmoji();
       todosText +=
-        index + 1 + ". " + (todo.completed ? "🏁COMPLETED🏁 " : getRandomEmoji()) +
-        " " +
-        todo.title +
-        " " +
-        "\n";
+        index + 1 + ". " + emoji + " " + todo.title + " " + "\n";
     });
     navigator.clipboard.writeText(todosText);
   }

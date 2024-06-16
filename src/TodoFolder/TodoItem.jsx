@@ -44,7 +44,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
 
         <button
           onClick={() => {
-            const updatedTitle = completed ? `🏁COMPLETED🏁 ${title} ` : title;
+            const updatedTitle = completed ? `✅Done✅ ${title} ` : title;
             copyTodoItem(updatedTitle);
             const alertBox = document.createElement("div");
             alertBox.textContent =
