@@ -25,14 +25,7 @@ const InstallApp = () => {
         {!isAppMode && (
           <button
             id="installApp"
-            onClick={() => {
-              handleClick().then(() => {
-                alert("App is being installed, check your app library");
-              });
-              setTimeout(() => {
-                alert("App install complete");
-              }, 5000);
-            }}
+            onClick={handleClick}
             className="installButton mb-1 font-Changa-Regular text-[12px]"
           >
             Android/Desk App
