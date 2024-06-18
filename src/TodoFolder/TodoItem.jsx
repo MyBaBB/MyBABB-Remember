@@ -1,71 +1,51 @@
-
-import React, { useState } from "react";
-
+/* eslint-disable react/prop-types */
 function copyTodoItem(title) {
   navigator.clipboard.writeText(title);
-}import PropTypes from 'prop-types';
+}
 
-
-
-
-
-TodoItem.propTypes = {
-  completed: PropTypes.bool.isRequired,
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  toggleTodo: PropTypes.func.isRequired,
-  deleteTodo: PropTypes.func.isRequired,
-};
 export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
-  const [isEditing, setIsEditing] = useState(false);
-  const [updatedTitle, setUpdatedTitle] = useState(title);
-  const handleEdit = () => {
-    setIsEditing(true);
-  };
-  const handleSave = () => {
-    // Add code here to save the updated title
-    // You can call a function to update the todo item with the new title
-    setIsEditing(false);
-  };
-  const handleChange = (e) => {
-    setUpdatedTitle(e.target.value);
-  };
   return (
-    <div className="outerDivContainer m-auto w-full">
-      {isEditing ? (
-        <div>
+    <div className="outerDivContainer m-auto  w-full">
+
+
+
+      
+      <li className="ListItem9  ">
+        <label
+          className="label1 relative m-auto flex w-full 
+           rounded-md border-[1px] border-black bg-slate-700 
+                      "
+        >
           <input
-            type="text"
-            value={updatedTitle}
-            onChange={handleChange}
+            type="checkbox"
+            checked={completed}
+            onChange={(e) => toggleTodo(id, e.target.checked)}
           />
-          <button onClick={handleSave}>Save</button>
-        </div>
-      ) : (
-        <div>
-          <li className="ListItem9">
-            <label className="label1 relative m-auto flex w-full rounded-md border-[1px] border-black bg-slate-700">
-              <input
-                type="checkbox"
-                checked={completed}
-                onChange={(e) => toggleTodo(id, e.target.checked)}
-              />
-              <div className="checkbox1 overflow-x-auto">
-                <span className="title1 font-DMSerifDisplay-Regular text-xl">
-                  {title}
-                </span>
-              </div>
-            </label>
-          </li>
-          <div className="relative m-auto ml-[.49rem] flex justify-between pb-4 pt-1 font-Aclonica-Regular">
-            <button
-              onClick={() => deleteTodo(id)}
-              className="btn relative mb-4 bg-red-900 from-red-500 to-red-950 text-blue-50 hover:bg-gradient-to-b"
-            >
-              Delete
-            </button>
-            <button onClick={handleEdit}>Edit</button>
-            <button
+          <div className="checkbox1 overflow-x-auto">
+            <span className="title1 font-DMSerifDisplay-Regular text-xl">
+              {title}
+            </span>
+          </div>
+        </label>
+      </li>
+
+
+
+
+
+
+      <div className=" relative m-auto ml-[.49rem] flex 
+      justify-between pb-4 pt-1 font-Aclonica-Regular">
+        <button
+          onClick={() => deleteTodo(id)}
+          className="btn relative  mb-4
+                    bg-red-900 from-red-500 to-red-950
+                     text-blue-50 hover:bg-gradient-to-b"
+        >
+          Delete
+        </button>
+
+        <button
           onClick={() => {
             const updatedTitle = completed ? `✅ ${title} ` : title;
             copyTodoItem(updatedTitle);
@@ -101,10 +81,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
         >
           Copy
         </button>
-            
-          </div>
-        </div>
-      )}
+      </div>
     </div>
   );
 }
