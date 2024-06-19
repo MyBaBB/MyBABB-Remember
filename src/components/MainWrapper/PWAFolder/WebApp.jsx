@@ -32,7 +32,19 @@ const InstallApp = () => {
           </button>
         )}
       </div>
-
+      <button id="shareButton" onClick={() => {
+  navigator.share({
+    title: 'Fishy-Notes',
+    text: 'Check out this awesome website!',
+    url: window.location.href
+  }).then(() => {
+    console.log('Shared successfully.');
+  }).catch((error) => {
+    console.error('Error sharing:', error);
+  });
+}}>
+  Share
+</button>
       <a
         href="https://www.youtube.com/watch?v=AwfKUpq5seE "
         className="relative "
