@@ -20,7 +20,7 @@ const InstallApp = () => {
   const isAppMode = window.matchMedia("(display-mode: standalone)").matches;
 
   return (
-    <div className="relative m-auto   flex  w-[65%] justify-between">
+    <div className="relative m-auto -mt-4  flex  w-[65%] justify-between">
       <div>
         {!isAppMode && (
           <button
@@ -37,6 +37,7 @@ const InstallApp = () => {
         href="https://www.youtube.com/watch?v=AwfKUpq5seE "
         className="relative "
       >
+       
         <div>
           {!isAppMode && (
             <button

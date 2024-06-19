@@ -1,6 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
  import "./Copyright.css";
+ import { PiShareFatBold } from "react-icons/pi";
+
 function Copyright() {
   return (
 <div className=" relative flex justify-between mt-2 -mb-2  w-full   ">
@@ -17,8 +19,11 @@ function Copyright() {
     console.error('Error sharing:', error);
   });
 }}>
-  <span className="shareButton  font-LibreBaskerville-Bold text-[#75bfc4] hover:opacity-50" >
-    share</span>
+  <span className="hover:opacity-50">
+  <u className="underlineShare text-green-700">
+    <span className="shareButton  font-LibreBaskerville-Bold text-[#75bfc4] " >
+    share-app</span></u>
+    <span className="inline-block text-[#75bfc4]"><PiShareFatBold /></span></span>
 </button>
 </div>
 <div  className=" w-fit">
