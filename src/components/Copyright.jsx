@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-
+ import "./Copyright.css";
 function Copyright() {
   return (
 <div className=" relative flex justify-between mt-2 -mb-2  w-full   ">
@@ -17,16 +17,17 @@ function Copyright() {
     console.error('Error sharing:', error);
   });
 }}>
-  <span className="font-LibreBaskerville-Bold text-blue-400 hover:opacity-50" >Share</span>
+  <span className="shareButton  font-LibreBaskerville-Bold text-[#75bfc4] hover:opacity-50" >
+    share</span>
 </button>
 </div>
 <div  className=" w-fit">
     <a href="https://mybabb.com">
      
         <p className="relative m-auto -bottom-2 flex w-fit whitespace-nowrap font-Orbitron-Regular ">
-          <span className="z-1 text-xs  text-[7px] text-blue-200 sm:text-[9px]">
+          <span className="z-1 text-xs  text-[7px] text-[#75bfc4] sm:text-[9px]">
             &lt;&lt;&lt;&nbsp;&copy;
-            <span className="font-Aclonica-Regular text-orange-500">
+            <span className="font-Aclonica-Regular text-orange-400">
               &nbsp;MyBaBB
             </span>{" "}
             <em>12-2023</em>
