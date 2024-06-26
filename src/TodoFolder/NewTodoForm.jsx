@@ -37,19 +37,17 @@ export function NewTodoForm({ onSubmit }) {
           </a>
         </div>
         <span
-          className="fishyNotepad mt-2 text-red-400 text-center whitespace-nowrap font-Aclonica-Regular text-[14px]
+          className="fishyNotepad mt-2 text-blue-400 text-center whitespace-nowrap font-Aclonica-Regular text-[14px]
                       xxs:block  xs:text-[14px] sm:text-[19px] "
         >
           Notepad
         
       
-        <div className="text-center   text-sm text-red-400">
-          (Beta Version)
-        </div>
+        
         </span>
         
         <div className="inline-block  ">
-          <a href="https://mybabb.github.io/MyBaBB_Password_Machine/">
+          <a href="https://passwords.mybabb.com">
             <div className=" relative z-50    inline-block    ">
               <span className=" inline-block text-blue-50">
                 <FaUserSecret size={27} />

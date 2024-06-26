@@ -2,12 +2,12 @@
   "name": "Fishy-Notes",
   "private": true,
   "version": "0.0.0",
-   "homepage": "https://mybabb.github.io/MyBABB-Remember/",
+   
   "type": "module",
   "scripts": {
     "format": "prettier --write ./src",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+   
     "start": "react-scripts start",
     "dev": "vite",
     "build": "vite build",
