@@ -34,15 +34,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
 
 
       <div className=" relative m-auto ml-[.49rem] flex justify-between pb-4 pt-1 font-Aclonica-Regular">
-        <button
-          onClick={() => deleteTodo(id)}
-          className="btn relative  mb-4
-                    bg-red-900 from-red-500 to-red-950 text-blue-50 hover:bg-gradient-to-b"
-        >
-          Delete
-        </button>
-
-        <button
+      <button
           onClick={() => {
             const updatedTitle = completed ? `✅ ${title} ` : title;
             copyTodoItem(updatedTitle);
@@ -77,6 +69,19 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
         >
           Copy
         </button>
+       
+       
+       
+       
+        <button
+          onClick={() => deleteTodo(id)}
+          className="btn relative  mb-4
+                    bg-red-900 from-red-500 to-red-950 text-blue-50 hover:bg-gradient-to-b"
+        >
+          Delete
+        </button>
+
+       
       </div>
     </div>
   );
