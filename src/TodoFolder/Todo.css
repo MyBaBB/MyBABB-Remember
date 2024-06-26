@@ -160,8 +160,8 @@ body {
   margin: 0;
   padding: 0;
   text-shadow: 1px 1px 2px #000000;
-  text-decoration: underline;
-  text-decoration-thickness: 0.2px;
+  /* text-decoration: underline;
+  text-decoration-thickness: 0.2px; */
   text-decoration-color: black;
   color: deepskyblue;
 }
@@ -205,9 +205,10 @@ body {
 }
 
 .list li label::before {
-  content: "";
+  content: '👁️ ';
+  font-size:.75rem ;
   display: block;
-  width: 0.9rem;
+  width: 1rem;
   height: 0.9rem;
   background: hsl(200, 100%, 90%);
   border-radius: 0.25em;
@@ -215,14 +216,17 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: 0.25rem;
+  padding-right: 1.5px;
+ 
 }
 
 .list li label:hover::before {
+  
   background: hsl(200, 100%, 80%);
 }
 
 .list li:has(input:checked) label::before {
-  content: "✅";
+  content: "🔐";
   background: hsl(200, 100%, 40%);
   color: hsl(200, 100%, 90%);
   font-size: 0.75rem;

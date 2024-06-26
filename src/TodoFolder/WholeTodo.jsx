@@ -116,13 +116,36 @@ export default function App() {
 
   function copyAllTodosNormal() {
     let todosText = "";
-    todos.forEach((todo, index) => {
-      const emoji = todo.completed ? "✅" : getRandomEmoji();
-      todosText +=
-        index + 1 + ". " + emoji + " " + todo.title + " " + "\n";
-    });
+    todos
+      .filter((todo) => !todo.completed)
+      .forEach((todo, index) => {
+        const emoji = getRandomEmoji();
+        todosText +=
+          index + 1 + ". " + emoji + " " + todo.title + " " + "\n";
+      });
     navigator.clipboard.writeText(todosText);
   }
+
+  // function copyAllTodosNormal2() {
+  //   let todosText = "";
+  //   todos.forEach((todo, index) => {
+  //     if (!todo.completed) {
+  //       const emoji = todo.completed ? "✅" : getRandomEmoji();
+  //       todosText +=
+  //         index + 1 + ". " + emoji + " " + todo.title + " " + "\n";
+  //     }
+  //   });
+  //   navigator.clipboard.writeText(todosText);
+  // }
+
+
+
+
+
+
+
+
+
 
   return (
     <>
@@ -171,9 +194,10 @@ export default function App() {
               <button
                 onClick={() => {
                   copyAllTodosNormal();
+                 
                   const alertBox = document.createElement("div");
                   alertBox.textContent =
-                    "👉🏻 Entire List was Copied to  ClipBoard ✍🏻   ";
+                    "👉🏻 Entire List was Copied to ClipBoard ✍🏻";
                   alertBox.classList.add(
                     "fixed",
                     "bottom-[25%]",
