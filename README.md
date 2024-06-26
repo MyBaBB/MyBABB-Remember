@@ -1,5 +1,5 @@
 <!-- note to self npm run deploy for github pages -->
-use the proversion branch for mybabb.com 
+   use the proversion branch for mybabb.com 
 # Todo-list
 
 ## Custom  todo-list app with a simple UI and a few features. ##
