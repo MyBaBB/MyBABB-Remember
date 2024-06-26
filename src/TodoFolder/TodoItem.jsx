@@ -33,7 +33,8 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
 
 
 
-      <div className=" relative m-auto ml-[.49rem] flex justify-between pb-4 pt-1 font-Aclonica-Regular">
+      <div className=" relative m-auto  flex 
+      justify-between w-[70%] pb-4 pt-1 font-Aclonica-Regular">
       <button
           onClick={() => {
             if (completed) {
