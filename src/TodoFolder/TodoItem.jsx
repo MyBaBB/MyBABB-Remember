@@ -36,7 +36,11 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
       <div className=" relative m-auto ml-[.49rem] flex justify-between pb-4 pt-1 font-Aclonica-Regular">
       <button
           onClick={() => {
-            const updatedTitle = completed ? `✅ ${title} ` : title;
+            if (completed) {
+             
+              return;
+            }
+            const updatedTitle = `${title}`;
             copyTodoItem(updatedTitle);
             const alertBox = document.createElement("div");
             alertBox.textContent =
@@ -64,9 +68,13 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
               alertBox.remove();
             }, 2000);
           }}
-          className="btn  copyButton relative mb-4  flex from-green-600 
-            to-green-950 font-PTSerif-Bold text-blue-50 hover:bg-gradient-to-b"
-        >
+          className={`btn  copyButton relative mb-4  flex ${
+            completed ? "from-gray-600" : "from-green-600"
+          } 
+            to-green-950 font-PTSerif-Bold text-blue-50 ${
+            completed ? "hover:bg-red-950 hover:text-red-900" : "hover:bg-gradient-to-b"
+          }`}
+        > 
           Copy
         </button>
        
