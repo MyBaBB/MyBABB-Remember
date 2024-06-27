@@ -85,7 +85,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
         <button
           onClick={() => deleteTodo(id)}
           className="btn relative  mb-4
-                    bg-red-900 from-red-500 to-red-950 text-blue-50 hover:bg-gradient-to-b"
+                    bg-red-800 from-red-500 to-red-950 text-blue-50 hover:bg-gradient-to-b"
         >
           Delete
         </button>
