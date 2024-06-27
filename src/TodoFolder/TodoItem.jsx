@@ -3,13 +3,9 @@ function copyTodoItem(title) {
   navigator.clipboard.writeText(title);
 }
 
-export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
+export function TodoItem({ lockedTodo, id, title, toggleTodo, deleteTodo }) {
   return (
     <div className="outerDivContainer m-auto  w-full">
-
-
-
-      
       <li className="ListItem9  ">
         <label
           className="label1 relative m-auto flex w-full  rounded-md border-[1px] border-black bg-slate-700 
@@ -17,7 +13,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
         >
           <input
             type="checkbox"
-            checked={completed}
+            checked={lockedTodo}
             onChange={(e) => toggleTodo(id, e.target.checked)}
           />
           <div className="checkbox1 overflow-x-auto">
@@ -28,17 +24,13 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
         </label>
       </li>
 
-
-
-
-
-
-      <div className=" relative m-auto  flex 
-      justify-between w-[70%] pb-4 pt-1 font-Aclonica-Regular">
-      <button
+      <div
+        className=" relative m-auto  flex 
+      w-full justify-end pb-2 pt-2 font-Aclonica-Regular"
+      >
+        <button
           onClick={() => {
-            if (completed) {
-             
+            if (lockedTodo) {
               return;
             }
             const updatedTitle = `${title}`;
@@ -69,28 +61,30 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
               alertBox.remove();
             }, 2000);
           }}
-          className={`btn  copyButton relative mb-4  flex ${
-            completed ? "from-gray-600" : "from-green-600"
+          className={`btn  copyButton relative mb-4   ${
+            lockedTodo ? "from-gray-600" : "from-green-600"
           } 
-            to-green-950 font-PTSerif-Bold text-blue-50 ${
-            completed ? "hover:bg-red-950 hover:text-red-900" : "hover:bg-gradient-to-b"
-          }`}
-        > 
+            to-green-950 font-PTSerif-Bold ${
+              lockedTodo
+                ? "pointer-events-none opacity-50"
+                : "text-blue-50 hover:bg-gradient-to-b"
+            }`}
+        >
           Copy
         </button>
-       
-         
-       
-       
+
         <button
-          onClick={() => deleteTodo(id)}
-          className="btn relative  mb-4
-                    bg-red-900 from-red-500 to-red-950 text-blue-50 hover:bg-gradient-to-b"
+          onClick={() => !lockedTodo && deleteTodo(id)}
+          disabled={lockedTodo}
+          className={`btn deleteButton relative  mb-4
+            ${
+              lockedTodo
+                ? "pointer-events-none opacity-50"
+                : "bg-red-900 from-red-500 to-red-950 text-blue-50 hover:bg-gradient-to-b"
+            }`}
         >
           Delete
         </button>
-
-       
       </div>
     </div>
   );

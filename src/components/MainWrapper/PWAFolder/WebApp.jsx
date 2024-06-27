@@ -32,12 +32,11 @@ const InstallApp = () => {
           </button>
         )}
       </div>
-     
+
       <a
         href="https://www.youtube.com/watch?v=AwfKUpq5seE "
         className="relative "
       >
-       
         <div>
           {!isAppMode && (
             <button
