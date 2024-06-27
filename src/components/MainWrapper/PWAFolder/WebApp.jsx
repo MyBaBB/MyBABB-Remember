@@ -2,6 +2,15 @@
 import React from "react";
 import "./WebApp.css";
 
+const handleUninstall = () => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (const registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+};
 const InstallApp = () => {
   let deferredPrompt;
   window.addEventListener("beforeinstallprompt", (e) => {
@@ -33,6 +42,10 @@ const InstallApp = () => {
         )}
       </div>
      
+
+
+
+
       <a
         href="https://www.youtube.com/watch?v=AwfKUpq5seE "
         className="relative "
@@ -50,6 +63,17 @@ const InstallApp = () => {
           )}
         </div>
       </a>
+
+        <button onClick={handleUninstall} className="installButton mb-1 font-Changa-Regular text-[12px]">
+          Uninstall
+        </button>
+        {!("serviceWorker" in navigator) ? (
+          <a href="https://fishy-notepad.mybabb.com/">
+            <button className="installButton mb-1 font-Changa-Regular text-[12px]">
+              Get it
+            </button>
+          </a>
+        ) : null}
     </div>
   );
 };
