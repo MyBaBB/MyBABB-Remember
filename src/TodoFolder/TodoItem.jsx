@@ -26,7 +26,7 @@ export function TodoItem({ lockedTodo, id, title, toggleTodo, deleteTodo }) {
 
       <div
         className=" relative m-auto  flex 
-      w-full justify-end pb-2 pt-2 font-Aclonica-Regular"
+      w-full justify-end pb-1 pt-1 font-Aclonica-Regular"
       >
         <button
           onClick={() => {
