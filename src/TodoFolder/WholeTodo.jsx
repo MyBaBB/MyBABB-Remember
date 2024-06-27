@@ -25,7 +25,7 @@ export default function App() {
 
   function addTodo(title) {
     setTodos((currentTodos) => {
-      const newTodo = { id: crypto.randomUUID(), title, completed: false };
+      const newTodo = { id: crypto.randomUUID(), title, lockedTodo: false };
       if (addToTop) {
         return [newTodo, ...currentTodos];
       } else {
@@ -34,14 +34,11 @@ export default function App() {
     });
   }
 
-
-
-
-  function toggleTodo(id, completed) {
+  function toggleTodo(id, lockedTodo) {
     setTodos((currentTodos) => {
       return currentTodos.map((todo) => {
         if (todo.id === id) {
-          return { ...todo, completed };
+          return { ...todo, lockedTodo };
         }
 
         return todo;
@@ -49,12 +46,6 @@ export default function App() {
     });
   }
 
-
-
-
-
-
-  
   const [isOpen, setIsOpen] = useState(false);
 
   const [isTodoOrderReversed, setIsTodoOrderReversed] = useState(false);
@@ -117,11 +108,10 @@ export default function App() {
   function copyAllTodosNormal() {
     let todosText = "";
     todos
-      .filter((todo) => !todo.completed)
+      .filter((todo) => !todo.lockedTodo)
       .forEach((todo, index) => {
         const emoji = getRandomEmoji();
-        todosText +=
-          index + 1 + ". " + emoji + " " + todo.title + " " + "\n";
+        todosText += index + 1 + ". " + emoji + " " + todo.title + " " + "\n";
       });
     navigator.clipboard.writeText(todosText);
   }
@@ -129,23 +119,14 @@ export default function App() {
   // function copyAllTodosNormal2() {
   //   let todosText = "";
   //   todos.forEach((todo, index) => {
-  //     if (!todo.completed) {
-  //       const emoji = todo.completed ? "✅" : getRandomEmoji();
+  //     if (!todo.lockedTodo) {
+  //       const emoji = todo.lockedTodo ? "✅" : getRandomEmoji();
   //       todosText +=
   //         index + 1 + ". " + emoji + " " + todo.title + " " + "\n";
   //     }
   //   });
   //   navigator.clipboard.writeText(todosText);
   // }
-
-
-
-
-
-
-
-
-
 
   return (
     <>
@@ -194,7 +175,7 @@ export default function App() {
               <button
                 onClick={() => {
                   copyAllTodosNormal();
-                 
+
                   const alertBox = document.createElement("div");
                   alertBox.textContent =
                     "👉🏻 Entire List was Copied to ClipBoard ✍🏻";
@@ -295,7 +276,6 @@ export default function App() {
                 )}
               </button>
 
-              
               <button
                 onClick={toggleTodoOrder}
                 className="btn2 copyButton relative     m-auto my-1  flex

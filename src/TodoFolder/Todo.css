@@ -205,8 +205,8 @@ body {
 }
 
 .list li label::before {
-  content: '👁️ ';
-  font-size:1.55rem ;
+  content: "👁️ ";
+  font-size: 1.55rem;
   display: block;
   width: 2rem;
   height: 2rem;
@@ -217,11 +217,9 @@ body {
   align-items: center;
   margin-left: 0.25rem;
   padding-right: 1.5px;
- 
 }
 
 .list li label:hover::before {
-  
   background: hsl(200, 100%, 80%);
 }
 
