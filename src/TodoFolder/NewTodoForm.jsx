@@ -23,7 +23,7 @@ export function NewTodoForm({ onSubmit }) {
       <div className="relative   hidden justify-between xxs:flex">
         <div className="inline-block ">
           <a href="https://resume-hub.mybabb.com/" className="">
-            <div className="  relative   z-50 inline-block   w-fit   ">
+            <div className="  relative   z-49 inline-block   w-fit   ">
               <span className="rewindButton mt-2 inline-block text-black ">
                 {" "}
                 <FiRewind size={30} className="" />
