@@ -42,7 +42,11 @@ const InstallApp = () => {
         )}
       </div>
      
-
+      <a href="https://fishy-notepad.mybabb.com/">
+        <button className="installButton mb-1 font-Changa-Regular text-[12px]">
+          Upgrade
+        </button>
+      </a>
 
 
 
@@ -64,11 +68,7 @@ const InstallApp = () => {
         </div>
       </a>
       
-      <a href="https://fishy-notepad.mybabb.com/">
-        <button className="installButton mb-1 font-Changa-Regular text-[12px]">
-          Upgrade
-        </button>
-      </a>
+      
       
 
     </div>
