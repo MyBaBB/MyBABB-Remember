@@ -17,8 +17,8 @@ export default defineConfig({
     
           "name": "Web Developer Friend ",
           "short_name": "Notes",
-          "theme_color": "#255170",
-          "background_color": "#ecfafa",
+          "theme_color": "196d9c",
+          "background_color": "#196d9c",
           "display": "standalone",
           "scope": "./",
           "start_url": "./",
