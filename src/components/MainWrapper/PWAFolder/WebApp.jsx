@@ -36,7 +36,7 @@ const InstallApp = () => {
             id="installApp"
             className="installButton mb-1 font-Changa-Regular text-[12px]"
           >
-            ✅ Installed
+            ✅ App-Installed
           </button>
         )}
       </div>
