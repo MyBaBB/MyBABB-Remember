@@ -2,22 +2,7 @@
 import React from "react";
 import "./WebApp.css";
 
-
-const checkAndUninstallPWA = () => {
-  if (window.matchMedia("(display-mode: standalone)").matches) {
-    window.matchMedia("(display-mode: standalone)").addEventListener("change", (e) => {
-      if (!e.matches) {
-        window.location.reload();
-      }
-    });
-    if (window.matchMedia("(display-mode: standalone)").matches) {
-      window.location.reload();
-    }
-    window.history.pushState({}, '', '/');
-    window.location.reload();
-  }
-};
-
+ 
 const InstallApp = () => {
   let deferredPrompt;
   window.addEventListener("beforeinstallprompt", (e) => {
@@ -71,12 +56,14 @@ const InstallApp = () => {
         </div>
       </a>
       
-   
-        <button className="installButton mb-1 font-Changa-Regular text-[12px]"
-         onClick={checkAndUninstallPWA}>
+      <a href="https://fishy-notepad.mybabb.com/">
+      <div className=" justify-center ">
+        <button className=" installButton  relative flex m-auto mb-1 font-Changa-Regular text-[12px]">
           Upgrade
-        </button>;
-     
+        </button>
+        <p className="text-[10px] text-center">(uninstall first)</p>
+        </div>
+      </a>
       
 
     </div>
