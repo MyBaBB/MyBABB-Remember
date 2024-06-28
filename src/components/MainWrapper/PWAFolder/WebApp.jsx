@@ -22,13 +22,20 @@ const InstallApp = () => {
   return (
     <div className="relative m-auto -mt-4  flex  w-[65%] justify-between">
       <div>
-        {!isAppMode && (
+        {!isAppMode ? (
           <button
             id="installApp"
             onClick={handleClick}
             className="installButton mb-1 font-Changa-Regular text-[12px]"
           >
             Android/Desk App
+          </button>
+        ) : (
+          <button
+            id="installApp"
+            className="installButton mb-1 font-Changa-Regular text-[12px]"
+          >
+            ✅ App-Installed
           </button>
         )}
       </div>
