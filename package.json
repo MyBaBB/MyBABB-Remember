@@ -2,7 +2,7 @@
   "name": "Fishy-Notes",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://mybabb.github.io/MyBABB-Remember/",
+  "homepage":  "https://mybabb.github.io/MyBABB-Remember/",
   "type": "module",
   "scripts": {
     "format": "prettier --write ./src",
