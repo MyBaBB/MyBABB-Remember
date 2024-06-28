@@ -16,7 +16,7 @@ export default defineConfig({
       manifest: {
     
           "name": "Web Developer Friend ",
-          "short_name": "Notes",
+          "short_name": "Beta Notes",
           "theme_color": "#b54d6a",
           "background_color": "#b54d6a",
           "display": "standalone",
