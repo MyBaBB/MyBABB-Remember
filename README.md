@@ -1,5 +1,5 @@
 <!-- note to self npm run deploy for github pages -->
- Took off gh-pages and just used build folder now old version is still running on gh pages with a notification.
+ this is gh-pages Beta version.  run deploy to update.
 # Todo-list
 
 ## Custom  todo-list app with a simple UI and a few features. ##

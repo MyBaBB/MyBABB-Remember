@@ -52,7 +52,7 @@ export function NewTodoForm({ onSubmit }) {
         </span>
         </div>
         <div className="inline-block  ">
-          <a href="https://mybabb.github.io/MyBaBB_Password_Machine/">
+          <a href="https://passwords.mybabb.com">
             <div className=" relative z-50    inline-block    ">
               <span className=" inline-block text-blue-50">
                 <FaUserSecret size={27} />
