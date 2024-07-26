@@ -19,4 +19,4 @@ add anchor tag to NewTodoForm on NotePad4 paragraph line 45.
 make route for it in App.js
 style bg color on line 138 on WholeTodo4
 Style each page as needed.
- 
+ # using hashrouter for now.
