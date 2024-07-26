@@ -36,7 +36,7 @@ export function NewTodoForm({ onSubmit }) {
             </div>
           </a>
         </div>
-         <a href="/WholeTodo3">
+         <a href="./WholeTodo3">
           <div className="fishyNotepad mt-2 text-blue-400 text-center whitespace-nowrap font-Aclonica-Regular text-[14px]
                       xxs:block  xs:text-[14px] sm:text-[19px]">Note Pad 2
          </div>
