@@ -42,7 +42,7 @@ export function NewTodoForm({ onSubmit }) {
           <div className="fishyNotepad  text-blue-400 text-center whitespace-nowrap font-Aclonica-Regular text-[14px]
                       xxs:block  xs:text-[14px] sm:text-[19px]">Note Pad 1
          </div>
-         <span className="text-red-300"></span>
+         <span className="text-red-300">(click)</span>
         </a>
         </div>
         <div className="inline-block  ">
