@@ -36,15 +36,12 @@ export function NewTodoForm({ onSubmit }) {
             </div>
           </a>
         </div>
-        <div className="relative text-center ">
-          <span className="text-red-300  ">&apos; Beta Version &apos;</span> 
-        <a href="/WholeTodo2">
-          <div className="fishyNotepad  text-blue-400 text-center whitespace-nowrap font-Aclonica-Regular text-[14px]
-                      xxs:block  xs:text-[14px] sm:text-[19px]">Note Pad 1
+        <a href="/WholeTodo1">
+          <div className="fishyNotepad mt-2 text-blue-400 text-center whitespace-nowrap font-Aclonica-Regular text-[14px]
+                      xxs:block  xs:text-[14px] sm:text-[19px]">Note Pad 3
          </div>
-         <span className="text-red-300">(click)</span>
         </a>
-        </div>
+        
         <div className="inline-block  ">
           <a href="https://passwords.mybabb.com">
             <div className=" relative z-50    inline-block    ">

@@ -11,16 +11,17 @@ import NightOcean from "../assets/nightOcean400x200.jpg";
 import NightOcean240px from "../assets/nightOcean240x190.jpg";
 import Copyright from "../components/Copyright";
 
-export default function WholeTodo() {
+export default function WholeTodo2() {
   const [todos, setTodos] = useState(() => {
-    const localValue = localStorage.getItem("ITEMS");
+    const localValue = localStorage.getItem("ITEMS2");
+     
     if (localValue == null) return [];
 
     return JSON.parse(localValue);
   });
 
   useEffect(() => {
-    localStorage.setItem("ITEMS", JSON.stringify(todos));
+    localStorage.setItem("ITEMS2", JSON.stringify(todos));
   }, [todos]);
 
   function addTodo(title) {
@@ -33,6 +34,7 @@ export default function WholeTodo() {
       }
     });
   }
+
   function toggleTodo(id, lockedTodo) {
     setTodos((currentTodos) => {
       return currentTodos.map((todo) => {
@@ -133,10 +135,10 @@ export default function WholeTodo() {
       <div
         className="controlContainer relative m-auto w-[95%] max-w-[550px] flex-row rounded-3xl
          border-2 border-black  p-4"
-        style={{ background: "radial-gradient(circle, #707070, #606060)" }}
+        style={{ background: "radial-gradient(circle, lightSkyBlue, #606060)" }}
       >
-         
 
+        
 
         <div className="relative flex-row ">
           <NewTodoForm onSubmit={addTodo} />
@@ -181,7 +183,7 @@ export default function WholeTodo() {
 
                   const alertBox = document.createElement("div");
                   alertBox.textContent =
-                  " All '' Unlocked '' Items Copied to ClipBoard ✍🏻";
+                   " All '' Unlocked '' Items Copied to ClipBoard ✍🏻";
                   alertBox.classList.add(
                     "fixed",
                     "bottom-[25%]",
@@ -325,4 +327,3 @@ export default function WholeTodo() {
     </>
   );
 }
- 
