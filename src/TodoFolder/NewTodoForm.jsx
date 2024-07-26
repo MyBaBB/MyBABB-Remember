@@ -5,7 +5,7 @@ import { FaUserSecret } from "react-icons/fa";
 import { SiTestinglibrary } from "react-icons/si";
 import "./Todo.css";
 import { FiRewind } from "react-icons/fi";
-
+ 
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
 
@@ -38,7 +38,7 @@ export function NewTodoForm({ onSubmit }) {
         </div>
         <div className="relative text-center ">
           <span className="text-red-300  ">&apos; Beta Version &apos;</span> 
-        <a href="./WholeTodo2">
+        <a href="/WholeTodo2">
           <div className="fishyNotepad  text-blue-400 text-center whitespace-nowrap font-Aclonica-Regular text-[14px]
                       xxs:block  xs:text-[14px] sm:text-[19px]">Note Pad 1
          </div>
