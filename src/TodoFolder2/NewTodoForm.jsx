@@ -20,7 +20,7 @@ export function NewTodoForm({ onSubmit }) {
 
   return (
     <>
-      <div className="relative    justify-between flex">
+      <div className="relative    flex justify-between">
         <div className="inline-block  whitespace-nowrap">
           <a href="https://resume-hub.mybabb.com/" className="">
             <div className="  relative   z-50 inline-block   w-fit   ">
@@ -37,42 +37,59 @@ export function NewTodoForm({ onSubmit }) {
           </a>
         </div>
 
-        <div className="relative  flex text-center 
-           w-full  justify-around mb-2        ">
-<a href="#/WholeTodo1">
-          <div className="fishyNotepad relative text-blue-400 text-[14px]
-                             xs:text-[18px] sm:text-[19px]">
-                           <span  className=" absolute top-[9px] left-[15px]
-                           font-BlackOpsOne-Regular text-white">1</span>
-                           <TfiNotepad size={40}/> 
-         </div>
-        </a>
-        
-        <a href="#/WholeTodo2">
-        <div className="fishyNotepad relative  text-blue-400  
-                            text-[14px]
-                             xs:text-[18px] sm:text-[19px]   ">
-                           <span  className=" absolute top-[9px] left-[15px]
-                           font-BlackOpsOne-Regular text-white">2</span>
-                           <TfiNotepad size={40}/> 
-         </div>
-        
-        </a>
-        <a href="#/WholeTodo3">
-          <div className="fishyNotepad relative text-blue-400 text-[14px]
-                             xs:text-[18px] sm:text-[19px]">
-                           <span  className=" absolute top-[9px] left-[15px]
-                           font-BlackOpsOne-Regular text-white">3</span>
-                           <TfiNotepad size={40}/> 
-         </div>
-        </a>
-            
-       
+        <div
+          className="relative  mb-2 flex 
+           w-full  justify-around text-center        "
+        >
+          <a href="#/WholeTodo1">
+            <div
+              className="fishyNotepad relative text-[14px] text-blue-400
+                             xs:text-[18px] sm:text-[19px]"
+            >
+              <span
+                className=" absolute left-[15px] top-[9px]
+                           font-BlackOpsOne-Regular text-white"
+              >
+                1
+              </span>
+              <TfiNotepad size={40} />
+            </div>
+          </a>
+
+          <a href="#/WholeTodo2">
+            <div
+              className="fishyNotepad relative  text-[14px]  
+                            text-blue-400
+                             xs:text-[18px] sm:text-[19px]   "
+            >
+              <span
+                className=" absolute left-[15px] top-[9px]
+                           font-BlackOpsOne-Regular text-white"
+              >
+                2
+              </span>
+              <TfiNotepad size={40} />
+            </div>
+          </a>
+          <a href="#/WholeTodo3">
+            <div
+              className="fishyNotepad relative text-[14px] text-blue-400
+                             xs:text-[18px] sm:text-[19px]"
+            >
+              <span
+                className=" absolute left-[15px] top-[9px]
+                           font-BlackOpsOne-Regular text-white"
+              >
+                3
+              </span>
+              <TfiNotepad size={40} />
+            </div>
+          </a>
         </div>
         <div className="inline-block whitespace-nowrap ">
           <a href="https://passwords.mybabb.com">
             <div className=" relative z-50    inline-block    ">
-              <span className=" inline-block text-blue-50 mb-1">
+              <span className=" mb-1 inline-block text-blue-50">
                 <FaUserSecret size={27} />
               </span>
               &nbsp;&nbsp;

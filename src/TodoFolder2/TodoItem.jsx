@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 function copyTodoItem(title) {
-  navigator.clipboard.writeText(title) ;
+  navigator.clipboard.writeText(title);
 }
 
 export function TodoItem({ lockedTodo, id, title, toggleTodo, deleteTodo }) {
@@ -66,7 +66,7 @@ export function TodoItem({ lockedTodo, id, title, toggleTodo, deleteTodo }) {
           } 
             to-green-950 font-PTSerif-Bold ${
               lockedTodo
-                ? `pointer-events-none opacity-70 text-[#f991519c]  bg-gradient-to-b from-gray-600 to-slate-900`
+                ? `pointer-events-none bg-gradient-to-b from-gray-600  to-slate-900 text-[#f991519c] opacity-70`
                 : "text-blue-50 hover:bg-gradient-to-b"
             }`}
         >
@@ -79,7 +79,7 @@ export function TodoItem({ lockedTodo, id, title, toggleTodo, deleteTodo }) {
           className={`btn deleteButton relative  mb-4
             ${
               lockedTodo
-                ? `pointer-events-none opacity-70 text-[#f991519c]  bg-gradient-to-b from-gray-600 to-slate-900`
+                ? `pointer-events-none bg-gradient-to-b from-gray-600  to-slate-900 text-[#f991519c] opacity-70`
                 : "bg-red-900 from-red-500 to-red-950 text-blue-50 hover:bg-gradient-to-b"
             }`}
         >
