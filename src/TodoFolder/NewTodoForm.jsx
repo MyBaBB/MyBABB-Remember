@@ -5,7 +5,7 @@ import { FaUserSecret } from "react-icons/fa";
 import { SiTestinglibrary } from "react-icons/si";
 import "./Todo.css";
 import { FiRewind } from "react-icons/fi";
- 
+import { TfiNotepad } from "react-icons/tfi";
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
 
@@ -20,13 +20,13 @@ export function NewTodoForm({ onSubmit }) {
 
   return (
     <>
-      <div className="relative   hidden justify-between xxs:flex">
-        <div className="inline-block ">
+      <div className="relative    justify-between flex">
+        <div className="inline-block  whitespace-nowrap">
           <a href="https://resume-hub.mybabb.com/" className="">
             <div className="  relative   z-50 inline-block   w-fit   ">
               <span className="rewindButton mt-2 inline-block text-black ">
                 {" "}
-                <FiRewind size={30} className="" />
+                <FiRewind size={30} className=" hidden sm:block" />
               </span>
               &nbsp;&nbsp;
               <span className="inline-block text-blue-50 ">
@@ -36,24 +36,50 @@ export function NewTodoForm({ onSubmit }) {
             </div>
           </a>
         </div>
-        <div className="relative text-center ">
-          <span className="text-red-300  ">&apos; Beta Version &apos;</span> 
-        <a href="#/WholeTodo2">
-          <div className="fishyNotepad  text-blue-400 text-center whitespace-nowrap font-Aclonica-Regular text-[14px]
-                      xxs:block  xs:text-[14px] sm:text-[19px]">Note Pad 1
+
+        <div className="relative  flex text-center 
+           w-full  justify-around mb-2        ">
+
+
+        <a href="#/WholeTodo1">
+          <div className="fishyNotepad relative text-blue-400 text-[14px]
+                             xs:text-[18px] sm:text-[19px]">
+                           <span  className=" absolute top-[9px] left-[15px]
+                           font-BlackOpsOne-Regular text-white">1</span>
+                           <TfiNotepad size={40}/> 
          </div>
-         <span className="text-red-300">(click)</span>
         </a>
+        
+        <a href="#/WholeTodo2">
+        <div className="fishyNotepad relative  text-blue-400  
+                            text-[14px]
+                             xs:text-[18px] sm:text-[19px]   ">
+                           <span  className=" absolute top-[9px] left-[15px]
+                           font-BlackOpsOne-Regular text-white">2</span>
+                           <TfiNotepad size={40}/> 
+         </div>
+        
+        </a>
+        <a href="#/WholeTodo3">
+          <div className="fishyNotepad relative text-blue-400 text-[14px]
+                             xs:text-[18px] sm:text-[19px]">
+                           <span  className=" absolute top-[9px] left-[15px]
+                           font-BlackOpsOne-Regular text-white">3</span>
+                           <TfiNotepad size={40}/> 
+         </div>
+        </a>
+              
+       
         </div>
-        <div className="inline-block  ">
+        <div className="inline-block whitespace-nowrap ">
           <a href="https://passwords.mybabb.com">
             <div className=" relative z-50    inline-block    ">
-              <span className=" inline-block text-blue-50">
+              <span className=" inline-block text-blue-50 mb-1">
                 <FaUserSecret size={27} />
               </span>
               &nbsp;&nbsp;
               <span className="fastForwardButton mt-2 inline-block text-black ">
-                <FiFastForward size={30} />
+                <FiFastForward size={30} className="hidden sm:block" />
               </span>
             </div>
           </a>
