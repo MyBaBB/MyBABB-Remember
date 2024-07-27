@@ -41,7 +41,7 @@ export function NewTodoForm({ onSubmit }) {
           className="relative  mb-2 flex 
            w-full  justify-around text-center        "
         >
-          <a href="#/WholeTodo1">
+          <a href="/WholeTodo1">
             <div
               className="fishyNotepad relative text-[14px] text-blue-400
                              xs:text-[18px] sm:text-[19px]"
@@ -56,7 +56,7 @@ export function NewTodoForm({ onSubmit }) {
             </div>
           </a>
 
-          <a href="#/WholeTodo2">
+          <a href="/WholeTodo2">
             <div
               className="fishyNotepad relative  text-[14px]  
                             text-blue-400
@@ -71,7 +71,7 @@ export function NewTodoForm({ onSubmit }) {
               <TfiNotepad size={40} />
             </div>
           </a>
-          <a href="#/WholeTodo3">
+          <a href="/WholeTodo3">
             <div
               className="fishyNotepad relative text-[14px] text-blue-400
                              xs:text-[18px] sm:text-[19px]"
