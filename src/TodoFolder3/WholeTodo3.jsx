@@ -135,7 +135,7 @@ export default function WholeTodo3() {
         <div
           className="controlContainer relative m-auto w-[95%] max-w-[550px] flex-row rounded-3xl
          border-2 border-black  p-4"
-          style={{ background: "radial-gradient(circle, aquamarine, #606060)" }}
+          style={{ background: "radial-gradient(circle,   #606060, #374032)" }}
         >
           <div className="relative flex-row ">
             <NewTodoForm onSubmit={addTodo} />
