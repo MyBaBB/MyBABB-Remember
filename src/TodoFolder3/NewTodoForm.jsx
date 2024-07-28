@@ -41,7 +41,7 @@ export function NewTodoForm({ onSubmit }) {
           className="relative  mb-2 flex 
            w-full  justify-around text-center        "
         >
-          <a href="/WholeTodo1">
+          <a href="/WholeTodo">
             <div
               className="fishyNotepad relative text-[14px] text-blue-400
                              xs:text-[18px] sm:text-[19px]"
