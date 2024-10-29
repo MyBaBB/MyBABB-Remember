@@ -308,6 +308,10 @@ body {
   --scale: 0;
   z-index: 49;
 }
+ 
+.animate-open-menu {
+  animation: open-menu 0.5s ease-in-out forwards;
+}
 @keyframes open-menu {
   0% {
     transform: scaleY(0);
@@ -321,9 +325,6 @@ body {
     transform: scaleY(1);
     opacity: 1;
   }
-}
-.animate-open-menu {
-  animation: open-menu 0.5s ease-in-out forwards;
 }
 @keyframes close-menu {
   0% {
