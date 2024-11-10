@@ -12,7 +12,7 @@ function App() {
     <Routes>
       
  
-    
+      <Route path="/" element={<WholeTodo />} />
       <Route path="/WholeTodo2" element={<WholeTodo2 />} />
       <Route path="/WholeTodo3" element={<WholeTodo3 />} />
       <Route path="/*" element={<WholeTodo />} />
