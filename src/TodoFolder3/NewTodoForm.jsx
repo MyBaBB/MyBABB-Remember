@@ -4,6 +4,7 @@ import { FiFastForward } from "react-icons/fi";
 import { FaUserSecret } from "react-icons/fa";
 import { SiTestinglibrary } from "react-icons/si";
 import "./Todo.css";
+import { Link } from "react-router-dom";
 import { FiRewind } from "react-icons/fi";
 import { TfiNotepad } from "react-icons/tfi";
 export function NewTodoForm({ onSubmit }) {
@@ -41,7 +42,7 @@ export function NewTodoForm({ onSubmit }) {
           className="relative  mb-2 flex 
            w-full  justify-around text-center        "
         >
-          <a href="/WholeTodo">
+         <Link to="/WholeTodo">
             <div
               className="fishyNotepad relative text-[14px] text-blue-400
                              xs:text-[18px] sm:text-[19px]"
@@ -54,9 +55,9 @@ export function NewTodoForm({ onSubmit }) {
               </span>
               <TfiNotepad size={40} />
             </div>
-          </a>
+          </Link>
 
-          <a href="/WholeTodo2">
+          <Link to="/WholeTodo2">
             <div
               className="fishyNotepad relative  text-[14px]  
                             text-blue-400
@@ -70,8 +71,8 @@ export function NewTodoForm({ onSubmit }) {
               </span>
               <TfiNotepad size={40} />
             </div>
-          </a>
-          <a href="/WholeTodo3">
+          </Link>
+          <Link to="/WholeTodo3">
             <div
               className="fishyNotepad relative text-[14px] text-blue-400
                              xs:text-[18px] sm:text-[19px]"
@@ -84,7 +85,7 @@ export function NewTodoForm({ onSubmit }) {
               </span>
               <TfiNotepad size={40} />
             </div>
-          </a>
+          </Link>
         </div>
         <div className="inline-block whitespace-nowrap ">
           <a href="https://passwords.mybabb.com">

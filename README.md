@@ -1,5 +1,5 @@
 <!-- note to self npm run deploy for github pages -->
-  this is the Beta Version on github pages 
+  this is the New Version
   npm run deploy is removed from the package.json file
 # Todo-list
 
