@@ -84,14 +84,4 @@ export default defineConfig({
 
     }),
   ],
-   build:{
-     rollupOptions: {
-      input:'/index.html',
-     },
-   server: {
-     historyApiFallback: true,
-   },
-
-
-   }
 })
