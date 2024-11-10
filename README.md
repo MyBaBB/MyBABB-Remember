@@ -1,5 +1,6 @@
-<!-- note to self npm run deploy for github pages -->
-  this is the Beta Version on github pages 
+<!-- github.com/mybabb/MyBABB-Remember staging branch on build dist on render.com  -->
+#  https://fishy-notepad.mybabb.com/ 
+  this is the New Version
   npm run deploy is removed from the package.json file
 # Todo-list
 
