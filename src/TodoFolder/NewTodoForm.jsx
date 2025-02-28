@@ -7,8 +7,34 @@ import "./Todo.css";
 import { Link } from "react-router-dom";
 import { FiRewind } from "react-icons/fi";
 import { TfiNotepad } from "react-icons/tfi";
+import  FrogSplash from "../assets/FrogSplash.mp3"
+import OneHotDog from "../assets/OneHotDog.wav"
+import TwoHotDogs from "../assets/TwoHotDogs.wav"
+import ThreeHotDogs from "../assets/ThreeHotDogs.wav"
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
+  function playFrogSplash() {
+    const audio = new Audio(FrogSplash);
+    audio.play();
+   }
+  function playOneHotDog() {
+    const audio = new Audio(OneHotDog);
+    audio.play();
+  }
+  function playTwoHotDogs() {
+    const audio = new Audio(TwoHotDogs);
+    audio.play();
+  }
+  function playThreeHotDogs() {
+    const audio = new Audio(ThreeHotDogs);
+    audio.play();
+  }
+
+
+
+
+
+
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -17,6 +43,8 @@ export function NewTodoForm({ onSubmit }) {
     onSubmit(newItem);
 
     setNewItem("");
+
+    playFrogSplash();
   }
 
   return (
@@ -51,7 +79,7 @@ export function NewTodoForm({ onSubmit }) {
               <span
                 className=" absolute left-[15px] top-[9px]
                            font-BlackOpsOne-Regular text-white"
-              >
+               onClick={playOneHotDog}>
                 1
               </span>
               <TfiNotepad size={40} />
@@ -68,7 +96,7 @@ export function NewTodoForm({ onSubmit }) {
               <span
                 className=" absolute left-[15px] top-[9px]
                            font-BlackOpsOne-Regular text-white"
-              >
+               onClick={playTwoHotDogs}>
                 2
               </span>
               <TfiNotepad size={40} />
@@ -84,7 +112,7 @@ export function NewTodoForm({ onSubmit }) {
               <span
                 className=" absolute left-[15px] top-[9px]
                            font-BlackOpsOne-Regular text-white"
-              >
+               onClick={playThreeHotDogs}>
                 3
               </span>
               <TfiNotepad size={40} />
@@ -124,7 +152,7 @@ export function NewTodoForm({ onSubmit }) {
         <button
           className="btn3 relative m-auto mb-8 flex justify-center  from-blue-700 to-blue-950  text-blue-50 
          hover:bg-gradient-to-b "
-        >
+            >
           <span className="font-PTSerif-Bold">Click to Add Item</span>
         </button>
       </form>
