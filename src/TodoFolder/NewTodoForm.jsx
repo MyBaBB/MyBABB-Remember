@@ -75,11 +75,12 @@ export function NewTodoForm({ onSubmit }) {
             <div
               className="fishyNotepad relative text-[14px] text-blue-400
                              xs:text-[18px] sm:text-[19px]"
-            >
+             onClick={playOneHotDog}>
+              
               <span
                 className=" absolute left-[15px] top-[9px]
                            font-BlackOpsOne-Regular text-white"
-               onClick={playOneHotDog}>
+               >
                 1
               </span>
               <TfiNotepad size={40} />
@@ -92,11 +93,11 @@ export function NewTodoForm({ onSubmit }) {
               className="fishyNotepad relative  text-[14px]  
                             text-blue-400
                              xs:text-[18px] sm:text-[19px]   "
-            >
+                             onClick={playTwoHotDogs}>
               <span
                 className=" absolute left-[15px] top-[9px]
                            font-BlackOpsOne-Regular text-white"
-               onClick={playTwoHotDogs}>
+               >
                 2
               </span>
               <TfiNotepad size={40} />
@@ -108,11 +109,11 @@ export function NewTodoForm({ onSubmit }) {
             <div
               className="fishyNotepad relative text-[14px] text-blue-400
                              xs:text-[18px] sm:text-[19px]"
-            >
+                             onClick={playThreeHotDogs}>
               <span
                 className=" absolute left-[15px] top-[9px]
                            font-BlackOpsOne-Regular text-white"
-               onClick={playThreeHotDogs}>
+               >
                 3
               </span>
               <TfiNotepad size={40} />
