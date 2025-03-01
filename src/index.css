@@ -6,7 +6,7 @@
   scroll-behavior: smooth;
 }
 
-@font-face {
+/* @font-face {
   font-family: "Archivo_Black";
   src: url(../GoogleFonts/ArchivoBlack-Regular.ttf);
 }
@@ -38,12 +38,12 @@
 @font-face {
   font-family: "Changa-Regular";
   src: url(../GoogleFonts/Changa-Regular.ttf);
-}
+} */
 @font-face {
   font-family: "Changa-VariableFont_wght";
   src: url(../GoogleFonts/Changa-VariableFont_wght.ttf);
 }
-@font-face {
+/* @font-face {
   font-family: "ChunkFive-Regular";
   src: url(../GoogleFonts/ChunkFive-Regular.otf);
 }
@@ -116,7 +116,7 @@
 @font-face {
   font-family: "Nosifer-Regular";
   src: url(../GoogleFonts/Nosifer-Regular.ttf);
-}
+} */
 @font-face {
   font-family: "NotoSans-Italic-VariableFont_wdth,wght";
   src: url(../GoogleFonts/NotoSans-Italic-VariableFont_wdth,wght.ttf);
@@ -125,10 +125,10 @@
   font-family: "NotoSans-VariableFont_wdth,wght";
   src: url(../GoogleFonts/NotoSans-VariableFont_wdth,wght.ttf);
 }
-@font-face {
+/* @font-face {
   font-family: "NovaCut-Regular";
   src: url(../GoogleFonts/NovaCut-Regular.ttf);
-}
+} */
 @font-face {
   font-family: "Orbitron-Regular";
   src: url(../GoogleFonts/Orbitron-Regular.ttf);
@@ -137,7 +137,7 @@
   font-family: "Orbitron-VariableFont_wght";
   src: url(../GoogleFonts/Orbitron-VariableFont_wght.ttf);
 }
-@font-face {
+/* @font-face {
   font-family: "PermanentMarker-Regular";
   src: url(../GoogleFonts/PermanentMarker-Regular.ttf);
 }
@@ -169,7 +169,7 @@
 @font-face {
   font-family: "Sansita-Regular";
   src: url(../GoogleFonts/Sansita-Regular.ttf);
-}
+} */
 @font-face {
   font-family: "Sixtyfour-Regular-VariableFont";
   src: url(../GoogleFonts/Sixtyfour-Regular-VariableFont.ttf);
@@ -179,7 +179,7 @@
   font-family: "Sixtyfour-Regular";
   src: url(../GoogleFonts/Sixtyfour-Regular.ttf);
 }
-@font-face {
+/* @font-face {
   font-family: "Yellowtail-Regular";
   src: url(../GoogleFonts/Yellowtail-Regular.ttf);
-}
+} */

@@ -11,6 +11,12 @@ Project- I need to add some features after I test for a while.
 saves to local cache per each separate browser.
 
 ![image](Readme.png)
+## Google Fonts Used
+*  Changa-VariableFont_wght.ttf
+*  NotoSans-Italic-VariableFont_wdth,wght
+*  NotoSans-VariableFont_wdth,wght
+*  Orbitron-VariableFont_wght
+*  Sixtyfour-Regular
 
 
 # To add a page.
