@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { TfiNotepad } from "react-icons/tfi";
 import  FrogSplash from "../assets/FrogSplash.mp3"
 import TurnPage from "../assets/TurnPage.mp3"
- 
+import ScreenSaver from "../components/ScreenSaver";
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
   function playFrogSplash() {
@@ -37,7 +37,7 @@ export function NewTodoForm({ onSubmit }) {
     <>
       <div className="relative    flex justify-between">
         <div className="inline-block  whitespace-nowrap">
-      
+        <ScreenSaver />
           <a href="https://resume-hub.mybabb.com/" className="">
             <div className="  relative   z-50 inline-block   w-fit   ">
               <span className="rewindButton mt-2 inline-block text-black ">
