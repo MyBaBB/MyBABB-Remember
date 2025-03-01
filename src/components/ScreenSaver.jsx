@@ -12,7 +12,7 @@ function resetTimer() {
   }
 
   timerID = setTimeout(() => {
-    window.location.href = 'https://octo-space.mybabb.com'
+    window.location.href = 'https://screen.saver.mybabb.com'
   }, timeout);
 }
 
