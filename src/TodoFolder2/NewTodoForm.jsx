@@ -8,15 +8,18 @@ import { FiRewind } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { TfiNotepad } from "react-icons/tfi";
 import  FrogSplash from "../assets/FrogSplash.mp3"
-import OneHotDog from "../assets/OneHotDog.wav"
-import TwoHotDogs from "../assets/TwoHotDogs.wav"
-import ThreeHotDogs from "../assets/ThreeHotDogs.wav"
+import TurnPage from "../assets/TurnPage.mp3"
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
   function playFrogSplash() {
     const audio = new Audio(FrogSplash);
     audio.play();
    }
+  function playTurnPage() {
+    const audio = new Audio(TurnPage);
+    audio.play();
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
     if (newItem === "") return;
@@ -24,20 +27,10 @@ export function NewTodoForm({ onSubmit }) {
     onSubmit(newItem);
 
     setNewItem("");
+
     playFrogSplash();
   }
-    function playOneHotDog() {
-      const audio = new Audio(OneHotDog);
-      audio.play();
-    }
-    function playTwoHotDogs() {
-      const audio = new Audio(TwoHotDogs);
-      audio.play();
-    }
-    function playThreeHotDogs() {
-      const audio = new Audio(ThreeHotDogs);
-      audio.play();
-    }
+
 
   return (
     <>
@@ -66,7 +59,7 @@ export function NewTodoForm({ onSubmit }) {
             <div
               className="fishyNotepad relative text-[14px] text-blue-400
                              xs:text-[18px] sm:text-[19px]"
-                             onClick={playOneHotDog}>
+                             onClick={playTurnPage}>
               <span
                 className=" absolute left-[15px] top-[9px]
                            font-BlackOpsOne-Regular text-white"
@@ -82,7 +75,7 @@ export function NewTodoForm({ onSubmit }) {
               className="fishyNotepad relative  text-[14px]  
                             text-blue-400
                              xs:text-[18px] sm:text-[19px]   "
-                             onClick={playTwoHotDogs}>
+                             onClick={playTurnPage}>
               <span
                 className=" absolute left-[15px] top-[9px]
                            font-BlackOpsOne-Regular text-white"
@@ -96,7 +89,7 @@ export function NewTodoForm({ onSubmit }) {
             <div
               className="fishyNotepad relative text-[14px] text-blue-400
                              xs:text-[18px] sm:text-[19px]"
-                             onClick={playThreeHotDogs}>
+                             onClick={playTurnPage}>
               <span
                 className=" absolute left-[15px] top-[9px]
                            font-BlackOpsOne-Regular text-white"

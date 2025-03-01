@@ -8,33 +8,17 @@ import { Link } from "react-router-dom";
 import { FiRewind } from "react-icons/fi";
 import { TfiNotepad } from "react-icons/tfi";
 import  FrogSplash from "../assets/FrogSplash.mp3"
-import OneHotDog from "../assets/OneHotDog.wav"
-import TwoHotDogs from "../assets/TwoHotDogs.wav"
-import ThreeHotDogs from "../assets/ThreeHotDogs.wav"
+import TurnPage from "../assets/TurnPage.mp3"
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
   function playFrogSplash() {
     const audio = new Audio(FrogSplash);
     audio.play();
    }
-  function playOneHotDog() {
-    const audio = new Audio(OneHotDog);
+  function playTurnPage() {
+    const audio = new Audio(TurnPage);
     audio.play();
   }
-  function playTwoHotDogs() {
-    const audio = new Audio(TwoHotDogs);
-    audio.play();
-  }
-  function playThreeHotDogs() {
-    const audio = new Audio(ThreeHotDogs);
-    audio.play();
-  }
-
-
-
-
-
-
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -75,7 +59,7 @@ export function NewTodoForm({ onSubmit }) {
             <div
               className="fishyNotepad relative text-[14px] text-blue-400
                              xs:text-[18px] sm:text-[19px]"
-             onClick={playOneHotDog}>
+             onClick={playTurnPage}>
               
               <span
                 className=" absolute left-[15px] top-[9px]
@@ -93,7 +77,7 @@ export function NewTodoForm({ onSubmit }) {
               className="fishyNotepad relative  text-[14px]  
                             text-blue-400
                              xs:text-[18px] sm:text-[19px]   "
-                             onClick={playTwoHotDogs}>
+                             onClick={playTurnPage}>
               <span
                 className=" absolute left-[15px] top-[9px]
                            font-BlackOpsOne-Regular text-white"
@@ -109,7 +93,7 @@ export function NewTodoForm({ onSubmit }) {
             <div
               className="fishyNotepad relative text-[14px] text-blue-400
                              xs:text-[18px] sm:text-[19px]"
-                             onClick={playThreeHotDogs}>
+                             onClick={playTurnPage}>
               <span
                 className=" absolute left-[15px] top-[9px]
                            font-BlackOpsOne-Regular text-white"
