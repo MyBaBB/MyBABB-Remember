@@ -3,11 +3,21 @@ import React from 'react'
 
 
 
-function startScreenSaver() {
-  setTimeout(() => {
+let timerID = null;
+let timeout = 50000;
+
+function resetTimer() {
+  if (timerID) {
+    clearTimeout(timerID);
+  }
+
+  timerID = setTimeout(() => {
     window.location.href = 'https://octo-space.mybabb.com'
-  }, 50000)
+  }, timeout);
 }
+
+window.addEventListener('mousemove', resetTimer);
+window.addEventListener('touchstart', resetTimer);
 
 
 
@@ -15,7 +25,7 @@ function startScreenSaver() {
 const ScreenSaver = () => {
   return (
     <div>
-        {startScreenSaver()}
+        {resetTimer()}
         <div className="screensaver absolute">
             
         </div>
