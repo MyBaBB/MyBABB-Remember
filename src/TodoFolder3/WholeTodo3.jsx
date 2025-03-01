@@ -10,7 +10,7 @@ import { CgCopy } from "react-icons/cg";
 import Lagoon from "../assets/lagoon400x200.jpg";
 import Lagoon240px from "../assets/lagoon240x190.jpg";
 import Copyright from "../components/Copyright";
-
+import ScreenSaver  from "../components/ScreenSaver.jsx";
 export default function WholeTodo3() {
   const [todos, setTodos] = useState(() => {
     const localValue = localStorage.getItem("ITEMS3");
@@ -137,6 +137,7 @@ export default function WholeTodo3() {
          border-2 border-black  p-4"
           style={{ background: "radial-gradient(circle,   #606060, #374032)" }}
         >
+          <ScreenSaver />
           <div className="relative flex-row ">
             <NewTodoForm onSubmit={addTodo} />
           </div>

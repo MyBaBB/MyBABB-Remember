@@ -10,6 +10,7 @@ import { CgCopy } from "react-icons/cg";
 import NightOcean from "../assets/nightOcean400x200.jpg";
 import NightOcean240px from "../assets/nightOcean240x190.jpg";
 import Copyright from "../components/Copyright";
+import ScreenSaver  from "../components/ScreenSaver.jsx";
 
 export default function WholeTodo() {
   const [todos, setTodos] = useState(() => {
@@ -135,6 +136,7 @@ export default function WholeTodo() {
          border-2 border-black  p-4"
           style={{ background: "radial-gradient(circle, 2d6c73, #606060)" }}
         >
+ <ScreenSaver />
           <div className="relative flex-row ">
             <NewTodoForm onSubmit={addTodo} />
           </div>

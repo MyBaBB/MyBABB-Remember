@@ -10,7 +10,7 @@ import { CgCopy } from "react-icons/cg";
 import fishingMoon from "../assets/fishingMoon400x200.jpg";
 import fishingMoon240px from "../assets/fishingMoon240x190.jpg";
 import Copyright from "../components/Copyright";
-
+import ScreenSaver  from "../components/ScreenSaver.jsx";
 export default function WholeTodo2() {
   const [todos, setTodos] = useState(() => {
     const localValue = localStorage.getItem("ITEMS2");
@@ -139,6 +139,7 @@ export default function WholeTodo2() {
             background: "radial-gradient(circle, lightSkyBlue, #606060)",
           }}
         >
+          <ScreenSaver />
           <div className="relative flex-row ">
             <NewTodoForm onSubmit={addTodo} />
           </div>
