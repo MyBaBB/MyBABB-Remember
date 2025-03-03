@@ -40,17 +40,10 @@
   }
   
   .slider-container input[type="range"] {
-    input[type="range"] {
-        -webkit-appearance: slider-vertical;
-        width: 8px;
-        height: 75px;
-        background: #ddd;
-        outline: none;
-        opacity: 0.7;
-        -webkit-transition: .2s;
-        transition: opacity .2s;
-      }
-    
+    height: 10px;
+    width:100px;
+    margin: 0 auto;
+   
   }
   
   .slider-container span {

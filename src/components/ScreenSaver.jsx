@@ -73,9 +73,11 @@ function ScreenSaver() {
               step="30000" // 30 seconds
               value={timeoutValue}
               onChange={handleTimeoutChange}
-              orient="vertical"
+              
+             
             />
-            <span>{timeoutValue / 60000}&nbsp;minutes</span>
+            <br />
+            <span className=''>{timeoutValue / 60000}&nbsp;minutes</span>
           </div>
         </div>
       )}
