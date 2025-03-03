@@ -29,9 +29,12 @@ function ScreenSaver() {
     if (isScreensaverOn) {
       window.addEventListener('mousemove', resetTimer);
       window.addEventListener('touchstart', resetTimer);
+      window.addEventListener('keydown', resetTimer);
+     
     } else {
       window.removeEventListener('mousemove', resetTimer);
       window.removeEventListener('touchstart', resetTimer);
+      window.removeEventListener('keydown', resetTimer);
     }
   }, [isScreensaverOn]);
 
