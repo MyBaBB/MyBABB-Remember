@@ -40,9 +40,17 @@
   }
   
   .slider-container input[type="range"] {
-    height: 100px;
-    width: 20px;
-    margin: 0 auto;
+    input[type="range"] {
+        -webkit-appearance: slider-vertical;
+        width: 8px;
+        height: 75px;
+        background: #ddd;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+      }
+    
   }
   
   .slider-container span {
