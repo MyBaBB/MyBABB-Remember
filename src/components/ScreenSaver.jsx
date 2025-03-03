@@ -4,7 +4,7 @@ import React from 'react'
 
 
 let timerID = null;
-let timeout = 5000;
+let timeout = 300000;
 
 function resetTimer() {
   if (timerID) {
@@ -14,7 +14,8 @@ function resetTimer() {
   if (window.innerWidth < 640) {
     return;
   } else {
-    timeout = 5 * 60 * 1000;
+    // Set timeout to 300000 milliseconds (5 minutes)
+    timeout = 300000;
   }
   timerID = setTimeout(() => {
     window.location.href = 'https://screen.saver.mybabb.com/fishynotepad'
@@ -31,8 +32,12 @@ const ScreenSaver = () => {
   return (
     <div>
         {resetTimer()}
-        <div className="screensaver absolute">
-            
+        <div className="screensaver absolute ">
+            <button>
+              
+
+
+            </button>
         </div>
 
     </div>
