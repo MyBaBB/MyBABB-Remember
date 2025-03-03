@@ -54,7 +54,7 @@ function ScreenSaver() {
     <div className='fixed top-10 right-10 hidden lg:block'>
     <div className="accordion" style={{ width: '8rem' }}>
       <div className="accordion-header  " onClick={handleAccordionToggle}>
-        <span>Screensaver</span> 
+        <span>ScreenSaver</span> 
        
         <span className={`accordion-icon ${isAccordionOpen ? 'open' : ''}`}>
         <FaCaretDown />
