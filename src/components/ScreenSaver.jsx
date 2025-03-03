@@ -6,6 +6,7 @@ import React from 'react'
 let timerID = null;
 let timeout = 300000;
 
+
 function resetTimer() {
   if (timerID) {
     clearTimeout(timerID);
@@ -28,17 +29,14 @@ window.addEventListener('touchstart', resetTimer);
 
 
 
+
+
+
 const ScreenSaver = () => {
   return (
     <div>
         {resetTimer()}
-        <div className="screensaver absolute ">
-            <button>
-              
-
-
-            </button>
-        </div>
+       
 
     </div>
   )
