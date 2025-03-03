@@ -4,13 +4,18 @@ import React from 'react'
 
 
 let timerID = null;
-let timeout = 50000;
+let timeout = 5000;
 
 function resetTimer() {
   if (timerID) {
     clearTimeout(timerID);
   }
 
+  if (window.innerWidth < 640) {
+    return;
+  } else {
+    timeout = 5 * 60 * 1000;
+  }
   timerID = setTimeout(() => {
     window.location.href = 'https://screen.saver.mybabb.com/fishynotepad'
   }, timeout);
