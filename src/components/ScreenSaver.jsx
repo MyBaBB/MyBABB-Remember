@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import './ScreenSaver.css';
 import { FaCaretDown } from "react-icons/fa6";
-
+import TurnOffButton from "./OffButton";
+import TurnOnButton from "./OnButton";
 let timerID = null;
 let timeout = 300000; // initial timeout value (5 minutes)
 
@@ -21,7 +22,7 @@ function resetTimer() {
 }
 
 function ScreenSaver() {
-  const [isScreensaverOn, setIsScreensaverOn] = useState(true);
+  const [isScreensaverOn, setIsScreensaverOn] = useState(false);
   const [timeoutValue, setTimeoutValue] = useState(300000); // new state for timeout value
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
 
@@ -52,6 +53,9 @@ function ScreenSaver() {
     setIsAccordionOpen(!isAccordionOpen);
   };
 
+
+
+
   return (
     <>
     <div className='fixed top-10 right-10 hidden lg:block'>
@@ -65,15 +69,15 @@ function ScreenSaver() {
       </div>
       {isAccordionOpen && (
         <div className="accordion-content">
-          <button onClick={handleToggleScreensaver}>
-            {isScreensaverOn ? 'Turn off' : 'Turn on '}
+          <button onClick={handleToggleScreensaver} className=' w-full relative flex justify-center items-center'>
+            {isScreensaverOn ? <TurnOnButton /> : <TurnOffButton />}
           </button>
           <div className="slider-container">
             <input
               type="range"
-              min="3000" // 30 seconds
-              max="900000" // 15 minutes
-              step="30000" // 30 seconds
+              min="0000" // 30 seconds
+              max="3600040" // 1 hour
+              step="300000" // 5 minutes
               value={timeoutValue}
               onChange={handleTimeoutChange}
               

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NewTodoForm } from "./NewTodoForm";
 import "./Todo.css";
-import { TodoList } from "./TodoList3";
+import { TodoList } from "./TodoList";
 import { AiOutlineCaretUp, AiOutlineCaretDown } from "react-icons/ai";
 import WebApp from "../components/MainWrapper/PWAFolder/WebApp";
 import { GiClick } from "react-icons/gi";

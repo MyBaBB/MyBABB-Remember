@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import WholeTodo from "./TodoFolder/WholeTodo.jsx";
-import WholeTodo2 from "./TodoFolder2/WholeTodo2.jsx";
-import WholeTodo3 from "./TodoFolder3/WholeTodo3.jsx";
+import WholeTodo2 from "./TodoFolder/WholeTodo2.jsx";
+import WholeTodo3 from "./TodoFolder/WholeTodo3.jsx";
  
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
