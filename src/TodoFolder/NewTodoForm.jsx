@@ -147,13 +147,13 @@ export function NewTodoForm({ onSubmit }) {
             >
           <span className="font-PTSerif-Bold">Holding Tank</span>
         </button>
-      <a href="mailto:" className=" btn3 relative m-auto mb-8 flex justify-center 
+      <a href="mailto:" className=" btn3 w-[9rem] relative m-auto mb-8 flex justify-center 
            from-blue-700 to-blue-950 text-blue-50 
             whitespace-nowrap hover:bg-gradient-to-b">
         
         <button
           type="button"
-          className=" w-[9rem] "
+          className="  "
             >
           <span className="font-PTSerif-Bold">Release</span>
         </button>
