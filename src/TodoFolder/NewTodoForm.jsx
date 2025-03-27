@@ -137,14 +137,31 @@ export function NewTodoForm({ onSubmit }) {
           id="item"
           placeholder="Type here"
         />
-
+<div className="ClickAndCastButton relative flex-row xs:flex ">
         <button
-          className="btn3 relative m-auto mb-8 flex justify-center  from-blue-700 to-blue-950  text-blue-50 
-         hover:bg-gradient-to-b "
+      
+          className="btn3  w-[9rem]
+                      relative m-auto mb-8 flex justify-center 
+                      whitespace-nowrap from-blue-700 to-blue-950  text-blue-50 
+                           hover:bg-gradient-to-b "
             >
           <span className="font-PTSerif-Bold">Click to Add Item</span>
         </button>
-      </form>
+      <a href="mailto:" className=" btn3 relative m-auto mb-8 flex justify-center 
+           from-blue-700 to-blue-950 text-blue-50 
+            whitespace-nowrap hover:bg-gradient-to-b">
+        
+        <button
+          type="button"
+          className=" w-[9rem] "
+            >
+          <span className="font-PTSerif-Bold">Cast a Line</span>
+        </button>
+      </a>
+        </div>
+</form>
+
+     
     </>
   );
 }
