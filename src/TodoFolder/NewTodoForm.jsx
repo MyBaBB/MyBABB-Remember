@@ -155,7 +155,7 @@ export function NewTodoForm({ onSubmit }) {
           type="button"
           className=" w-[9rem] "
             >
-          <span className="font-PTSerif-Bold">Cast a Line</span>
+          <span className="font-PTSerif-Bold">Cast Out</span>
         </button>
       </a>
         </div>
