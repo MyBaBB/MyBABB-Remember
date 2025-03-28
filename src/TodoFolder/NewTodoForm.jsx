@@ -10,11 +10,15 @@ import { TfiNotepad } from "react-icons/tfi";
 import  FrogSplash from "../assets/FrogSplash.mp3"
 import TurnPage from "../assets/TurnPage.mp3"
 import ScreenSaver from "../components/ScreenSaver";
-
+import SwimFish from "../assets/SwimFish.mp3"
 export function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("");
   function playFrogSplash() {
     const audio = new Audio(FrogSplash);
+    audio.play();
+   }
+  function PlaySwimFish() {
+    const audio = new Audio(SwimFish);
     audio.play();
    }
   function playTurnPage() {
@@ -154,8 +158,10 @@ export function NewTodoForm({ onSubmit }) {
         <button
           type="button"
           className="  "
+          onClick={PlaySwimFish}
             >
           <span className="font-PTSerif-Bold">Release</span>
+       
         </button>
       </a>
         </div>
