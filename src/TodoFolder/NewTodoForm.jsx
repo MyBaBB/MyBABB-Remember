@@ -143,12 +143,13 @@ export function NewTodoForm({ onSubmit }) {
         />
 <div className="ClickAndCastButton relative flex-row xs:flex ">
         <button
-      
+          title="Save Note"
           className="btn3  w-[9rem]
                       relative m-auto mb-8 flex justify-center 
                       whitespace-nowrap from-blue-700 to-blue-950  text-blue-50 
                            hover:bg-gradient-to-b "
             >
+            
           <span className="font-PTSerif-Bold">Holding Tank</span>
         </button>
       <a href="mailto:" className=" btn3 w-[9rem] relative m-auto mb-8 flex justify-center 
@@ -156,6 +157,7 @@ export function NewTodoForm({ onSubmit }) {
             whitespace-nowrap hover:bg-gradient-to-b">
         
         <button
+          title="Email Copies"
           type="button"
           className="  "
           onClick={PlaySwimFish}
