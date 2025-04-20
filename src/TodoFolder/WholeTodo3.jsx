@@ -317,7 +317,9 @@ export default function WholeTodo3() {
           </div>
           <Copyright />
         </div>
-
+        <span className="relative flex font-Orbitron-Regular w-fit  text-xs m-auto">
+              Free Version
+            </span>
         <div className=" mb-[-1rem] mt-[1rem]">
           <WebApp />
         </div>
