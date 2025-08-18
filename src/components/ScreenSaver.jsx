@@ -16,7 +16,7 @@ function resetTimer() {
     return;
   } else {
     timerID = setTimeout(() => {
-      window.location.href = 'https://screen.saver.mybabb.com/fishynotepad'
+      window.location.href = 'https://screen.saver.mybabb.com/'
     }, timeout);
   }
 }
